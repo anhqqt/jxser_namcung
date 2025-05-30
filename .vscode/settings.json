@@ -1,0 +1,20 @@
+{
+    //Thiết lập pattern và rule cho Symbol Masks
+    "symbolMasks.masks": [
+        {
+            //SymbolMasks sẽ hoạt động với những file ngôn ngữ được liệt kê dưới đây.
+            "language": [ "lua", "plaintext", "ini", "log", "c", "csharp", "cpp", "json"],
+            "patterns": [
+            {
+            //Trong "" đã có chữ "ư" mã Unicode, trình duyệt không hiển thị
+            "pattern": "­",
+            //Thay thế ký tự được liệt kê trong pattern bằng kí tự này
+            "replace": "ư",
+            }
+            ]
+        }
+    ],
+    //Tắt diagnose Lua script, vì mình không có source code nên hay báo lỗi sai 1 vài hàm
+    "Lua.diagnostics.enable": false,
+    "files.encoding": "iso88591",
+}

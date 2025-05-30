@@ -35,7 +35,7 @@ function main()
 		{"Hñy trang bÞ khãa", deltem},
 		{"Xem sè l­îng ng­êi ch¬i ®ang Online", dkgm9},
 		{"§æi tªn nh©n vËt", game_spreader2},
-		{"§¨ng ký quyÒn h¹n MOD", dkgm},
+		{"§¨ng ký quyÒn h¹n MOD!", dkgm},
 		{"Tho¸t"},
 	}
 
