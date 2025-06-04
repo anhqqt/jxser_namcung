@@ -507,29 +507,28 @@ end;
 
 
 -------------------------------------------------------------------------
--- Camp biÓu thŞ bªn chñ qu¶n cuéc ®èi tho¹i lµ bªn nµo, 1 lµ Tèng, 2 lµ Kim.
--- NÕu b»ng 1 th× cã nghÜa lµ ®· ®¨ng kı trong chiÕn tr­êng nµy vµ thuéc vÒ phe nµy.
--- NÕu b»ng 2 th× cã nghÜa lµ ®· ®¨ng kı trong chiÕn tr­êng nµy nh­ng kh«ng thuéc vÒ phe nµy.
--- NÕu b»ng 0 th× cã nghÜa lµ ch­a ®¨ng kı.
+--Camp±íÊ¾¶Ô»°µÄÖ÷¹ÜÊÇÄÄ·½µÄ£¬1ÎªËÎ£¬2Îª½ğ·½
+--Èç¹ûµÈÓÚ1 ±íÊ¾ÒÑ¾­ÔÚ±¾³¡Õ½¾ÖÖĞ±¨¹ıÃûÁË£¬²¢ÇÒÊôÓÚÕâ¸öÕóÓª
+--Èç¹ûµÈÓÚ2 ±íÊ¾ÒÑ¾­ÔÚ±¾³¡Õ½¾ÖÖĞ±¨¹ıÃûÁË£¬µ«ÊÇ²»ÊôÓÚÕâ¸öÕóÓª
+--Èç¹ûµÈÓÚ0 ±íÊ¾ÉĞÎ´±¨Ãû¡£
 
 function bt_checklastbattle(Camp)
 
-    local MKey = BT_GetGameData(GAME_KEY); -- µ±Ç°Õ½ÒÛµÄÎ¨Ò»KeyÂë
-    local BattleId = BT_GetGameData(GAME_BATTLEID); -- ¸ÃÕ½ÒÛÀàĞÍµÄID
-    local RuleId = BT_GetGameData(GAME_RULEID);
+local MKey = BT_GetGameData(GAME_KEY); --µ±Ç°Õ½ÒÛµÄÎ¨Ò»KeyÂë
+local BattleId = BT_GetGameData(GAME_BATTLEID); --¸ÃÕ½ÒÛÀàĞÍµÄID
+local RuleId = BT_GetGameData(GAME_RULEID);
 
-    if (MKey == BT_GetData(PL_KEYNUMBER) and BattleId == BT_GetData(PL_BATTLEID) and BT_GetData(PL_ROUND) == BT_GetGameData(GAME_ROUND)) then
-        if (Camp == BT_GetData(PL_BATTLECAMP)) then
-            return 1
-        else
-            return 2
-        end
-    else
-        return 0
-    end
+if ( MKey == BT_GetData(PL_KEYNUMBER) and BattleId == BT_GetData(PL_BATTLEID) and BT_GetData(PL_ROUND) == BT_GetGameData(GAME_ROUND) ) then
+	if (Camp == BT_GetData(PL_BATTLECAMP)) then
+		return 1
+	else
+		return 2
+	end
+else
+	return 0
+end;
 
 end
-
 -------------------------------------------------------------------------
 function bt_setnormaltask2type()
 --701ÒÑ¾­±»Õ¼ÓÃ£¬ËùÒÔ¸ü»»µ½751
