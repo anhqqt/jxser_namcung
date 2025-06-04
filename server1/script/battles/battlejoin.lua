@@ -233,7 +233,7 @@ function bt_enterbattle()
 	MapId = BT_GetGameData(GAME_MAPID);
 	
 	if (MapId > 0) then
-		idx = SubWorldID2Idx(MapId); 
+		idx = SubWorldID2Idx(MapId);
 		
 		if (idx < 0) then
 			Say("Xin lçi, tiÒn tuyÕn ®ang cã vÊn ®Ò, t¹m thêi kh«ng thÓ vµo chiÕn tr­êng.",0)
