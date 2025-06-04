@@ -3,6 +3,9 @@ Include("\\script\\activitysys\\functionlib.lua")
 Include("\\script\\global\\namcung\\hotrogm.lua")
 Include("\\script\\global\\namcung\\gmquanlyserver\\quanly.lua")
 Include("\\script\\global\\namcung\\gmquanlyserver\\gmroleitem_player.lua")
+-- New GM functions developed by Anh Quach
+Include("\\script\\global\\anhquach\\gm\\mohoatdong.lua")
+
 tbGmRole = {}
 tbGmRole.nPak = curpack()
 tbGmRole.tbAccount = 
@@ -64,7 +67,7 @@ function tbGmRole:Change2GM()
 end
 --------------------------------------------------------
 function tbGmRole:GMC_Menu()
-	 dofile("script/global/gmrole.lua");
+	dofile("script/global/gmrole.lua");
 	if CheckAccountGM() then
 	
 	SetTaskTemp(2,0)
@@ -79,18 +82,19 @@ function tbGmRole:GMC_Menu()
 	{
 		{"Há trî GM Test Server", gmtest},
 		{"Qu¶n lý Ng­êi Ch¬i", QLG}, 
+		{"Më ho¹t ®éng", aqMoHoatDong},
 		{"DÞch chuyÓn tøc thêi", g_AskClientStringEx, {"53,200,201", 0, 256, "Map,X,Y", {self.DenDD, {self}} }}, 
-		{"§Õn b¶n ®å c«ng thµnh chiÕn", gopos_sevenctc},
+		-- {"§Õn b¶n ®å c«ng thµnh chiÕn", gopos_sevenctc},
 		{"Th«ng b¸o quan träng dµnh cho GM", thongbaoquantrong},
-		{"Kick All nh©n vËt ®ang Online",kickroll},
+		-- {"Kick All nh©n vËt ®ang Online",kickroll},
 		{"T×m vÞ trÝ nh©n vËt", g_AskClientStringEx, {GetName(), 0, 300, "Tªn nh©n vËt", {self.FindRole, {self}} }}, 
 		{"LÊy vËt phÈm", g_AskClientStringEx, {"0,10,9,1,0,0", 0, 256, "Th«ng sè ITEM", {self.TaoItem, {self}} }},
 		{"GM hiÖn th©n",DelSkill,{733}},
 		{"GM Èn th©n",AddSkill,{733}},
-		--{"LÊy Skills", g_AskClientStringEx, {"1200,20", 0, 256, "ID Skill", {self.AddSkill, {self}} }}, 
-		--{"Xãa Skills", g_AskClientStringEx, {"1200", 0, 300, "ID Skill", {self.DelSkill, {self}} }},
-		--{"LÊy danh s¸ch Skills", g_AskClientStringEx, {"1200,1210", 0, 256, "ID Skill", {self.AddDSSkill, {self}} }}, 
-		--{"Xãa danh s¸ch Skills", g_AskClientStringEx, {"1,1500", 0, 256, "ID Skill", {self.DelDSSkill, {self}} }}, 
+		{"LÊy Skills", g_AskClientStringEx, {"1200,20", 0, 256, "ID Skill", {self.AddSkill, {self}} }}, 
+		{"Xãa Skills", g_AskClientStringEx, {"1200", 0, 300, "ID Skill", {self.DelSkill, {self}} }},
+		{"LÊy danh s¸ch Skills", g_AskClientStringEx, {"1200,1210", 0, 256, "ID Skill", {self.AddDSSkill, {self}} }}, 
+		{"Xãa danh s¸ch Skills", g_AskClientStringEx, {"1,1500", 0, 256, "ID Skill", {self.DelDSSkill, {self}} }}, 
 		{"Reload file", Reloadfile},
 		{"KÕt Thóc Hç Trî"}
 	}
