@@ -13,6 +13,10 @@ TB_HUANGZHIZHANG_EVENT = {
 GN_HUANG_EVENTID = 1
 GN_HUANG_SWITH = 2
 GN_HUANG_DATE = 3
+
+-- Hµm sÏ ®­îc gäi ë c¸c n¬i kh¸c nh­ D· TÈu, Tèng Kim, v.v...
+-- Môc ®Ých ®Ó kiÓm tra hÖ sè nhËn th­ëng tr­íc khi nhËn
+-- NÕu trong thêi gian diÔn ra "Hoµng chi ch­¬ng" th× sÏ nhËn x2 phÇn th­ëng, ngoµi thêi gian sÏ nhËn x1 phÇn th­ëng
 function greatnight_huang_event(event)
 	--»î¶¯»¹Ã»¿ªÊ¼
 	if (gb_GetTask(GN_EVENTNAME, GN_HUANG_EVENTID) == 0) then
@@ -40,6 +44,8 @@ function greatnight_huang_event(event)
 	return 1
 end
 
+-- HÖ sè phÇn th­ëng khi trong thêi gian diÔn ra "Hoµng chi ch­¬ng"
+-- MÆc ®Þnh lµ x2, cã thÓ chØnh söa thªm nh­ T6 hoÆc cuèi tuÇn th× x3
 function gn_getaward_times()
 --	local nWeek = tonumber(GetLocalDate("%w"))
 --	if (nWeek == 6 or nWeek == 0) then
