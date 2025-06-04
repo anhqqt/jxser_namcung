@@ -199,6 +199,14 @@ function NewPractice_B(bIn)
 	end
 end
 
+local TONGCLAIMWAR = function (bIn)
+
+end
+
+local NOTONGCLAIMWAR = function (bIn)
+
+end
+
 -- 进入/离开可以修炼精力的地图
 --function JingliEntrance(bIn)
 --	DynamicExecute("\\script\\global\\jingli.lua", "WorldEntrance", PlayerIndex, bIn)
@@ -223,4 +231,6 @@ aryFuncStore["PUNISH_PK10"] = PK10_InPrison
 aryFuncStore["NATIONALWAR"] = nationalwar_mapevent
 aryFuncStore["NEWPRACTICE_A"] = NewPractice_A
 aryFuncStore["NEWPRACTICE_B"] = NewPractice_B
+aryFuncStore["TONGCLAIMWAR"] = TONGCLAIMWAR
+aryFuncStore["NOTONGCLAIMWAR"] = NOTONGCLAIMWAR
 --aryFuncStore["JINGLI"] = JingliEntrance
