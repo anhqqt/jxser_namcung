@@ -42,7 +42,6 @@ function TaskContent()
 		return
 	end
 	
-	AddGlobalCountNews("Tr­íc m¾t lµ thêi gian m­a thuËn giã hßa, ®Ó ®¸p t¹ c«ng søc ®ãng gãp c¸c vÞ ®¹i hiÖp, Vâ l©m minh chñ §éc C« KiÕm ®· tæ chøc ho¹t ®éng <color=yellow>'§ªm huy hoµng'<color>. Thêi gian b¾t ®Çu ho¹t ®éng mçi ngµy lµ 20h00.",1)
 	OutputMsg("=====> Qua Huy Hoang 20:00 BAT DAU <====")
 
 	-- Mèc b¶o hiÓm, biÕn sè sÏ ®­îc ®Æt vÒ 0 khi ho¹t ®éng b¾t ®Çu
