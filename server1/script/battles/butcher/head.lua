@@ -471,25 +471,27 @@ function sf_join(camp)
 		end
 	end
 
-if (result == 0) then
-		if (CalcItemCount(-1, 6, 1, 30083, -1) >= 1 and ConsumeEquiproomItem(1, 6, 1, 30083, 1) == 1) then		
-		--if (GetCash() >= SONGJIN_SIGNUP_FEES) then
-		--Pay(SONGJIN_SIGNUP_FEES)
-		BT_LeaveBattle() -- Çå³ıÍæ¼Ò¿Í»§¶Ëµ±Ç°µÄÅÅÃûÊı¾İ
-		BT_ClearPlayerData()
-		SetTask(2435, 0);--±¾³¡ËÎ½ğÒÑ¾­ÁìÈ¡µÄ°ï»á¹±Ï×¶ÈÇåÁã--by ÁÎÖ¾É½
-		Msg2Player("Nh¾c nhë: cã thÓ Ên phİm ~ ë gãc tr¸i phİa trªn bµn phİm ®Ó xem tin tøc chiÕn sù!");
-		BT_SetData(PL_ROUND,BT_GetGameData(GAME_ROUND))
-		tbLog:PlayerActionLog("EventChienThang042011","BaoDanhTongKim")	-- ±¨ÃûÈÕÖ¾
-		local nlevel = BT_GetGameData(GAME_LEVEL)
-		G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
-		tbLog:PlayerActionLog("TinhNangKey","BaoDanhTongKim")
-	else
-		local szMsg = "Xin lçi, tham gia ®ît Tèng Kim ®¹i chiÕn nµy, cÇn ph¶i nép 1 TK chiªu binh lÖnh"
-		Say(szMsg, 0)
-		return 
+	if (result == 0) then
+		-- §æi phİ b¸o danh vÒ 3000 l­îng - Modified by Anh Quach - 05062025
+		-- if (CalcItemCount(-1, 6, 1, 30083, -1) >= 1 and ConsumeEquiproomItem(1, 6, 1, 30083, 1) == 1) then
+		if (GetCash() >= SONGJIN_SIGNUP_FEES) then
+			Pay(SONGJIN_SIGNUP_FEES)
+			BT_LeaveBattle() -- Çå³ıÍæ¼Ò¿Í»§¶Ëµ±Ç°µÄÅÅÃûÊı¾İ
+			BT_ClearPlayerData()
+			SetTask(2435, 0); --±¾³¡ËÎ½ğÒÑ¾­ÁìÈ¡µÄ°ï»á¹±Ï×¶ÈÇåÁã--by ÁÎÖ¾É½
+			Msg2Player("Nh¾c nhë: cã thÓ Ên phİm ~ ë gãc tr¸i phİa trªn bµn phİm ®Ó xem tin tøc chiÕn sù!");
+			BT_SetData(PL_ROUND, BT_GetGameData(GAME_ROUND))
+			tbLog:PlayerActionLog("EventChienThang042011", "BaoDanhTongKim") -- ±¨ÃûÈÕÖ¾
+			local nlevel = BT_GetGameData(GAME_LEVEL)
+			G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
+			tbLog:PlayerActionLog("TinhNangKey", "BaoDanhTongKim")
+		else
+			-- local szMsg = "Xin lçi, tham gia ®ît Tèng Kim ®¹i chiÕn nµy, cÇn ph¶i nép 1 TK chiªu binh lÖnh"
+			local szMsg = "Xin lçi, tham gia ®ît Tèng Kim ®¹i chiÕn nµy, cÇn ph¶i nép phİ b¸o danh lµ 3000 l­îng"
+			Say(szMsg, 0)
+			return
+		end
 	end
-end
 
 gametime = floor(GetMSRestTime(MISSIONID, 40) / 18);
 AddMSPlayer(MISSIONID,camp);
