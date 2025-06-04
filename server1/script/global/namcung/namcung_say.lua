@@ -18,15 +18,21 @@ function main()
     if CheckAccountGM() then
         local szTitle =
             "<npc>.<enter><color=yellow>Vâ L©m TruyÒn Kú<color><enter><color=red>C÷u Niªn T­¬ng Phïng<color>.<enter>Hoan nghªnh c¸c anh hïng hµo kiÖt... !"
-        local tbOpt = {{"Hñy trang bÞ khãa", deltem}, {"Xem sè l­îng ng­êi ch¬i ®ang Online", dkgm9},
-                       {"§æi tªn nh©n vËt", game_spreader2}, {"§¨ng ký quyÒn h¹n GM", dkgm}, {"Tho¸t"}}
+        local tbOpt = {{"Hñy trang bÞ khãa", deltem}, 
+                        {"Xem sè l­îng ng­êi ch¬i ®ang Online", dkgm9},
+                        {"§æi tªn nh©n vËt", game_spreader2}, 
+                        {"§¨ng ký quyÒn h¹n GM", dkgm}, 
+                        {"Tho¸t"}}
 
         CreateNewSayEx(szTitle, tbOpt)
     elseif CheckAccountMod() then
         local szTitle =
             "<npc>.<enter><color=yellow>Vâ L©m TruyÒn Kú<color><enter><color=red>C÷u Niªn T­¬ng Phïng<color>.<enter>Hoan nghªnh c¸c anh hïng hµo kiÖt... !"
-        local tbOpt = {{"Hñy trang bÞ khãa", deltem}, {"Xem sè l­îng ng­êi ch¬i ®ang Online", dkgm9},
-                       {"§æi tªn nh©n vËt", game_spreader2}, {"§¨ng ký quyÒn h¹n MOD", dkgm}, {"Tho¸t"}}
+        local tbOpt = {{"Hñy trang bÞ khãa", deltem}, 
+                        {"Xem sè l­îng ng­êi ch¬i ®ang Online", dkgm9},
+                        {"§æi tªn nh©n vËt", game_spreader2}, 
+                        {"§¨ng ký quyÒn h¹n MOD", dkgm}, 
+                        {"Tho¸t"}}
 
         CreateNewSayEx(szTitle, tbOpt)
     else

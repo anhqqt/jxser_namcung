@@ -472,9 +472,9 @@ function sf_join(camp)
     end
 
     if (result == 0) then
-        if (CalcItemCount(-1, 6, 1, 30083, -1) >= 1 and ConsumeEquiproomItem(1, 6, 1, 30083, 1) == 1) then
-            -- if (GetCash() >= SONGJIN_SIGNUP_FEES) then
-            -- Pay(SONGJIN_SIGNUP_FEES)
+        -- if (CalcItemCount(-1, 6, 1, 30083, -1) >= 1 and ConsumeEquiproomItem(1, 6, 1, 30083, 1) == 1) then
+		if (GetCash() >= SONGJIN_SIGNUP_FEES) then
+            Pay(SONGJIN_SIGNUP_FEES)
             BT_LeaveBattle() -- 清除玩家客户端当前的排名数据
             BT_ClearPlayerData()
             SetTask(2435, 0); -- 本场宋金已经领取的帮会贡献度清零--by 廖志山
@@ -485,7 +485,8 @@ function sf_join(camp)
             G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
             tbLog:PlayerActionLog("TinhNangKey", "BaoDanhTongKim")
         else
-            local szMsg = "Xin l鏸, tham gia t T鑞g Kim i chi課 n祔, c莕 ph秈 n閜 1 TK chi猽 binh l謓h"
+            -- local szMsg = "Xin l鏸, tham gia t T鑞g Kim i chi課 n祔, c莕 ph秈 n閜 1 TK chi猽 binh l謓h"
+			local szMsg = "Xin l鏸, tham gia t T鑞g Kim i chi課 n祔, c莕 ph秈 n閜 3000 lng"
             Say(szMsg, 0)
             return
         end

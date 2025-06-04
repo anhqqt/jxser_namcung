@@ -29,8 +29,6 @@ function TaskContent()
         local szMsg = format("TiÒn tuyÕn mËt b¸o, N­íc Tèng \"%s\" ½ð¹ú \"%s\"thiªn tö ®o¹t ng«i ®· më, xin mêi c¸c vÞ t­íng sÜ ®Õn tèng kim ®Ó ghi danh tham chiÕn!", CW_GetOccupant(7), CW_GetOccupant(4))
         local szNews = format("dw AddLocalCountNews([[%s]], 2)", szMsg)
         GlobalExecute(szNews)
-        Battle_StartNewRound(2, 1) -- LÖnh GM, khëi ®éng Quèc chiÕn Tø Ph­¬ng s¬ cÊp
-        Battle_StartNewRound(2, 2) -- LÖnh GM, khëi ®éng Quèc chiÕn Tø Ph­¬ng trung cÊp
         Battle_StartNewRound(2, 3) -- LÖnh GM, khëi ®éng Quèc chiÕn Tø Ph­¬ng cao cÊp
         OutputMsg("=====> [TongKim] Quoc Chien Tong Kim 16:50 BAT DAU <====")
     end
