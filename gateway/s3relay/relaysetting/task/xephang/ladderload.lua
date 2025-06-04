@@ -1,26 +1,22 @@
--- Õ½ÒÛÏµÍ³
+-- HÖ thèng xÕp h¹ng
 -- Fanghao_Wu 2004-12-6
 function GameSvrConnected(dwGameSvrIP)
-	SyncAllLadder(dwGameSvrIP)
-end;
+    SyncAllLadder(dwGameSvrIP)
+end
 function GameSvrReady(dwGameSvrIP)
 end
 
 function TaskShedule()
-	-- ÉèÖÃ·½°¸Ãû³Æ
-	TaskName( "Relay BANG XEP HANG" );
-	-- 10·ÖÖÓÒ»´Î
-	TaskInterval( 2440 );
-	-- ÉèÖÃ´¥·¢´ÎÊý£¬0±íÊ¾ÎÞÏÞ´ÎÊý
-	TaskCountLimit( 0 );
-	-- Êä³öÆô¶¯ÏûÏ¢
-	OutputMsg( "=======================>Xoa thong tin Xep Hang<========================" );
-	for i=10001, 10300 do 
-		LoadLadder(i)
-	end
-	
+    TaskName("XOA BANG XEP HANG")
+    TaskInterval(2440)
+    TaskCountLimit(0)
+    OutputMsg("=====> [Khoi dong] Bang xep hang")
+    for i = 10001, 10300 do
+        LoadLadder(i)
+    end
+
 end
 
 function TaskContent()
-	OutputMsg( "===>Xep Hang Khoi Dong Hoan Tat<===" );
+    OutputMsg("===> Xep hang khoi dong thanh cong <===")
 end

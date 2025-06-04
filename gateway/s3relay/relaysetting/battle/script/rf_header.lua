@@ -1,22 +1,22 @@
--- Õ½ÒÛÁ÷³ÌÍ·ÎÄ¼ş
+-- File ®Çu quy tr×nh chiÕn ®Êu
 -- Fanghao Wu
 -- 2004.12.15
 
-DBKEY_BATTLE = "BATTLE_%d_%d";						-- Õ½ÒÛĞÅÏ¢µÄÊı¾İ¿âKEY
-DBKEY_BATTLE_LATEST_INFO = "BATTLE_LATEST_INFO";	-- Õ½ÒÛ×îºóÒ»¾ÖĞÅÏ¢µÄÊı¾İ¿âKEY
+DBKEY_BATTLE = "BATTLE_%d_%d";						-- KEY c¬ së d÷ liÖu cña th«ng tin chiÕn tr­êng
+DBKEY_BATTLE_LATEST_INFO = "BATTLE_LATEST_INFO";	-- KEY c¬ së d÷ liÖu cña th«ng tin trËn ®Êu cuèi cïng trong chiÕn tr­êng
 
--- Éú³ÉÖ¸¶¨Õ½ÒÛÕ½ÒÛĞÅÏ¢µÄÊı¾İ¿âKEY
+-- T¹o KEY c¬ së d÷ liÖu cña th«ng tin chiÕn tr­êng chØ ®Şnh
 function makeBattleDBKey( nBattleID, nBattleLevel )
 	return format( DBKEY_BATTLE, nBattleID, nBattleLevel );
 end
 
--- Æô¶¯ĞÂÒ»ÂÖÕ½ÒÛ
+-- Khëi ®éng mét vßng chiÕn tr­êng míi
 function battle_StartNewIssue( nBattleID, nBattleLevel )
 	local bDBSuccess, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, nBattleMapID, nWorldMapID, strMapName, nRuleID;
 	local arynMapPatternID, arynFollowingRoundID, arynRuleID;
 	
 	bDBSuccess, nLatestIssueID, nRoundCount, nRoundID = battle_GetLatestIssueInfo( nBattleID, nBattleLevel );
-	if( bDBSuccess ~= 1 ) then	-- µÚÒ»ÆÚÕ½ÒÛ
+	if( bDBSuccess ~= 1 ) then	-- TrËn chiÕn ®Çu tiªn
 		nLatestIssueID = 1;
 	else
 		nLatestIssueID = nLatestIssueID + 1;
@@ -37,7 +37,7 @@ function battle_StartNewIssue( nBattleID, nBattleLevel )
 	return nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID;
 end
 
--- »ñÈ¡Ö¸¶¨Õ½ÒÛ×îºóÒ»¾ÖµÄÆÚÊı¼°¾ÖÊıĞÅÏ¢
+-- LÊy th«ng tin vÒ kú sè vµ trËn sè cuèi cïng cña chiÕn tr­êng chØ ®Şnh
 function battle_GetLatestIssueInfo( nBattleID, nBattleLevel )
 	local bDBSuccess;
 	local nLatestIssueID, nRoundCount;
@@ -45,7 +45,7 @@ function battle_GetLatestIssueInfo( nBattleID, nBattleLevel )
 	return bDBSuccess, nLatestIssueID, nRoundCount;
 end
 
--- »ñÈ¡Ö¸¶¨Õ½ÒÛÕ½¾ÖµÄÕ½¾ÖÏêÏ¸ĞÅÏ¢
+-- LÊy th«ng tin chi tiÕt vÒ chiÕn tr­êng ®­îc chØ ®Şnh
 function battle_GetSpecRoundInfo( nBattleID, nBattleLevel, nIssueID, nRoundCount )
 	local strBattleDBKey;
 	local bDBSuccess;
@@ -57,7 +57,7 @@ function battle_GetSpecRoundInfo( nBattleID, nBattleLevel, nIssueID, nRoundCount
 	return bDBSuccess, nRoundID, nMapPatternID, strMapName, nRuleID, nBattleResult;
 end
 
--- »ñÈ¡Ö¸¶¨Õ½ÒÛ×îºóÒ»¾ÖµÄÕ½¾ÖÏêÏ¸ĞÅÏ¢
+-- LÊy th«ng tin chi tiÕt vÒ chiÕn tr­êng cña trËn ®Êu cuèi cïng ®­îc chØ ®Şnh
 function battle_GetLatestRoundInfo( nBattleID, nBattleLevel )
 	local bDBSuccess;
 	local nLatestIssueID, nRoundCount;
@@ -72,19 +72,19 @@ function battle_GetLatestRoundInfo( nBattleID, nBattleLevel )
 	return bDBSuccess, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID, nBattleResult;
 end
 
--- ±£´æÕ½¾ÖÏêÏ¸ĞÅÏ¢
+-- L­u tr÷ th«ng tin chi tiÕt chiÕn tr­êng
 function battle_SaveRoundInfo( nBattleID, nBattleLevel, nIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID, nBattleResult )
 	SaveCustomDataToSDBOw( DBKEY_BATTLE_LATEST_INFO, nBattleID, nBattleLevel, "ii", nIssueID, nRoundCount );
 	local strBattleDBKey = makeBattleDBKey( nBattleID, nBattleLevel );
 	SaveCustomDataToSDBOw( strBattleDBKey, nIssueID, nRoundCount, "iisii", nRoundID, nMapPatternID, strMapName, nRuleID, nBattleResult );
 end
 
--- Êä³öÈÕÖ¾·Ö¸ô·û
+-- XuÊt kı tù ph©n c¸ch nhËt kı
 function battle_Msg_Separator()
 	OutputMsg( "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
 end
 
--- Êä³öĞÂÕ½¾ÖÈÕÖ¾
+-- XuÊt nhËt kı chiÕn tr­êng míi
 function battle_Msg_NewRound( nBattleID, nBattleLevel, nIssueID, nRoundCount, nRoundID, nMapPatternID, nBattleMapID, nWorldMapID, strMapName, nRuleID, strExtraMsg )
 	battle_Msg_Separator();
 	OutputMsg( format( "[%s]  NEW BATTLE START", date( "%Y-%m-%d %H:%M:%S" ) ) );
@@ -96,7 +96,7 @@ function battle_Msg_NewRound( nBattleID, nBattleLevel, nIssueID, nRoundCount, nR
 	battle_Msg_Separator();
 end
 
--- Êä³öÕ½¾Ö½áÊøÈÕÖ¾
+-- XuÊt nhËt kı kÕt thóc chiÕn tr­êng
 function battle_Msg_RoundResult( nBattleID, nBattleLevel, nIssueID, nRoundCount, nRoundID, nBattleResult, strExtraMsg )
 	battle_Msg_Separator();
 	OutputMsg( format( "[%s]  BATTLE END", date( "%Y-%m-%d %H:%M:%S" ) ) );

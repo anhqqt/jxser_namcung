@@ -1,13 +1,9 @@
 tbAccountGM = 
 { 
-	["123456"] =
+	["matdecha"] =
 	{ 
-		"NamCung" 
-	}, 
-	["1"] = 
-	{ 
-		"test0012" 
-	}, 
+		"Administrator" 
+	}
 }
 
 tbAccountMod = 
