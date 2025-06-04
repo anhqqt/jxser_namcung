@@ -800,7 +800,10 @@ function Task_GiveAward()
 	myAward, nTongValue = tl_giveplayeraward(1);
 	if (not nTongValue) then
 		nTongValue = 0;
-	end	
+	end
+	-- KiÓm tra ho¹t ®éng "Hoµng chi ch­¬ng - §ªm Huy Hoµng"
+	-- NÕu cã bËt trªn s3relay task nh­ng kh«ng trong thêi gian hoÆc kh«ng bËt trªn s3relay task th× x1, 
+	-- Trong thêi gian th× x2
 	local nBeishu = greatnight_huang_event(4);
 	if (nBeishu > 0) then
 		nTongValue = floor(nTongValue / nBeishu);
@@ -909,7 +912,10 @@ end
 	
 	tl_settaskcourse(3)
 	PayPlayerLinkAward();
-	
+
+	-- KiÓm tra ho¹t ®éng "Hoµng chi ch­¬ng - §ªm Huy Hoµng"
+	-- NÕu cã bËt trªn s3relay task nh­ng kh«ng trong thêi gian hoÆc kh«ng bËt trªn s3relay task th× x1, 
+	-- Trong thêi gian th× x2
 	local nBeishu = greatnight_huang_event(4);
 	local nTongValueGift = GetTaskTemp(TASKID_TONG_TASKLINKTEMP);
 	if (nBeishu > 0) then
@@ -942,6 +948,9 @@ end
 				 " [Nh©n vËt]"..GetName()..
 				 "Trong nhiÖm vô liªn tiÕp nhËn ®­îc<money>"..nAward.."</money>phÇn th­ëng lµ l­îng b¹c!");
 	end;
+	-- KiÓm tra ho¹t ®éng "Hoµng chi ch­¬ng - §ªm Huy Hoµng"
+	-- NÕu cã bËt trªn s3relay task nh­ng kh«ng trong thêi gian hoÆc kh«ng bËt trªn s3relay task th× x1, 
+	-- Trong thêi gian th× x2
 	local nBeishu = greatnight_huang_event(4);
 	local nTongValueGift = GetTaskTemp(TASKID_TONG_TASKLINKTEMP);
 	if (nBeishu > 0) then
@@ -965,6 +974,9 @@ end
 	
 	tl_settaskcourse(3)
 	PayPlayerLinkAward();
+	-- KiÓm tra ho¹t ®éng "Hoµng chi ch­¬ng - §ªm Huy Hoµng"
+	-- NÕu cã bËt trªn s3relay task nh­ng kh«ng trong thêi gian hoÆc kh«ng bËt trªn s3relay task th× x1, 
+	-- Trong thêi gian th× x2
 	local nBeishu = greatnight_huang_event(4);
 	local nTongValueGift = GetTaskTemp(TASKID_TONG_TASKLINKTEMP);
 	if (nBeishu > 0) then
@@ -1032,7 +1044,9 @@ local myNewCancel = GetTask(DEBUG_TASKVALUE);
 	
 	tl_settaskcourse(3)	
 	PayPlayerLinkAward();
-	
+	-- KiÓm tra ho¹t ®éng "Hoµng chi ch­¬ng - §ªm Huy Hoµng"
+	-- NÕu cã bËt trªn s3relay task nh­ng kh«ng trong thêi gian hoÆc kh«ng bËt trªn s3relay task th× x1, 
+	-- Trong thêi gian th× x2
 	local nBeishu = greatnight_huang_event(4);
 	local nTongValueGift = GetTaskTemp(TASKID_TONG_TASKLINKTEMP);
 	if (nBeishu > 0) then
