@@ -16,7 +16,7 @@ tab_GameSetting =
 }
 
 function TaskShedule()
-	TaskName("ThiÕt kÕ  hÖ thèng trß ch¬i");
+	TaskName("ThiÕt kÕ hÖ thèng trß ch¬i");
 	TaskInterval(1000000);
 	TaskCountLimit(0);
 	OutputMsg("=====> BAT DAU KHOI DONG CAC TINH NANG CUA GAME VO LAM TRUYEN KY <=====");
