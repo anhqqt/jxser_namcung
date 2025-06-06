@@ -1,3 +1,4 @@
+-- Translated by Anh Quach - 07-06-2025
 -- Thªm biÕn global
 Include("\\script\\global\\anhquach\\env.lua")
 ---
@@ -224,7 +225,7 @@ function dragon_join()
 					
 					--print("player"..PlayerIndex)
 
-					-- ÔÚÕâÀïÅĞ¶ÏÊÇ·ñÓĞÔ½ÓüÆóÍ¼
+					-- ë ®©y ph¸n ®o¸n xem cã YÕn Ng÷ Kú §å kh«ng
 					w,x,y = GetWorldPos();
 					if w==208 then
 					else
@@ -254,7 +255,7 @@ function dragon_join()
 					SetMissionV(VARV_BATCH_MODEL,0)
 				end
 				
-				tbLog:PlayerActionLog("EventChienThang042011","BaoDanhVuotAi")-- ±¨ÃûÈÕÖ¾				
+				tbLog:PlayerActionLog("EventChienThang042011","BaoDanhVuotAi") -- NhËt kı ®¨ng kı			
 				return
 			end
 		end
