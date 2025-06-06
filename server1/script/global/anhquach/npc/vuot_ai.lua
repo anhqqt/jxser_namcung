@@ -18,11 +18,11 @@ function want_playboat()
 		return
 	end
 	if (GetTeamSize() < VUOT_AI_THANH_VIEN) then
-		Say("Xin lçi! §éi tham gia 'NhiÖm vô Th¸ch thøc thêi gian' cÇn ph¶i cã Ýt nhÊt <color=red>4<color> ng­êi!",0)
+		Say("Xin lçi! §éi tham gia 'NhiÖm vô Th¸ch thøc thêi gian' cÇn ph¶i cã Ýt nhÊt <color=red>"..VUOT_AI_THANH_VIEN.."<color> ng­êi!",0)
 		return
 	end
 	if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
-		Say("Xin lçi! §¼ng cÊp d­íi 50 kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+		Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
 		return
 	end
 	if (GetLevel() >= 90) then
@@ -33,8 +33,8 @@ function want_playboat()
 		PlayerIndex = GetTeamMember(i)
 		local bmbrlevel = 0
 		if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
-			Say("Xin lçi! §¼ng cÊp d­íi 50 kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
-			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp 50, kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
+			Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp "..VUOT_AI_LV_TOI_THIEU..", kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
 			return
 		end
 		if (GetLevel() >= 90) then
@@ -110,17 +110,17 @@ function dragon_join()
 		Say("Xin lçi! CÇn ph¶i lµ §éi tr­ëng míi cã t­ c¸ch b¸o danh tham gia 'NhiÖm vô Th¸ch thøc thêi gian'",0)
 		return
 	end
-	if(GetLevel() < 50) then
-		Say("Xin lçi! §¼ng cÊp d­íi 50 kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+	if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
+		Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
 		return
 	end
-	if (GetTeamSize() < 4) then
-		Say("Xin lçi! §éi tham gia 'NhiÖm vô Th¸ch thøc thêi gian' cÇn ph¶i cã Ýt nhÊt <color=red>4<color> ng­êi!",0)
+	if (GetTeamSize() < VUOT_AI_THANH_VIEN) then
+		Say("Xin lçi! §éi tham gia 'NhiÖm vô Th¸ch thøc thêi gian' cÇn ph¶i cã Ýt nhÊt <color=red>"..VUOT_AI_THANH_VIEN.."<color> ng­êi!",0)
 		return
 	end
 	
-	if (GetCash() < 10000) then
-		Say("Tham gia nhiÖm vô “Th¸ch thøc thêi gian” cÇn <color=red>1v¹n l­îng<color>. ChuÈn bÞ ®ñ tiÒn råi h·y quay l¹i!", 0)
+	if (GetCash() < VUOT_AI_TIEN) then
+		Say("Tham gia nhiÖm vô “Th¸ch thøc thêi gian” cÇn <color=red>"..(VUOT_AI_TIEN/10000).."v¹n l­îng<color>. ChuÈn bÞ ®ñ tiÒn råi h·y quay l¹i!", 0)
 		return
 	end
 	
@@ -137,9 +137,9 @@ function dragon_join()
 				return
 			end
 		end
-		if(GetLevel() < 50) then
-			Say("Xin lçi! §¼ng cÊp d­íi 50 kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
-			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp 50, kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
+		if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
+			Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp "..VUOT_AI_LV_TOI_THIEU..", kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
 			return
 		end
 		if (GetLevel() >= 90) then
@@ -204,11 +204,7 @@ function dragon_join()
 				SetMissionS(VARS_TEAM_NAME,GetName())
 				SetMissionS(VARS_TEAMLEADER_FACTION,GetLastFactionNumber())
 				SetMissionS(VARS_TEAMLEADER_GENDER,GetSex())
-				
-				-- DEBUG
-				--print(format("%s´Ó(%d,%d,%d)Î»ÖÃ½øÈëÊ±¼äµÄÌôÕ½ÈÎÎñµØÍ¼", GetName(), w, x, y));
-
-				Pay(10000)
+				Pay(VUOT_AI_TIEN)
 				
 
 				for i = 1 , getn(tabplayer) do 

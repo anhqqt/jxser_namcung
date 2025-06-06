@@ -6,5 +6,6 @@
 ---------------------------------------------------------------------------------
 
 -- V­ît ¶i
-VUOT_AI_THANH_VIEN = 1
-VUOT_AI_LV_TOI_THIEU = 50
+VUOT_AI_THANH_VIEN      = 1
+VUOT_AI_LV_TOI_THIEU    = 50
+VUOT_AI_TIEN            = 10000 -- 1 v¹n
