@@ -1,7 +1,7 @@
 -- Translated by Anh Quach - 07-06-2025
 -- Thªm biÕn global
 Include("\\script\\global\\anhquach\\env.lua")
----
+--
 Include("\\script\\missions\\challengeoftime\\include.lua")
 Include("\\script\\lib\\log.lua")
 
@@ -22,8 +22,8 @@ function want_playboat()
 		Say("Xin lçi! §éi tham gia 'NhiÖm vô Th¸ch thøc thêi gian' cÇn ph¶i cã Ýt nhÊt <color=red>"..VUOT_AI_THANH_VIEN.."<color> ng­êi!",0)
 		return
 	end
-	if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
-		Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+	if(GetLevel() < VUOT_AI_LV_MIN) then
+		Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_MIN.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
 		return
 	end
 	if (GetLevel() >= 90) then
@@ -33,9 +33,9 @@ function want_playboat()
 	for i = 1, GetTeamSize() do 
 		PlayerIndex = GetTeamMember(i)
 		local bmbrlevel = 0
-		if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
-			Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
-			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp "..VUOT_AI_LV_TOI_THIEU..", kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
+		if(GetLevel() < VUOT_AI_LV_MIN) then
+			Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_MIN.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp "..VUOT_AI_LV_MIN..", kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
 			return
 		end
 		if (GetLevel() >= 90) then
@@ -111,8 +111,8 @@ function dragon_join()
 		Say("Xin lçi! CÇn ph¶i lµ §éi tr­ëng míi cã t­ c¸ch b¸o danh tham gia 'NhiÖm vô Th¸ch thøc thêi gian'",0)
 		return
 	end
-	if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
-		Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+	if(GetLevel() < VUOT_AI_LV_MIN) then
+		Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_MIN.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
 		return
 	end
 	if (GetTeamSize() < VUOT_AI_THANH_VIEN) then
@@ -138,9 +138,9 @@ function dragon_join()
 				return
 			end
 		end
-		if(GetLevel() < VUOT_AI_LV_TOI_THIEU) then
-			Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_TOI_THIEU.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
-			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp "..VUOT_AI_LV_TOI_THIEU..", kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
+		if(GetLevel() < VUOT_AI_LV_MIN) then
+			Say("Xin lçi! §¼ng cÊp d­íi "..VUOT_AI_LV_MIN.." kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.",0);
+			Msg2Team("Xin lçi! Trong ®éi b¹n cã thµnh viªn d­íi cÊp "..VUOT_AI_LV_MIN..", kh«ng thÓ tham gia 'NhiÖm vô Th¸ch thøc thêi gian'.");
 			return
 		end
 		if (GetLevel() >= 90) then
