@@ -1,3 +1,6 @@
+-- Thªm biÕn global
+Include("\\script\\global\\anhquach\\env.lua")
+--
 Include("\\script\\event\\jiefang_jieri\\200904\\shuizei\\shuizei.lua");
 Include("\\script\\lib\\common.lua");
 
