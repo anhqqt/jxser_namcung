@@ -300,7 +300,7 @@ function bt_joinsong()
 	SetTask(1017, 0)
 	SetTask(TV_SERIESKILL_REALY,0)
 	BT_SetData(PL_BATTLECAMP, 0)
-	Msg2Player("C«ng c¸o:®· b¾t ®Çu chiÕn dŞch míi, ®iÓm tİch ph©n hiÖn giê sÏ lµ 0!")
+	Msg2Player("C«ng c¸o:®· b¾t ®Çu chiÕn dŞch míi, ®iÓm tİch lòy hiÖn giê sÏ lµ 0!")
 	Msg2Player("Hoan nghªnh! Hoan nghªnh! Ng­êi Tèng lu«n lµ anh hïng!")
 
 	--Storm ¼ÓÈëÌôÕ½
@@ -326,7 +326,7 @@ function bt_joinjin()
 	SetTask(1017, 0)
 	SetTask(TV_SERIESKILL_REALY,0)
 	BT_SetData(PL_BATTLECAMP, 0)
-	Msg2Player("C«ng c¸o:®· b¾t ®Çu chiÕn dŞch míi, ®iÓm tİch ph©n hiÖn giê sÏ lµ 0!")
+	Msg2Player("C«ng c¸o:®· b¾t ®Çu chiÕn dŞch míi, ®iÓm tİch lòy hiÖn giê sÏ lµ 0!")
 	Msg2Player("Hoan nghªnh! Hoan nghªnh! Kim quèc kh«ng thiÕu anh tµi!")
 
 	--Storm ¼ÓÈëÌôÕ½
