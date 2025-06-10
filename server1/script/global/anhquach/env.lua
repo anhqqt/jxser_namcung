@@ -23,3 +23,17 @@ THAM_CAU_XICH_THO   = 1800
 THAM_CAU_TUYET_ANH  = 1500
 THAM_CAU_DICH_LO    = 1500
 THAM_CAU_CHIEU_DA   = 2000
+
+-- Tèng Kim
+TONG_KIM_LIMIT_EXP_TUAN  = {
+    [0] = 700000,
+    [3] = 800000,
+    [4] = 1000000,
+}
+
+TONG_KIM_LIMIT_EXP_NGAY  = {
+    [0] = 700000,
+    [3] = 800000,
+    [4] = 1000000,
+}
+
