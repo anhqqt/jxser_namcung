@@ -104,7 +104,7 @@ function tl_giveplayeraward(myGiveAwardType)
 				SetTaskTemp(TASKID_TONG_TASKLINKTEMP, myMainValue); -- Ghi l¹i gi¸ trŞ sè l­îng
 				
 				-- 2007/7/11 §· söa ®æi phÇn th­ëng kinh nghiÖm D· TÈu cho phiªn b¶n ViÖt Nam ®Ó chèng lçi, nÕu ®ang ë tr¹ng th¸i mÖt mái, kinh nghiÖm sÏ ®­îc l­u vµo vËt phÈm
-				-- Trong tİch ph©n D· TÈu, cã thÓ sö dông ®Ó nhËn kinh nghiÖm khi kh«ng mÖt mái
+				-- Trong tİch lòy D· TÈu, cã thÓ sö dông ®Ó nhËn kinh nghiÖm khi kh«ng mÖt mái
 				if (GetTiredDegree() == 2) then
 					local nTemExp = floor(myMainValue / 1000);
 					if (nTemExp < 0) then

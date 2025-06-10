@@ -42,8 +42,8 @@ g_strTipMsg = {
 g_nFutureDate = 2019010424;
 STR_HEAD_FUTURE = "[Ho¹t §éng C÷u NguyÖt Phong Ba]";
 g_strFutureMsg = {
-    "9 nguyÖt phong ba ho¹t ®éng ®ang tiÕn hµnh, mçi ngµy, mçi tuÇn, mçi th¸ng ®Òu cã th­ëng cho chê ng­¬i. Tõ ®¸o trong thêi gian, tham gia ho¹t ®éng, tû nh­ tèng kim ®¹i chiÕn, d· tÈu nhiÖm vô, s¸t thñ nhiÖm vô ®Òu cã thÓ tèng vi tİch ph©n. Cã thÓ ®i kiÕn vâ l©m truyÒn thô cã lÏ ë trang chİnh kh¸n t×nh h×nh cô thÓ vµ tØ mØ ",
-    "9 nguyÖt phong ba ho¹t ®éng ®ang tiÕn hµnh, mçi ngµy vi tİch ph©n kh¶ dÜ ®æi lÊy th­ëng cho, cô thÓ nh­ sau: Mçi tuÇn tæng vi tİch ph©n bµi danh tiÒn m­êi ngo¹n gia t­¬ng thu ®­îc chu th­ëng cho, toµn bé ho¹t ®éng trong lóc, tæng vi tİch ph©n bµi danh tiÒn m­êi, t­¬ng thu ®­îc nguyÖt th­ëng cho. Qu¸n qu©n th­ëng cho vi ®¹i m· n·o nhÉn th­ëng cho cã lÏ ngÉu nhiªn thu ®­îc mét bé ®¹i hoµng kim trang bŞ, kü n¨ng + 1!",
+    "9 nguyÖt phong ba ho¹t ®éng ®ang tiÕn hµnh, mçi ngµy, mçi tuÇn, mçi th¸ng ®Òu cã th­ëng cho chê ng­¬i. Tõ ®¸o trong thêi gian, tham gia ho¹t ®éng, tû nh­ tèng kim ®¹i chiÕn, d· tÈu nhiÖm vô, s¸t thñ nhiÖm vô ®Òu cã thÓ tèng vi tİch lòy. Cã thÓ ®i kiÕn vâ l©m truyÒn thô cã lÏ ë trang chİnh kh¸n t×nh h×nh cô thÓ vµ tØ mØ ",
+    "9 nguyÖt phong ba ho¹t ®éng ®ang tiÕn hµnh, mçi ngµy vi tİch lòy kh¶ dÜ ®æi lÊy th­ëng cho, cô thÓ nh­ sau: Mçi tuÇn tæng vi tİch lòy bµi danh tiÒn m­êi ngo¹n gia t­¬ng thu ®­îc chu th­ëng cho, toµn bé ho¹t ®éng trong lóc, tæng vi tİch lòy bµi danh tiÒn m­êi, t­¬ng thu ®­îc nguyÖt th­ëng cho. Qu¸n qu©n th­ëng cho vi ®¹i m· n·o nhÉn th­ëng cho cã lÏ ngÉu nhiªn thu ®­îc mét bé ®¹i hoµng kim trang bŞ, kü n¨ng + 1!",
     "? ®iÒu chØnh b¹ch c©u hoµn giíi c¸ch: Tõ 9 nguyÖt 8 nhËt khëi, l©m an ng­êi b¸n hµng rong cã m¹i b¹ch c©u hoµn, gi¸ tiÒn lµ 1 mét ®ång tiÒn / mét: Mçi ngµy tõ 0:00 ®¸o 12:00 ly tuyÕn kinh nghiÖm vÉn nh­ cò t¨ng béi!"
 
 };

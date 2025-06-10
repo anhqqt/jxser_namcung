@@ -155,7 +155,7 @@ function tl_dealtask()
             nt_setTask(1026, nt_getTask(151))
         elseif (myTaskValueType == 5) then -- NÕu lµ t¨ng gi¸ trŞ PK
             nt_setTask(1026, GetPK())
-        elseif (myTaskValueType == 6) then -- NÕu lµ t¨ng tİch ph©n Tèng Kim
+        elseif (myTaskValueType == 6) then -- NÕu lµ t¨ng tİch lòy Tèng Kim
             nt_setTask(1026, nt_getTask(747))
         end
 
@@ -399,7 +399,7 @@ function tl_checktask(nTaskGoods)
             else
                 return 0
             end
-        elseif (myTaskValueType == 6) then -- Tèng Kim tİch ph©n
+        elseif (myTaskValueType == 6) then -- Tèng Kim tİch lòy
             myOrgValue = nt_getTask(747)
             if (myOrgValue - (nt_getTask(1026)) >= myTaskValue) then
                 return 1
