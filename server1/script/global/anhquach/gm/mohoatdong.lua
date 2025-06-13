@@ -63,4 +63,6 @@ function aqMoVuotAi()
 	ClearMapNpc(CHUANGGUAN30_MAP_ID)
 	-- Thªm bé ®Õm thêi gian
 	DynamicExecute("\\script\\missions\\challengeoftime\\chuangguang30.lua", "ChuangGuan30:AddTime")
+
+    Msg2Player("<color=yellow>§· më thµnh c«ng ho¹t ®éng: <color><color=green>V­ît ¶i<color>")
 end
