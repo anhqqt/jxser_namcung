@@ -199,14 +199,6 @@ function NewPractice_B(bIn)
 	end
 end
 
-local TONGCLAIMWAR = function (bIn)
-
-end
-
-local NOTONGCLAIMWAR = function (bIn)
-
-end
-
 -- 进入/离开可以修炼精力的地图
 --function JingliEntrance(bIn)
 --	DynamicExecute("\\script\\global\\jingli.lua", "WorldEntrance", PlayerIndex, bIn)
@@ -215,13 +207,13 @@ end
 aryFuncStore["PARTNER_OFF"] = SetPartnerSwitch
 aryFuncStore["CD_Forbid_OFF"] = CD_ForbidEnemy
 aryFuncStore["CreateTeam_OFF"] = forbidCreateTeam
--- aryFuncStore["USETOWNP_OFF"] = UseTownPSwitch	-- 功能同 forbidUseTownP
+-- aryFuncStore["USETOWNP_OFF"] = UseTownPSwitch	-- ??? forbidUseTownP
 aryFuncStore["LOGINREVOUT_OFF"] = setLogoutRevOut
 aryFuncStore["PUNISH_OFF"] = noPunish
 aryFuncStore["TISHENZHIREN"] = setTiShenZhiFu
 aryFuncStore["USETOWNP_OFF"] = forbidUseTownP
 aryFuncStore["FIGHTSTATE_OFF"] = setPeaceState
-
+aryFuncStore["FIGHTSTATE_ON"] = _ForceFightState
 aryFuncStore["SJFIGHTSTATE_OFF"] = sjFightState
 aryFuncStore["HEART_OFF"] = forbidHeart
 aryFuncStore["TONG_MAP"] = TongMap
@@ -233,4 +225,3 @@ aryFuncStore["NEWPRACTICE_A"] = NewPractice_A
 aryFuncStore["NEWPRACTICE_B"] = NewPractice_B
 aryFuncStore["TONGCLAIMWAR"] = TONGCLAIMWAR
 aryFuncStore["NOTONGCLAIMWAR"] = NOTONGCLAIMWAR
---aryFuncStore["JINGLI"] = JingliEntrance

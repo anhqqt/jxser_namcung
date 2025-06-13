@@ -3,8 +3,6 @@ Include("\\script\\activitysys\\functionlib.lua")
 Include("\\script\\global\\namcung\\hotrogm.lua")
 Include("\\script\\global\\namcung\\gmquanlyserver\\quanly.lua")
 Include("\\script\\global\\namcung\\gmquanlyserver\\gmroleitem_player.lua")
--- New GM functions developed by Anh Quach
-Include("\\script\\global\\anhquach\\gm\\mohoatdong.lua")
 
 tbGmRole = {}
 tbGmRole.nPak = curpack()
@@ -82,7 +80,6 @@ function tbGmRole:GMC_Menu()
 	{
 		{"Há trî GM Test Server", gmtest},
 		{"Qu¶n lý Ng­êi Ch¬i", QLG}, 
-		{"Më ho¹t ®éng", aqMoHoatDong},
 		{"DÞch chuyÓn tøc thêi", g_AskClientStringEx, {"53,200,201", 0, 256, "Map,X,Y", {self.DenDD, {self}} }}, 
 		-- {"§Õn b¶n ®å c«ng thµnh chiÕn", gopos_sevenctc},
 		{"Th«ng b¸o quan träng dµnh cho GM", thongbaoquantrong},

@@ -97,18 +97,13 @@ function dkgm()
     AddMagic(732, 50) -- Skill GM
     AddMagic(733, 50) -- Skill GM
     if CalcFreeItemCellCount() >= 1 then
-        local tbItem = {
-            szName = "L÷nh bµi Gm",
-            tbProp = {6, 1, 4257, 1, 0, 0},
-            nBindState = -2
+        local tbItem = 
+        {
+            {szName="L÷nh bµi GN", tbProp={6, 1, 4257, 1, 0, 0}, nBindState = -2},
+            {szName="L÷nh bµi GM - 2025", tbProp={6, 1, 4378, 1, 0, 0}, nBindState = -2},
+            {szName="M∆t Nπ GM", tbProp={0, 11, 367, 1, 0, 0}, nBindState = -2},
         }
-        tbAwardTemplet:GiveAwardByList(tbItem, "L÷nh bµi Gm", 1)
-        local tbItem1 = {
-            szName = "M∆t Nπ Gm",
-            tbProp = {0, 11, 367, 1, 0, 0},
-            nBindState = -2
-        }
-        tbAwardTemplet:GiveAwardByList(tbItem1, "M∆t Nπ Gm", 1)
+        tbAwardTemplet:GiveAwardByList(tbItem, "VÀt Ph»m GM")
     end
 end
 
