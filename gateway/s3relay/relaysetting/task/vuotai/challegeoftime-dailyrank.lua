@@ -1,17 +1,11 @@
 
-
+-- B秐g x誴 h筺g h祅g ng祔 ho箃 ng Vt 秈
 function TaskShedule()
-	--设置方案名称
-	TaskName(" ho箃 ng x誴 h筺g <Th竎h th鴆 th阨 gian> m鏸 ng祔")
-	
+	TaskName("ho箃 ng x誴 h筺g <Th竎h th鴆 th阨 gian> m鏸 ng祔")
 	TaskTime(0, 0);
-	
-	--设置间隔时间，单位为分钟
-	TaskInterval(1440) --30分钟一次
-	
-	--设置触发次数，0表示无限次数
+	TaskInterval(1440)
 	TaskCountLimit(0)
-	OutputMsg("=====> BANG XEP HANG <THACH THUC THOI GIAN> MOI NGAY=======");
+	OutputMsg("=====> [Khoi dong] Bang Xep Hang <Vuot Ai - Thach Thuc Thoi Gian> - 00:00 moi ngay");
 end
 
 function TaskContent()
@@ -24,7 +18,7 @@ function TaskContent()
 		GlobalExecute(format("dw Msg2SubWorld([[%s]])", szMsg))
 	end
 	Ladder_ClearLadder(10235);
-	OutputMsg("=====> Bang Xep Hang Vuot Ai Moi Ngay 00:00 Bat Dau==================");
+	OutputMsg("=====> Cap nhat Bang Xep hang <Vuot ai - Thach Thuc Thoi Gian> THANH CONG <====");
 end
 
 function GameSvrConnected(dwGameSvrIP)

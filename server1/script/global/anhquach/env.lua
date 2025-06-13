@@ -1,0 +1,39 @@
+---------------------------------------------------------------------------------
+-- File name    : env.lua
+-- Author       : Anh Quach
+-- Date         : 07-06-2025
+-- Description  : Quy ®Þnh c¸c biÕn dïng chung cho c¶ server
+---------------------------------------------------------------------------------
+
+-- V­ît ¶i
+VUOT_AI_THANH_VIEN  = 1
+VUOT_AI_LV_MIN      = 50
+VUOT_AI_TIEN        = 10000 -- 1 v¹n
+
+-- D· TÈu
+DA_TAU_LV_MIN = 30
+DA_TAU_EXP_10 = 1000000
+DA_TAU_EXP_20 = 2000000
+DA_TAU_EXP_30 = 3000000
+DA_TAU_EXP_40 = 10000000
+
+-- Th©m C©u
+THAM_CAU_O_VAN      = 1500
+THAM_CAU_XICH_THO   = 1800
+THAM_CAU_TUYET_ANH  = 1500
+THAM_CAU_DICH_LO    = 1500
+THAM_CAU_CHIEU_DA   = 2000
+
+-- Tèng Kim
+TONG_KIM_LIMIT_EXP_TUAN  = {
+    [0] = 700000,
+    [3] = 800000,
+    [4] = 1000000,
+}
+
+TONG_KIM_LIMIT_EXP_NGAY  = {
+    [0] = 700000,
+    [3] = 800000,
+    [4] = 1000000,
+}
+

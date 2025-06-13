@@ -1,0 +1,689 @@
+MAP_ID	GAMESVR_SET_1	GAMESVR_SET_2	GAMESVR_SET_3	GAMESVR_SET_4	GAMESVR_SET_5	GAMESVR_SET_6	GAMESVR_SET_7	GAMESVR_SET_8	GAMESVR_SET_9	GAMESVR_SET_10	GAMESVR_SET_11	GAMESVR_SET_12	GAMESVR_SET_13	GAMESVR_SET_14	GAMESVR_SET_15	GAMESVR_SET_16	±¸×¢
+57	1	1	"1,2,3"	"1,2,3,4"	"1,2,3,4,5"	"1,2,3,4,5,6"	"1,2,3,4,5,6,7"	"1,2,3,4,5,6,7,8"									Hoµnh S¬n ®¹i ®×nh
+209	1	1	"1,2"	"1,2"	"1,3,4"	"1,3,4"	"1,3,4"	"1,3,4"									DiÔn vâ tr­êng
+9	1	1	1	1	1	1	1	1									Tr­êng Giang Nguyªn §Çu
+10	1	1	1	1	1	1	1	1									Nh¹n Th¹ch ®éng
+11	1	1	1	1	1	1	1	1									 Thµnh §«
+12	1	1	1	1	1	1	1	1									§Þa ®¹o hËu viÖn TÝn T­íng tù
+13	1	1	1	1	1	1	1	1									Nga My ph¸i
+14	1	1	1	1	1	1	1	1									M·nh Hæ ®éng
+15	1	1	1	1	1	1	1	1									Gi¶ng Kinh §­êng
+16	1	1	1	1	1	1	1	1									TiÒn ®iÖn
+17	1	1	1	1	1	1	1	1									ChÝnh ®iÖn
+18	1	1	1	1	1	1	1	1									T¶ Thiªn ®iÖn
+19	1	1	1	1	1	1	1	1									KiÕm C¸c T©y Nam
+20	1	1	1	1	1	1	1	1									Giang T©n Th«n
+21	1	1	1	1	1	1	1	1									 Thanh Thµnh s¬n
+22	1	1	1	1	1	1	1	1									B¹ch V©n ®éng
+23	1	1	1	1	1	1	1	1									ThÇn Tiªn ®éng
+24	1	1	1	1	1	1	1	1									H­ëng Thñy ®éng
+25	1	1	1	1	1	1	1	1									§­êng M«n
+26	1	1	1	1	1	1	1	1									Tróc T¬ ®éng tÇng 1
+27	1	1	1	1	1	1	1	1									Tróc T¬ ®éng tÇng 2
+28	1	1	1	1	1	1	1	1									Tróc T¬ ®éng tÇng 3
+29	1	1	1	1	1	1	1	1									¸m khÝ phßng
+30	1	1	1	1	1	1	1	1									Háa khÝ phßng
+31	1	1	1	1	1	1	1	1									Vâ c«ng phßng
+32	1	1	1	1	1	1	1	1									Y d­îc phßng
+33	1	1	1	1	1	1	1	1									Phßng kh¸ch
+34	1	1	1	1	1	1	1	1									Phßng nghÞ sù
+35	1	1	1	1	1	1	1	1									ChÝnh phßng
+36	1	1	1	1	1	1	1	1									TÕ tæ ®­êng
+41	1	1	2	2	3	3	3	3									Phôc Ng­u S¬n T©y
+42	1	1	2	2	3	3	3	3									Thiªn T©m ®éng
+43	1	1	2	2	3	3	3	3									KiÕm C¸c Trung Nguyªn
+53	1	1	2	2	4	4	4	4									Ba L¨ng huyÖn
+78	1	1	2	2	4	4	4	4									 T­¬ng D­¬ng
+79	1	1	2	2	4	4	4	4									MËt ®¹o Nha m«n T­¬ng D­¬ng
+80	1	1	2	2	3	3	3	3									 D­¬ng Ch©u
+81	1	1	2	2	4	4	4	4									Vâ §ang ph¸i
+82	1	1	2	2	4	4	4	4									Mª cung §¸y giÕng
+83	1	1	2	2	4	4	4	4									Háa Lang ®éng
+84	1	1	2	2	4	4	4	4									Tö Tiªu ®¹i ®iÖn
+85	1	1	2	2	4	4	4	4									ThËp Ph­¬ng ®iÖn
+86	1	1	2	2	4	4	4	4									Phô MÉu ®iÖn
+87	1	1	2	2	4	4	4	4									Long Hæ ®iÖn
+88	1	1	2	2	4	4	4	4									Nh· thÊt 1
+89	1	1	2	2	4	4	4	4									Nh· thÊt 2
+90	1	1	2	2	3	3	3	3									Phôc Ng­u S¬n §«ng
+91	1	1	2	2	3	3	3	3									Mª cung Kª Qu¸n ®éng
+92	1	1	2	2	3	3	3	3									Thôc C­¬ng s¬n
+93	1	1	2	2	3	3	3	3									TiÕn Cóc ®éng
+94	1	1	2	2	3	3	3	3									Linh Cèc ®éng
+101	1	1	2	2	3	3	3	3									§¹o H­¬ng th«n
+102	1	1	2	2	3	3	3	3									Th¸nh ®éng tÇng 2
+103	1	1	2	2	3	3	3	3									ThiÕu L©m ph¸i
+104	1	1	2	2	3	3	3	3									Tµng Kinh C¸c
+105	1	1	2	2	3	3	3	3									§¹t Ma §­êng
+106	1	1	2	2	3	3	3	3									§¹i Hïng b¶o ®iÖn
+107	1	1	2	2	3	3	3	3									ThiÕu L©m §Ö tö phßng
+108	1	1	2	2	3	3	3	3									ThiÕu L©m §Ö tö phßng
+109	1	1	2	2	3	3	3	3									Ph­¬ng tr­îng ThiÒn phßng
+110	1	1	2	2	3	3	3	3									La H¸n §­êng
+111	1	1	2	2	3	3	3	3									Méc Nh©n H¹ng
+112	1	1	2	2	3	3	3	3									Thiªn PhËt ®iÖn
+113	1	1	2	2	3	3	3	3									MËt thÊt ThiÕu L©m
+114	1	1	2	2	3	3	3	3									108 La H¸n trËn
+115	1	1	2	2	4	4	4	4									C¸i Bang
+116	1	1	2	2	4	4	4	4									T­êng V©n ®éng tÇng 1 
+117	1	1	2	2	4	4	4	4									T­êng V©n ®éng tÇng 2
+118	1	1	2	2	4	4	4	4									T­êng V©n ®éng tÇng 3
+119	1	1	2	2	4	4	4	4									T­êng V©n ®éng tÇng 4
+120	1	1	2	2	4	4	4	4									T­êng V©n ®éng tÇng 5
+122	1	1	2	2	3	3	3	3									Hoµng Hµ Nguyªn §Çu
+123	1	1	2	2	3	3	3	3									L·o Hæ ®éng
+124	1	1	2	2	3	3	3	3									C¸n Viªn ®éng
+125	1	1	2	2	4	4	4	4									L­u Tiªn ®éng tÇng 1
+126	1	1	2	2	4	4	4	4									L­u Tiªn ®éng tÇng 2
+127	1	1	2	2	4	4	4	4									L­u Tiªn ®éng tÇng 3
+128	1	1	2	2	4	4	4	4									L­u Tiªn ®éng tÇng 4
+129	1	1	2	2	4	4	4	4									L­u Tiªn ®éng tÇng 5
+130	1	1	2	2	4	4	4	4									L­u Tiªn ®éng tÇng 6
+145	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 1
+146	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 2
+147	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 3
+148	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 4
+149	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 5
+150	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 6
+151	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 7
+152	1	1	2	2	3	3	3	3									TuyÕt B¸o ®éng tÇng 8
+153	1	1	1	1	2	2	2	2									Th¹ch Cæ trÊn
+154	1	1	1	1	2	2	2	2									Thóy Yªn m«n
+155	1	1	1	1	2	2	2	2									B¸ch Hoa ®×nh
+156	1	1	1	1	2	2	2	2									phßng §Ö tö
+157	1	1	1	1	2	2	2	2									phßng §Ö tö
+158	1	1	1	1	2	2	2	2									Mª cung cÊm ®Þa
+159	1	1	1	1	2	2	2	2									M«n lÇu
+160	1	1	1	1	2	2	2	2									Thñ Ngäc s¶nh
+161	1	1	1	1	2	2	2	2									Thóy Yªn LÇu
+162	1	1	1	1	2	2	2	2									§¹i Lý phñ
+163	1	1	1	1	2	2	2	2									¸c b¸ ®Þa ®¹o
+164	1	1	1	1	2	2	2	2									Thiªn TÇm th¸p tÇng 1
+165	1	1	1	1	2	2	2	2									Thiªn TÇm th¸p tÇng 2
+166	1	1	1	1	2	2	2	2									Thiªn TÇm th¸p tÇng 3
+167	1	1	1	1	2	2	2	2									 §iÓm Th­¬ng s¬n
+168	1	1	1	1	2	2	2	2									Phông Nh·n ®éng
+169	1	1	1	1	2	2	2	2									Long Nh·n ®éng
+170	1	1	1	1	2	2	2	2									Thæ PhØ ®éng
+171	1	1	1	1	2	2	2	2									§iÓm Th­¬ng ®éng tÇng 1
+172	1	1	1	1	2	2	2	2									§iÓm Th­¬ng ®éng tÇng 2
+173	1	1	1	1	2	2	2	2									§iÓm Th­¬ng ®éng tÇng 3
+174	1	1	1	1	1	1	1	1									Long TuyÒn th«n
+179	1	1	1	1	2	2	2	2									La Tiªu s¬n
+180	1	1	1	1	2	2	2	2									Long Cung ®éng
+181	1	1	1	1	2	2	2	2									L­ìng Thñy ®éng
+182	1	1	1	1	2	2	2	2									NghiÖt Long ®éng
+193	1	1	1	1	2	2	2	2									Vò Di s¬n
+194	1	1	1	1	2	2	2	2									Ngäc Hoa ®éng
+195	1	1	1	1	2	2	2	2									Nh¹n §·ng s¬n
+196	1	1	1	1	2	2	2	2									D­¬ng Gi¸c ®éng
+198	1	1	1	1	2	2	2	2									Thanh khª ®éng
+199	1	1	2	2	4	4	4	4									Vò L¨ng ®éng
+200	1	1	2	2	3	3	3	3									Cæ D­¬ng ®éng
+202	1	1	1	1	1	1	1	1									Phï Dung ®éng
+203	1	1	1	1	2	2	2	2									V« Danh ®éng
+205	1	1	2	2	3	3	3	3									D­¬ng Trung ®éng
+229	1	1	1	1	1	1	1	1									TÕ Tæ ®×nh (chiÕn ®Êu) 
+230	1	1	1	1	2	2	2	2									Trong thµnh §¹i Lý (chiÕn ®Êu) 
+231	1	1	1	1	2	2	2	2									N¬i ë Th­¬ng L­¬ng kh¸ch
+232	1	1	2	2	3	3	3	3									N¬i ë Chu V©n TuyÒn
+233	1	1	2	2	3	3	3	3									N¬i ë M¹c Kh«ng NguyÖt
+236	1	1	2	2	3	3	3	3									§µo Hoa ®¶o (2) 
+237	1	1	2	2	4	4	4	4									§µo Hoa ®¶o (3) 
+239	1	1	1	1	2	2	2	2									§µo Hoa ®¶o (5) 
+240	1	1	1	1	1	1	1	1									§µo Hoa ®¶o (6) 
+243	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o (2) 
+244	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o (3) 
+246	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o (5) 
+247	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o (6) 
+259	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+260	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+261	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+262	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+263	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+264	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+265	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+266	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+267	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+268	1	1	1	1	1	1	1	1									TÈy Tñy ®¶o s¬n ®éng (2) 
+269	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+270	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+271	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+272	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+273	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+274	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+275	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+276	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+277	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+278	1	1	1	1	2	2	2	2									TÈy Tñy ®¶o s¬n ®éng (3) 
+289	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+290	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+291	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+292	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+293	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+294	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+295	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+296	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+297	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+298	1	1	2	2	4	4	4	4									TÈy Tñy ®¶o s¬n ®éng (5) 
+299	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+300	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+301	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+302	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+303	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+304	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+305	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+306	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+307	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+308	1	1	2	2	3	3	3	3									TÈy Tñy ®¶o s¬n ®éng (6) 
+319	1	1	2	2	3	3	3	3									L©m Du Quan
+320	1	1	2	2	4	4	4	4									Ch©n nói Tr­êng B¹ch
+324	1	1	1	1	3	3	3	3									§iÓm b¸o danh Tèng Kim (trung cÊp) 
+325	1	1	3	3	2	2	2	2									§iÓm b¸o danh Tèng Kim (cao cÊp) 
+327	1	1	1	1	3	3	3	3									Khu vùc b×nh nguyªn (trung cÊp) 
+328	1	1	3	3	2	2	2	2									Khu vùc b×nh nguyªn (cao cÊp) 
+330	1	1	1	1	3	3	3	3									Khu vùc Hµ T©n (trung cÊp) 
+331	1	1	3	3	2	2	2	2									Khu vùc Hµ T©n (cao cÊp) 
+332	1	1	1	1	2	2	2	2									Thiªn Long Tù
+333	1	1	1	1	2	2	2	2									Hoa S¬n ph¸i
+336	1	1	1	4	4	4	4	4									Phong L¨ng ®é
+337	1	1	1	4	4	4	4	4									BÕn thuyÒn 1
+338	1	1	1	4	4	4	4	4									BÕn thuyÒn 2
+339	1	1	1	4	4	4	4	4									BÕn thuyÒn 3
+340	1	1	1	1	1	1	1	1									M¹c Cao QuËt
+341	1	1	1	4	4	4	4	4									M¹c B¾c Th¶o Nguyªn
+345	1	1	1	1	3	3	3	3									Thµnh trÊn (trung cÊp) 
+346	1	1	3	3	2	2	2	2									Thµnh trÊn (cao cÊp) 
+348	1	1	1	1	3	3	3	3									S¬n cèc (trung cÊp) 
+349	1	1	3	3	2	2	2	2									S¬n cèc (cao cÊp) 
+351	1	1	1	1	3	3	3	3									Th©m l©m (trung cÊp) 
+352	1	1	3	3	2	2	2	2									Th©m l©m (cao cÊp) 
+354	1	1	1	1	3	3	3	3									Doanh tr¹i (trung cÊp) 
+355	1	1	3	3	2	2	2	2									Doanh tr¹i (cao cÊp) 
+358	1	1	1	1	3	3	3	3									§¬n ®Êu B×nh nguyªn (Trung cÊp) 
+359	1	1	3	3	2	2	2	2									§¬n ®Êu B×nh nguyªn (Cao cÊp) 
+361	1	1	1	1	3	3	3	3									§¬n ®Êu Hµ t©n (Trung cÊp) 
+362	1	1	3	3	2	2	2	2									§¬n ®Êu Hµ t©n (Cao cÊp) 
+364	1	1	1	1	3	3	3	3									§¬n ®Êu Th©m l©m (Trung cÊp) 
+365	1	1	3	3	2	2	2	2									§¬n ®Êu Th©m l©m (Cao cÊp) 
+367	1	1	1	1	3	3	3	3									§¬n ®Êu S¬n cèc (Trung cÊp) 
+368	1	1	3	3	2	2	2	2									§¬n ®Êu S¬n cèc (Cao cÊp) 
+370	1	1	1	1	3	3	3	3									§¬n ®Êu Thµnh trÊn (Trung cÊp) 
+371	1	1	3	3	2	2	2	2									§¬n ®Êu Thµnh trÊn (Cao cÊp) 
+373	1	1	1	1	3	3	3	3									§¬n ®Êu Doanh tr¹i (Trung cÊp) 
+374	1	1	3	3	2	2	2	2									§¬n ®Êu Doanh tr¹i (Cao cÊp) 
+376	1	1	1	1	3	3	3	3									ChiÕn tr­êng Tèng Kim cò (trung cÊp) 
+377	1	1	3	3	2	2	2	2									ChiÕn tr­êng Tèng Kim (cao cÊp) 
+379	1	1	1	1	3	3	3	3									Xung phong (Trung cÊp) 
+380	1	1	3	3	2	2	2	2									Xung phong (Cao cÊp) 
+382	1	1	1	1	3	3	3	3									Th©m l©m (trung cÊp) 
+383	1	1	3	3	2	2	2	2									Th©m l©m (cao cÊp) 
+385	1	1	1	1	3	3	3	3									CÇu ranh giíi (trung cÊp) 
+386	1	1	3	3	2	2	2	2									CÇu ranh giíi (cao cÊp)
+393	1	1	2	2	1	1	1	1									Thiªn B¶o khè (trªn 120)
+394	1	1	2	2	1	1	1	1									Thiªn B¶o khè (trªn 120)
+395	1	1	2	2	1	1	1	1									Thiªn B¶o khè (trªn 120) 
+416	1	1	1	1	1	1	1	1									ThuyÒn Rång s¬ cÊp (1) 
+417	1	1	1	1	2	2	2	2									ThuyÒn Rång s¬ cÊp (2) 
+418	1	1	2	2	3	3	3	3									ThuyÒn Rång s¬ cÊp (3) 
+419	1	1	2	2	4	4	4	4									ThuyÒn Rång s¬ cÊp (4) 
+424	1	1	1	1	1	1	1	1									ThuyÒn Rång cao cÊp (1) 
+425	1	1	1	1	1	1	1	1									ThuyÒn Rång cao cÊp (2) 
+426	1	1	1	1	2	2	2	2									ThuyÒn Rång cao cÊp (3) 
+427	1	1	1	1	2	2	2	2									ThuyÒn Rång cao cÊp (4) 
+428	1	1	2	2	3	3	3	3									ThuyÒn Rång cao cÊp (5) 
+429	1	1	2	2	3	3	3	3									ThuyÒn Rång cao cÊp (6) 
+430	1	1	2	2	4	4	4	4									ThuyÒn Rång cao cÊp (7) 
+431	1	1	2	2	4	4	4	4									ThuyÒn Rång cao cÊp (8) 
+440	1	1	1	1	1	1	1	1									ThuyÒn Rång s¬ cÊp (9) 
+441	1	1	1	1	2	2	2	2									ThuyÒn Rång s¬ cÊp (10) 
+442	1	1	2	2	3	3	3	3									ThuyÒn Rång s¬ cÊp (11) 
+443	1	1	2	2	4	4	4	4									ThuyÒn Rång s¬ cÊp (12) 
+448	1	1	1	1	1	1	1	1									ThuyÒn Rång cao cÊp (17) 
+449	1	1	1	1	1	1	1	1									ThuyÒn Rång cao cÊp (18) 
+450	1	1	1	1	2	2	2	2									ThuyÒn Rång cao cÊp (19) 
+451	1	1	1	1	2	2	2	2									ThuyÒn Rång cao cÊp (20) 
+452	1	1	2	2	3	3	3	3									ThuyÒn Rång cao cÊp (21) 
+453	1	1	2	2	3	3	3	3									ThuyÒn Rång cao cÊp (22) 
+454	1	1	2	2	4	4	4	4									ThuyÒn Rång cao cÊp (23) 
+455	1	1	2	2	4	4	4	4									ThuyÒn Rång cao cÊp (24) 
+464	1	1	1	1	1	1	1	1									Th¸ch thøc thêi gian (S¬ cÊp 1) 
+465	1	1	1	1	1	1	1	1									Th¸ch thøc thêi gian (S¬ cÊp 2) 
+466	1	1	2	2	2	2	2	2									Th¸ch thøc thêi gian (S¬ cÊp 3) 
+467	1	1	2	2	3	3	3	3									Th¸ch thøc thêi gian (S¬ cÊp 4) 
+468	1	1	3	3	4	4	4	4									Th¸ch thøc thêi gian (S¬ cÊp 5) 
+480	1	1	1	1	1	1	1	1									Th¸ch thøc thêi gian (Cao cÊp 1) 
+481	1	1	1	1	1	1	1	1									Th¸ch thøc thêi gian (Cao cÊp 2) 
+482	1	1	1	1	1	1	1	1									Th¸ch thøc thêi gian (Cao cÊp 3) 
+483	1	1	1	1	1	1	1	1									Th¸ch thøc thêi gian (Cao cÊp 4) 
+484	1	1	2	2	2	2	2	2									Th¸ch thøc thêi gian (Cao cÊp 5) 
+485	1	1	2	2	2	2	2	2									Th¸ch thøc thêi gian (Cao cÊp 6) 
+486	1	1	2	2	3	3	3	3									Th¸ch thøc thêi gian (Cao cÊp 7) 
+487	1	1	2	2	3	3	3	3									Th¸ch thøc thêi gian (Cao cÊp 8) 
+488	1	1	3	3	4	4	4	4									Th¸ch thøc thêi gian (Cao cÊp 9) 
+489	1	1	3	3	4	4	4	4									Th¸ch thøc thêi gian (Cao cÊp 10) 
+512	1	1	1	1	3	3	3	3									V©n Trung §¹o
+513	1	1	1	4	2	2	2	2									B¸ch Hoa Cèc
+515	1	1	2	2	4	4	4	4									Tö Hµ LÜnh
+516	1	1	2	2	3	3	3	3									Thñ thµnh phe Tèng
+517	1	1	1	1	2	2	2	2									Thñ thµnh phe Kim
+518	1	1	2	2	3	3	3	3									B¸o danh thñ thµnh phe Tèng
+519	1	1	1	1	2	2	2	2									B¸o danh thñ thµnh phe Kim
+521	1	1	1	1	1	1	1	1									Minh NguyÖt trÊn (Thµnh §«) 
+523	1	1	2	2	4	4	4	4									Minh NguyÖt trÊn (T­¬ng D­¬ng) 
+524	1	1	2	2	3	3	3	3									Minh NguyÖt trÊn (D­¬ng Ch©u) 
+525	1	1	1	1	2	2	2	2									Minh NguyÖt trÊn (§¹i Lý) 
+527	1	1	1	1	2	2	2	2									Khu vùc liªn ®Êu (1) 
+528	1	1	2	2	3	3	3	3									Khu vùc liªn ®Êu (2) 
+531	1	1	1	1	2	2	2	2									ChuÈn bÞ liªn ®Êu (1)
+532	1	1	2	2	3	3	3	3									ChuÈn bÞ liªn ®Êu (2)
+535	1	1	1	1	2	2	2	2									§Êu tr­êng liªn ®Êu (1)
+536	1	1	2	2	3	3	3	3									§Êu tr­êng liªn ®Êu (2)
+540	1	1	3	3	2	2	2	2									Héi tr­êng liªn ®Êu (1)
+541	1	1	3	3	2	2	2	2									§Êu tr­êng liªn ®Êu (1)
+542	1	1	3	3	2	2	2	2									Héi tr­êng liªn ®Êu (2)
+543	1	1	3	3	2	2	2	2									§Êu tr­êng liªn ®Êu (2)
+544	1	1	3	3	2	2	2	2									Héi tr­êng liªn ®Êu (3)
+545	1	1	3	3	2	2	2	2									§Êu tr­êng liªn ®Êu (3)
+546	1	1	3	3	2	2	2	2									Héi tr­êng liªn ®Êu (4)
+547	1	1	3	3	2	2	2	2									§Êu tr­êng liªn ®Êu (4)
+548	1	1	3	3	2	2	2	2									Héi tr­êng liªn ®Êu (5)
+549	1	1	3	3	2	2	2	2									§Êu tr­êng liªn ®Êu (5)
+550	1	1	1	4	3	3	3	3									Héi tr­êng liªn ®Êu (6)
+551	1	1	1	4	3	3	3	3									§Êu tr­êng liªn ®Êu (6)
+552	1	1	1	4	3	3	3	3									Héi tr­êng liªn ®Êu (7)
+553	1	1	1	4	3	3	3	3									§Êu tr­êng liªn ®Êu (7)
+554	1	1	1	4	3	3	3	3									Héi tr­êng liªn ®Êu (8)
+555	1	1	1	4	3	3	3	3									§Êu tr­êng liªn ®Êu (8)
+556	1	1	1	4	3	3	3	3									Héi tr­êng liªn ®Êu (9)
+557	1	1	1	4	3	3	3	3									§Êu tr­êng liªn ®Êu (9)
+558	1	1	1	4	3	3	3	3									Héi tr­êng liªn ®Êu (10)
+559	1	1	1	4	3	3	3	3									§Êu tr­êng liªn ®Êu (10)
+570	1	1	3	3	2	2	2	2									HËu tr­êng liªn ®Êu (1)
+571	1	1	3	3	2	2	2	2									HËu tr­êng liªn ®Êu (2)
+572	1	1	3	3	2	2	2	2									HËu tr­êng liªn ®Êu (3)
+573	1	1	3	3	2	2	2	2									HËu tr­êng liªn ®Êu (4)
+574	1	1	3	3	2	2	2	2									HËu tr­êng liªn ®Êu (5)
+575	1	1	1	4	3	3	3	3									HËu tr­êng liªn ®Êu (6)
+576	1	1	1	4	3	3	3	3									HËu tr­êng liªn ®Êu (7)
+577	1	1	1	4	3	3	3	3									HËu tr­êng liªn ®Êu (8)
+578	1	1	1	4	3	3	3	3									HËu tr­êng liªn ®Êu (9)
+579	1	1	1	4	3	3	3	3									HËu tr­êng liªn ®Êu (10)
+580	1	1	2	2	3	3	3	3									ChiÕn tr­êng phe Tèng
+581	1	1	1	1	2	2	2	2									ChiÕn tr­êng phe Kim
+582	1	1	2	2	3	3	3	3									Hang Gi¸ng Sinh_Khu vùc chuÈn bÞ
+583	1	1	2	2	3	3	3	3									Hang Gi¸ng Sinh
+586	1	1	1	1	1	1	1	1									Khu vùc bang héi chung 1
+587	1	1	1	1	1	1	1	1									Khu vùc bang héi S¬n Thµnh
+588	1	1	2	2	2	2	2	4									Khu vùc bang héi Miªu C­¬ng
+595	1	1	2	2	2	2	2	4									Khu vùc bang héi chung 2
+605	1	1	2	2	2	2	2	2									ChiÕn tr­êng MËt L©m
+606	1	1	3	3	3	3	3	3									ChiÕn tr­êng MËt L©m
+607	1	1	1	4	4	4	4	4									ChiÕn tr­êng MËt L©m
+608	1	1	2	2	2	2	2	2									Khu vùc chuÈn bÞ
+609	1	1	2	2	2	2	2	2									Khu vùc chuÈn bÞ
+610	1	1	3	3	3	3	3	3									Khu vùc chuÈn bÞ
+611	1	1	3	3	3	3	3	3									Khu vùc chuÈn bÞ
+612	1	1	1	4	4	4	4	4									Khu vùc chuÈn bÞ
+613	1	1	1	4	4	4	4	4									Khu vùc chuÈn bÞ
+825	1	1	2	2	3	3	3	3									Khu vùc chuÈn bÞ - TÕt §oan Ngä
+826	1	1	2	2	3	3	3	3									Khu vùc TÕt §oan Ngä
+829	1	1	1	1	1	1	1	1									Tr­êng Ca M«n cÊm ®Þa
+849	1	1	1	1	2	2	2	2									Khu vùc chuÈn bÞ - TÕt §oan Ngä
+850	1	1	1	1	2	2	2	2									Khu vùc TÕt §oan Ngä
+869	1	1	1	1	3	3	3	3									ChiÕn tr­êng Hoang M¹c (trung)
+870	1	1	3	3	2	2	2	2									ChiÕn tr­êng Hoang M¹c (cao)
+877	1	1	1	1	3	3	3	3									Cæ thµnh (trung cÊp)
+878	1	1	3	3	2	2	2	2									Cæ thµnh (cao cÊp)
+887	1	1	1	1	3	3	3	3									»ÄÊ¯Áë³åÍ»Õ½£¨ÖÐ£©
+888	1	1	3	3	2	2	2	2									»ÄÊ¯Áë³åÍ»Õ½£¨¸ß£©
+890	1	1	1	1	3	3	3	3									ÓñÁÖ×è»÷Õ½£¨ÖÐ£©
+891	1	1	3	3	2	2	2	2									ÓñÁÖ×è»÷Õ½£¨¸ß£©
+892	1	1	2	2	3	3	3	3									èóµºÃØ¾³
+894	1	1	1	1	2	2	2	2									ÍÚ±¦»î¶¯
+898	1	1	3	3	2	2	2	2									Quèc chiÕn Giíi KiÒu chiÕn
+899	1	1	3	3	2	2	2	2									Quèc chiÕn MËt L©m chiÕn
+900	1	1	3	3	2	2	2	2									Quèc chiÕn Hoµng Sa L©m
+933	1	1	1	1	1	1	1	1		1							¹¥³ÇÕ½³É¶¼Õ½³¡
+928	1	1	1	1	2	2	2	2		2							ChiÕn tr­êng C«ng Thµnh ChiÕn §¹i Lý
+931	1	1	2	2	4	4	4	4		4							ChiÕn tr­êng C«ng Thµnh ChiÕn T­¬ng D­¬ng
+932	1	1	2	2	3	3	3	3		3							ChiÕn tr­êng C«ng Thµnh ChiÕn D­¬ng Ch©u
+949	1	1	2	2	3	3	3	3		3							ThÝ KiÕm Cèc
+968	1	1	2	2	3	3	3	3		3							NguyÖt Ca §¶o
+969	1	1	2	2	3	3	3	3		3							NguyÖt Ca MËt Cèc
+973	1	1	1	1	3	3	3	3		3							§iÓm b¸o danh liªn server 2
+974	1	1	3	3	2	2	2	2		2							§iÓm b¸o danh liªn server 3
+979	1	1	1	1	1	1	1	1		1							Bang héi thµnh b¶o
+980	1	1	1	1	2	2	2	2		2							Bang héi thµnh b¶o
+982	1	1	2	2	4	4	4	4		4							Bang héi thµnh b¶o
+983	1	1	2	2	3	3	3	3		3							Bang héi thµnh b¶o
+991	1	1	1	4	4	4	4	4									ChiÕn Long §éng - Cao
+992	1	1	1	4	4	4	4	4									Tiªu Bang ChiÕn
+864	1	1	1	4	4	4	4	4									L«i ®µi Hoa S¬n (Trung cÊp)
+865	1	1	1	4	4	4	4	4									L«i ®µi Hoa S¬n (Cao cÊp)
+866	1	1	1	4	4	4	4	4									Ch©n nói Hoa S¬n (Trung cÊp)
+867	1	1	1	4	4	4	4	4									Ch©n nói Hoa S¬n (Cao cÊp)
+1	1	2	1	1	5	5	5	5									 Ph­îng T­êng
+2	1	2	3	3	5	5	5	5									 Hoa S¬n
+3	1	2	3	3	5	5	5	5									KiÕm C¸c T©y B¾c
+4	1	2	3	3	5	5	5	5									Kim Quang ®éng
+5	1	2	3	3	5	5	5	5									Kinh Hoµng ®éng
+6	1	2	3	3	5	5	5	5									Táa V©n ®éng
+7	1	2	3	3	5	5	5	5									TÇn L¨ng
+8	1	2	3	3	5	5	5	5									L¨ng TÇn Thñy Hoµng
+37	1	2	3	3	4	6	6	6									 BiÖn Kinh
+38	1	2	3	3	4	6	6	6									ThiÕt th¸p tÇng 1 
+39	1	2	3	3	4	6	6	6									ThiÕt th¸p tÇng 2 
+40	1	2	3	3	4	6	6	6									ThiÕt th¸p tÇng 3
+44	1	2	2	4	1	1	7	7									ChiÕn tr­êng Tèng Kim
+45	1	2	3	3	2	6	6	6									Thiªn NhÉn gi¸o
+46	1	2	3	3	2	6	6	6									Thiªn NhÉn Gi¸o tÇng 1
+47	1	2	3	3	2	6	6	6									Thiªn NhÉn Gi¸o tÇng 2
+48	1	2	3	3	2	6	6	6									Thiªn NhÉn Gi¸o tÇng 2
+49	1	2	3	3	2	6	6	6									Thiªn NhÉn Gi¸o tÇng 3
+50	1	2	3	3	2	6	6	6									ThÊt S¸t ®éng
+51	1	2	3	3	2	6	6	6									Th¸nh ®éng tÇng 1
+52	1	2	3	3	2	6	6	6									Th¸nh ®éng tÇng 2
+54	1	2	2	4	1	1	7	7									Nam Nh¹c trÊn
+55	1	2	2	4	1	1	7	7									§µo Hoa Nguyªn
+56	1	2	2	4	1	1	7	7									Hoµnh S¬n Ph¸i
+58	1	2	2	4	1	1	7	7									§éc C« KiÕm Ngäa thÊt
+59	1	2	2	4	1	1	7	7									Thiªn V­¬ng Bang
+60	1	2	2	4	1	1	7	7									TiÒn ®iÖn
+61	1	2	2	4	1	1	7	7									Thiªn V­¬ng §¹i ®iÖn
+62	1	2	2	4	1	1	7	7									TÈm cung
+63	1	2	2	4	1	1	7	7									Phßng ®Ö tö 1
+64	1	2	2	4	1	1	7	7									Phßng ®Ö tö 2
+65	1	2	2	4	1	1	7	7									Thiªn V­¬ng ®¶o s¬n ®éng
+66	1	2	2	4	1	1	7	7									§¸y §éng §×nh hå tÇng 1
+67	1	2	2	4	1	1	7	7									§¸y §éng §×nh hå tÇng 2
+68	1	2	2	4	1	1	7	7									Thanh Loa ®¶o
+69	1	2	2	4	1	1	7	7									Thanh Loa ®¶o s¬n ®éng
+70	1	2	3	3	5	5	5	5									Vò L¨ng s¬n
+71	1	2	3	3	5	5	5	5									B¹ch Thñy ®éng
+72	1	2	3	3	5	5	5	5									§¹i Tï ®éng
+73	1	2	3	3	5	5	5	5									Phôc L­u ®éng
+74	1	2	3	3	5	5	5	5									Miªu LÜnh
+75	1	2	3	3	5	5	5	5									Kho¶ Lang ®éng
+76	1	2	3	3	5	5	5	5									S¬n B¶o ®éng
+77	1	2	3	3	5	5	5	5									YÕn Tö ®éng
+99	1	2	3	3	5	5	5	5									VÜnh L¹c trÊn
+100	1	2	3	3	4	6	6	6									Chu Tiªn trÊn
+121	1	2	3	3	5	6	6	6									Long M«n trÊn
+131	1	2	3	3	5	6	6	6									C«n L«n ph¸i
+132	1	2	3	3	5	6	6	6									B¨ng HuyÖt ®éng
+133	1	2	3	3	5	6	6	6									Phßng §Ö tö
+134	1	2	3	3	5	6	6	6									Phßng §Ö tö
+135	1	2	3	3	5	6	6	6									KiÕn TÝnh Phong s¬n ®éng
+136	1	2	3	3	5	6	6	6									Kho¸i Ho¹t L©m
+137	1	2	3	3	5	6	6	6									Thiªn Vi ®iÖn
+138	1	2	3	3	5	6	6	6									ChÝnh ®iÖn
+139	1	2	3	3	5	6	6	6									Tö Vi ®iÖn
+140	1	2	3	3	4	6	6	6									D­îc V­¬ng Cèc
+141	1	2	3	3	4	6	6	6									D­îc V­¬ng ®éng tÇng 1
+142	1	2	3	3	4	6	6	6									D­îc V­¬ng ®éng tÇng 2
+143	1	2	3	3	4	6	6	6									D­îc V­¬ng ®éng tÇng 3
+144	1	2	3	3	4	6	6	6									D­îc V­¬ng ®éng tÇng 4
+175	1	2	3	4	5	5	7	8									T©y S¬n th«n
+176	1	2	3	4	5	5	7	8									 L©m An
+177	1	2	3	4	5	5	7	8									Ngù Hoa viªn
+178	1	2	3	4	5	5	7	8									S¬n ®éng Ngù Hoa viªn
+183	1	2	3	4	5	5	7	8									Ngò §éc Gi¸o
+184	1	2	3	4	5	5	7	8									XÝch YÕt tr¹i
+185	1	2	3	4	5	5	7	8									Kim Xµ tr¹i
+186	1	2	3	4	5	5	7	8									MÆc Thï tr¹i
+187	1	2	3	4	5	5	7	8									Thanh Ng« tr¹i
+188	1	2	3	4	5	5	7	8									Ng©n ThiÒm tr¹i
+189	1	2	3	4	5	5	7	8									Tæng tr¹i
+190	1	2	3	4	5	5	7	8									Mª cung nhËp m«n
+191	1	2	3	4	5	5	7	8									phßng §Ö tö
+192	1	2	3	4	5	5	7	8									phßng §Ö tö
+197	1	2	3	3	4	6	6	6									Thiªn lao
+201	1	2	3	3	5	5	5	5									B¨ng Hµ ®éng
+204	1	2	3	3	4	6	6	6									Phi Thiªn ®éng
+206	1	2	3	3	5	5	5	5									TÇn L¨ng tÇng 2
+207	1	2	3	3	5	5	5	5									TÇn L¨ng tÇng 3
+208	1	2	2	3	4	5	6	6									§¹i lao
+212	1	2	3	3	5	5	5	5									Hoa S¬n tuyÖt ®Ønh
+213	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 1
+214	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 2
+215	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 3
+216	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 4
+217	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 5
+218	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 6
+219	1	2	2	4	1	1	7	7									L«i ®µi Bang héi 7
+220	1	2	3	4	5	5	7	7									DiÔn Vâ tr­êng 8
+221	1	2	2	4	1	1	7	7									C«ng thµnh chiÕn tr­êng
+222	1	2	2	4	1	1	7	7									HËu ph­¬ng bªn Thñ
+223	1	2	2	4	1	1	7	7									HËu ph­¬ng bªn C«ng
+224	1	2	3	4	5	5	7	8									Sa m¹c ®Þa biÓu
+225	1	2	3	4	5	5	7	8									Sa M¹c 1
+226	1	2	3	4	5	5	7	8									Sa M¹c 2
+227	1	2	3	4	5	5	7	8									Sa M¹c 3
+228	1	2	3	3	5	6	6	6									HËu s¬n C«n L«n
+234	1	2	3	4	5	5	7	8									Kim Xµ tr¹i (chiÕn ®Êu) 
+235	1	2	3	4	5	5	7	8									§µo Hoa ®¶o (1) 
+238	1	2	3	3	4	6	6	6									§µo Hoa ®¶o (4) 
+241	1	2	3	3	5	5	5	5									§µo Hoa ®¶o (7) 
+242	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o (1) 
+245	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o (4) 
+248	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o (7) 
+249	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+250	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+251	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+252	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+253	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+254	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+255	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+256	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+257	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+258	1	2	3	3	5	5	5	5									TÈy Tñy ®¶o s¬n ®éng (1) 
+279	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+280	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+281	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+282	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+283	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+284	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+285	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+286	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+287	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+288	1	2	3	3	4	6	6	6									TÈy Tñy ®¶o s¬n ®éng (4) 
+309	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+310	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+311	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+312	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+313	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+314	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+315	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+316	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+317	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+318	1	2	3	4	5	5	7	8									TÈy Tñy ®¶o s¬n ®éng (7) 
+321	1	2	3	3	5	5	5	5									Tr­êng B¹ch s¬n Nam 
+322	1	2	3	3	4	6	6	6									Tr­êng B¹ch s¬n B¾c
+323	1	2	2	4	1	1	7	7									§iÓm b¸o danh Tèng Kim (s¬ cÊp) 
+326	1	2	2	4	1	1	7	7									Khu vùc b×nh nguyªn (s¬ cÊp) 
+329	1	2	2	4	1	1	7	7									Khu vùc Hµ T©n (s¬ cÊp) 
+342	1	2	1	4	5	5	7	7									Vi s¬n ®¶o
+344	1	2	2	4	1	1	7	7									Thµnh trÊn (s¬ cÊp) 
+347	1	2	2	4	1	1	7	7									S¬n cèc (s¬ cÊp) 
+350	1	2	2	4	1	1	7	7									Th©m l©m (s¬ cÊp) 
+353	1	2	2	4	1	1	7	7									Doanh tr¹i (s¬ cÊp) 
+357	1	2	2	4	1	1	7	7									§¬n ®Êu B×nh nguyªn (S¬ cÊp) 
+360	1	2	2	4	1	1	7	7									§¬n ®Êu Hµ t©n (S¬ cÊp) 
+363	1	2	2	4	1	1	7	7									§¬n ®Êu Th©m l©m (S¬ cÊp) 
+366	1	2	2	4	1	1	7	7									§¬n ®Êu S¬n cèc (S¬ cÊp) 
+369	1	2	2	4	1	1	7	7									§¬n ®Êu Thµnh trÊn (S¬ cÊp) 
+372	1	2	2	4	1	1	7	7									§¬n ®Êu Doanh tr¹i (S¬ cÊp) 
+375	1	2	2	4	1	1	7	7									ChiÕn tr­êng Tèng Kim cò (s¬ cÊp) 
+378	1	2	2	4	1	1	7	7									Xung phong (S¬ cÊp) 
+381	1	2	2	4	1	1	7	7									Th©m l©m (s¬ cÊp) 
+384	1	2	2	4	1	1	7	7									CÇu ranh giíi (s¬ cÊp) 
+387	1	2	3	3	4	6	6	6									Phong Kú (60-89)
+388	1	2	3	3	4	6	6	6									Phong Kú (90-119) 
+389	1	2	3	3	4	6	6	6									Phong Kú (trªn 120) 
+390	1	2	3	4	5	5	5	5									Thiªn B¶o khè (trªn 120)
+391	1	2	3	4	5	5	5	5									Thiªn B¶o khè (trªn 120)
+392	1	2	3	4	5	5	5	5									Thiªn B¶o khè (trªn 120)
+396	1	2	1	1	1	6	6	6									Héi tr­êng liªn ®Êu KiÖt xuÊt (1)
+397	1	2	1	1	1	6	6	6									§Êu tr­êng liªn ®Êu KiÖt xuÊt (1)
+398	1	2	1	1	1	6	6	6									Héi tr­êng liªn ®Êu KiÖt xuÊt (2)
+399	1	2	1	1	1	6	6	6									§Êu tr­êng liªn ®Êu KiÖt xuÊt (2)
+400	1	2	1	1	1	6	6	6									Héi tr­êng liªn ®Êu KiÖt xuÊt (3)
+401	1	2	1	1	1	6	6	6									§Êu tr­êng liªn ®Êu KiÖt xuÊt (3)
+402	1	2	1	1	1	6	6	6									Héi tr­êng liªn ®Êu KiÖt xuÊt (4)
+403	1	2	1	1	1	6	6	6									§Êu tr­êng liªn ®Êu KiÖt xuÊt (4)
+404	1	2	1	1	1	6	6	6									Héi tr­êng liªn ®Êu KiÖt xuÊt (5)
+405	1	2	1	1	1	6	6	6									§Êu tr­êng liªn ®Êu KiÖt xuÊt (5)
+406	1	2	2	2	4	4	7	8									Héi tr­êng liªn ®Êu KiÖt xuÊt (6)
+407	1	2	2	2	4	4	7	8									§Êu tr­êng liªn ®Êu KiÖt xuÊt (6)
+408	1	2	2	2	4	4	7	8									Héi tr­êng liªn ®Êu KiÖt xuÊt (7)
+409	1	2	2	2	4	4	7	8									§Êu tr­êng liªn ®Êu KiÖt xuÊt (7)
+410	1	2	2	2	4	4	7	8									Héi tr­êng liªn ®Êu KiÖt xuÊt (8)
+411	1	2	2	2	4	4	7	8									§Êu tr­êng liªn ®Êu KiÖt xuÊt (8)
+412	1	2	2	2	4	4	7	8									Héi tr­êng liªn ®Êu KiÖt xuÊt (9)
+413	1	2	2	2	4	4	7	8									§Êu tr­êng liªn ®Êu KiÖt xuÊt (9)
+414	1	2	2	2	4	4	7	8									Héi tr­êng liªn ®Êu KiÖt xuÊt (10)
+415	1	2	2	2	4	4	7	8									§Êu tr­êng liªn ®Êu KiÖt xuÊt (10)
+420	1	2	3	3	5	5	5	5									ThuyÒn Rång s¬ cÊp (5) 
+421	1	2	3	3	4	6	6	6									ThuyÒn Rång s¬ cÊp (6) 
+422	1	2	3	4	5	5	7	8									ThuyÒn Rång s¬ cÊp (7) 
+423	1	2	3	4	5	5	7	8									ThuyÒn Rång s¬ cÊp (8) 
+432	1	2	3	3	5	5	5	5									ThuyÒn Rång cao cÊp (9) 
+433	1	2	3	3	5	5	5	5									ThuyÒn Rång cao cÊp (10) 
+434	1	2	3	3	4	6	6	6									ThuyÒn Rång cao cÊp (11) 
+435	1	2	3	3	4	6	6	6									ThuyÒn Rång cao cÊp (12) 
+436	1	2	3	4	5	5	7	8									ThuyÒn Rång cao cÊp (13) 
+437	1	2	3	4	5	5	7	8									ThuyÒn Rång cao cÊp (14) 
+438	1	2	3	4	5	5	5	5									ThuyÒn Rång cao cÊp (15) 
+439	1	2	3	4	5	5	5	5									ThuyÒn Rång cao cÊp (16) 
+444	1	2	3	3	5	5	5	5									ThuyÒn Rång s¬ cÊp (13) 
+445	1	2	3	3	4	6	6	6									ThuyÒn Rång s¬ cÊp (14) 
+446	1	2	3	4	5	5	7	8									ThuyÒn Rång s¬ cÊp (15) 
+447	1	2	3	4	5	5	5	5									ThuyÒn Rång s¬ cÊp (16) 
+456	1	2	3	3	5	5	5	5									ThuyÒn Rång cao cÊp (25) 
+457	1	2	3	3	5	5	5	5									ThuyÒn Rång cao cÊp (26) 
+458	1	2	3	3	4	6	6	6									ThuyÒn Rång cao cÊp (27) 
+459	1	2	3	3	4	6	6	6									ThuyÒn Rång cao cÊp (28) 
+460	1	2	3	4	5	5	7	8									ThuyÒn Rång cao cÊp (29) 
+461	1	2	3	4	5	5	7	8									ThuyÒn Rång cao cÊp (30) 
+462	1	2	3	4	5	5	5	5									ThuyÒn Rång cao cÊp (31) 
+463	1	2	3	4	5	5	5	5									ThuyÒn Rång cao cÊp (32) 
+469	1	2	3	3	5	5	5	5									Th¸ch thøc thêi gian (S¬ cÊp 6) 
+470	1	2	3	4	4	6	6	6									Th¸ch thøc thêi gian (S¬ cÊp 7) 
+471	1	2	3	4	5	5	7	8									Th¸ch thøc thêi gian (S¬ cÊp 8) 
+490	1	2	3	3	5	5	5	5									Th¸ch thøc thêi gian (Cao cÊp 11) 
+491	1	2	3	3	5	5	5	5									Th¸ch thøc thêi gian (Cao cÊp 12) 
+492	1	2	3	4	4	6	6	6									Th¸ch thøc thêi gian (Cao cÊp 13) 
+493	1	2	3	4	4	6	6	6									Th¸ch thøc thêi gian (Cao cÊp 14) 
+494	1	2	3	4	5	5	7	8									Th¸ch thøc thêi gian (Cao cÊp 15) 
+495	1	2	3	4	5	5	7	8									Th¸ch thøc thêi gian (Cao cÊp 16) 
+514	1	2	3	3	5	5	5	5									S¬n TÆc ®éng
+520	1	2	3	3	5	5	5	5									Minh NguyÖt trÊn (Ph­îng T­êng) 
+522	1	2	3	3	4	6	6	6									Minh NguyÖt trÊn (BiÖn Kinh) 
+526	1	2	3	4	5	5	7	8									Minh NguyÖt trÊn (L©m An) 
+529	1	2	3	3	1	6	6	6									Khu vùc liªn ®Êu kiÖt xuÊt (1)
+530	1	2	1	4	4	4	7	8									Khu vùc liªn ®Êu kiÖt xuÊt (2)
+533	1	2	3	3	1	6	6	6									ChuÈn bÞ liªn ®Êu kiÖt xuÊt (1)
+534	1	2	1	4	4	4	7	8									ChuÈn bÞ liªn ®Êu kiÖt xuÊt (2)
+537	1	2	3	3	1	6	6	6									§Êu tr­êng liªn ®Êu kiÖt xuÊt (1)
+538	1	2	1	4	4	4	7	8									§Êu tr­êng liªn ®Êu kiÖt xuÊt (2)
+539	1	2	1	4	4	4	7	8									Tr­êng Ca M«n cÊm ®Þa
+560	1	2	1	1	1	6	6	6									HËu tr­êng liªn ®Êu KiÖt xuÊt (1)
+561	1	2	1	1	1	6	6	6									HËu tr­êng liªn ®Êu KiÖt xuÊt (2)
+562	1	2	1	1	1	6	6	6									HËu tr­êng liªn ®Êu KiÖt xuÊt (3)
+563	1	2	1	1	1	6	6	6									HËu tr­êng liªn ®Êu KiÖt xuÊt (4)
+564	1	2	1	1	1	6	6	6									HËu tr­êng liªn ®Êu KiÖt xuÊt (5)
+565	1	2	2	2	4	4	7	8									HËu tr­êng liªn ®Êu KiÖt xuÊt (6)
+566	1	2	2	2	4	4	7	8									HËu tr­êng liªn ®Êu KiÖt xuÊt (7)
+567	1	2	2	2	4	4	7	8									HËu tr­êng liªn ®Êu KiÖt xuÊt (8)
+568	1	2	2	2	4	4	7	8									HËu tr­êng liªn ®Êu KiÖt xuÊt (9)
+569	1	2	2	2	4	4	7	8									HËu tr­êng liªn ®Êu KiÖt xuÊt (10)
+584	1	2	3	3	4	6	6	6									N¬i chuÈn bÞ nh÷ng ho¹t ®éng dÞp xu©n
+585	1	2	3	3	4	6	6	6									Khu vùc ho¹t ®éng dÞp xu©n
+589	1	2	2	2	3	3	3	5									Khu vùc bang héi Sa M¹c
+590	1	2	3	3	4	4	4	5									Khu vùc bang héi Kinh S­
+591	1	2	3	3	5	5	5	6									Khu vùc bang héi Biªn Tr¹i
+593	1	2	1	4	4	6	6	7									Khu vùc bang héi Giang Nam
+594	1	2	1	4	5	5	7	7									Khu vùc bang héi TuyÕt L·nh
+596	1	2	3	3	3	3	3	5									Khu vùc bang héi chung 3
+597	1	2	1	4	4	4	4	6									Khu vùc bang héi chung 4
+821	1	2	3	3	4	4	4	8									Khu vùc chuÈn bÞ chiªu mé ®Ö tö
+822	1	2	3	3	4	4	4	8									Khu vùc chiªu mé ®Ö tö
+823	1	2	1	4	5	5	5	8									Khu vùc chuÈn bÞ ®¸nh qu¸i thó
+824	1	2	1	4	5	5	5	8									Khu vùc ®¸nh qu¸i thó
+827	1	2	1	4	5	5	5	8									Khu vùc chuÈn bÞ - Thu thËp vËt phÈm
+828	1	2	1	4	5	5	5	8									Khu vùc thu thËp vËt phÈm
+834	1	2	3	4	5	5	7	8									Tr­êng Ca M«n cÊm ®Þa
+841	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 1
+842	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 2
+843	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 3
+844	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 4
+845	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 5
+846	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 6
+847	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 7
+848	1	2	3	3	4	6	6	6									L«i ®µi hµo kiÖt 8
+851	1	2	3	3	4	6	6	6									Cöa vµo b¶o tang Viªm §Õ
+853	1	2	3	3	4	6	6	6									Cöa vµo b¶o tang Viªm §Õ
+854	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (1)
+855	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (2)
+856	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (3)
+857	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (4)
+872	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (5)
+871	1	2	3	4	5	5	7	8									B¶o tµng Viªm §Õ (6)
+874	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (7)
+873	1	2	3	4	5	5	7	8									B¶o tµng Viªm §Õ (8)
+863	1	2	3	3	5	5	5	5									B¶o tµng Viªm §Õ (9)
+882	1	2	3	3	5	5	5	5									B¶o tµng Viªm §Õ (10)
+868	1	2	2	4	1	1	7	7									ChiÕn tr­êng Hoang M¹c (s¬)
+876	1	2	2	4	1	1	7	7									Cæ thµnh (s¬ cÊp)
+886	1	2	2	4	1	1	7	7									»ÄÊ¯Áë³åÍ»Õ½£¨³õ£©
+889	1	2	2	4	1	1	7	7									ÓñÁÖ×è»÷Õ½£¨³õ£©
+893	1	2	3	3	4	6	6	6									ÍÚ±¦»î¶¯
+895	1	2	3	4	5	5	7	8									Ho¹t ®éng Boss §Êu Ng­u
+896	1	2	3	4	5	5	7	8									Lo¹n ChiÕn Cöu Ch©u Cèc
+897	1	2	3	3	5	6	6	6		6							Danh nh©n ®­êng
+901	1	2	3	4	5	5	7	8									ÆßÏ¦»î¶¯
+926	1	2	3	4	5	5	7	8									ChiÕn tr­êng C«ng Thµnh ChiÕn Thµnh §«
+927	1	2	3	3	4	6	6	6		6							ChiÕn tr­êng C«ng Thµnh ChiÕn BiÖn Kinh
+929	1	2	3	3	5	5	5	5		5							ChiÕn tr­êng C«ng Thµnh ChiÕn Ph­îng T­êng
+930	1	2	3	4	5	5	7	8		8							ChiÕn tr­êng C«ng Thµnh ChiÕn L©m An
+934	1	2	3	3	4	6	6	6									Ngän nói Tr­êng B¹ch
+935	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 1
+936	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 2
+937	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (1)
+938	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (2)
+939	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (3)
+940	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (4)
+941	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (5)
+942	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (6)
+943	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (7)
+944	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (8)
+945	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (9)
+946	1	2	3	3	4	6	6	6									Thiªn Tr× TÇng 3 (10)
+947	1	2	3	3	4	6	6	6									Thiªn Tr× tÇng thø 4
+948	1	2	3	3	4	6	6	6									KiÕm Gia Mª Cung.
+950	1	2	2	3	4	6	6	6		3							¸c Lang Cèc Thµnh §«
+951	1	2	2	3	4	6	6	6		3							¸c Lang Cèc Ph­îng T­êng
+952	1	2	2	3	4	6	6	6		3							¸c Lang Cèc BiÖn Kinh
+953	1	2	2	3	4	6	6	6		3							¸c Lang Cèc L©m An
+954	1	2	2	3	4	6	6	6		3							¸c Lang Cèc §¹i Lý
+955	1	2	2	3	4	6	6	6		3							¸c Lang Cèc T­¬ng D­¬ng
+956	1	2	2	3	4	6	6	6		3							¸c Lang Cèc D­¬ng Ch©u
+957	1	2	3	4	5	5	7	8									MËt Phßng cöa ¶i
+960	1	2	3	4	5	5	7	7		7							L«i §µi Hoµng Thµnh T­
+962	1	2	3	3	4	6	6	6									Cöa vµo b¶o tang Viªm §Õ
+858	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (6)
+859	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (7)
+860	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (8)
+861	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (9)
+862	1	2	3	3	4	6	6	6									B¶o tµng Viªm §Õ (10)
+963	1	2	3	4	5	5	7	8									Khu vùc chuÈn bÞ
+964	1	2	3	4	5	5	7	8									§Êu tr­êng (1)
+965	1	2	3	4	5	5	7	8									§Êu tr­êng (2)
+966	1	2	3	4	5	5	7	8									§Êu tr­êng (3)
+972	1	2	2	4	1	1	7	7		7							§iÓm b¸o danh Tèng Kim liªn server
+967	1	2	2	4	1	1	7	7									V« Danh MËt C¶nh
+978	1	2	3	3	5	5	5	5		5							Bang héi thµnh b¶o
+981	1	2	3	3	4	6	6	6		6							Bang héi thµnh b¶o
+984	1	2	3	4	5	5	7	8		8							Bang héi thµnh b¶o
+985	1	2	3	3	4	6	6	6		6							§Þa Cung Biªn Kinh
