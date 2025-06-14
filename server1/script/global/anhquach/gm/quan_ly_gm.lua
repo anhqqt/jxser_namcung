@@ -1,20 +1,6 @@
 Include("\\script\\dailogsys\\dailogsay.lua")
-
-QuanLyGM_tbDanhSachGM = 
-{ 
-	["matdecha"] =
-        { 
-            "Administrator"
-        }
-}
-
-QuanLyGM_tbDanhSachMod = 
-{ 
-	["matdecha2"] =
-        { 
-            "Test5Doc"
-        }
-}
+-- Th™m bi’n global
+Include("\\script\\global\\anhquach\\env.lua")
 
 function QuanLyGM_KiemTraGM()
     dofile("script/global/anhquach/gm/quan_ly_gm.lua")
@@ -22,7 +8,7 @@ function QuanLyGM_KiemTraGM()
     local szName = GetName()
 
     -- Ki”m tra n’u lµ GM
-    local tbRoleListGM = QuanLyGM_tbDanhSachGM[szAccount]
+    local tbRoleListGM = GM_DANH_SACH[szAccount]
     if tbRoleListGM then
         for i = 1, getn(tbRoleListGM) do
             if tbRoleListGM[i] == szName then
@@ -32,7 +18,7 @@ function QuanLyGM_KiemTraGM()
     end
 
     -- Ki”m tra n’u lµ MOD
-    local tbRoleListMod = QuanLyGM_tbDanhSachMod[szAccount]
+    local tbRoleListMod = MOD_DANH_SACH[szAccount]
     if tbRoleListMod then
         for i = 1, getn(tbRoleListMod) do
             if tbRoleListMod[i] == szName then
