@@ -18,6 +18,8 @@ Include("\\script\\activitysys\\playerfunlib.lua")
 Include("\\script\\global\\playerlist.lua")
 -- Include("\\script\\global\\login_hint.lua")  -- Nh¾c nhë ho¹t ®éng ®¨ng nhËp
 --================================================================
+Include("\\script\\global\\anhquach\\login.lua")
+--================================================================
 Include("\\script\\worldrank\\vngglobalvar.lua")
 Include("\\script\\worldrank\\vngtop10.lua")
 Include("\\script\\worldrank\\xephang.lua")
@@ -144,16 +146,4 @@ function no()
     if chuangong_login ~= nil then
         chuangong_login()
     end
-end
-
-function WriteLogPro(data, str)
-    local Data2 = openfile("" .. data .. "", "a+");
-    write(Data2, tostring(str));
-    closefile(Data2);
-end
-
-function logplayer(zFile, szMsg)
-    local handle = openfile(zFile, "a")
-    write(handle, format("%s\n", szMsg));
-    closefile(handle);
 end
