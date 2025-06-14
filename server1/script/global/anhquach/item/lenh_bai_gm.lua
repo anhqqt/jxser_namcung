@@ -4,6 +4,7 @@ Include("\\script\\activitysys\\functionlib.lua")
 Include("\\script\\global\\anhquach\\gm\\quan_ly_gm.lua")
 Include("\\script\\global\\anhquach\\gm\\quan_ly_npc.lua")
 Include("\\script\\global\\anhquach\\gm\\quan_ly_hoat_dong.lua")
+Include("\\script\\global\\anhquach\\gm\\quan_ly_xep_hang.lua")
 
 CAMNANG_ADMIN = "<#><link=image[0]:\\spr\\item\\Nam.spr>CÈm Nang ADMIN: <link>"
 if GetSex() == 1 then
@@ -57,6 +58,7 @@ function main()
         {
             {"Qu¶n lý NPC", QuanLyNPC_Say, {szTitle}},
             {"Qu¶n lý Ho¹t §éng", QuanLyHD_Say, {szTitle}},
+            {"Qu¶n lý XÕp H¹ng", QuanLyXH_Say, {szTitle}},
             {"Tho¸t"}
         }
         CreateNewSayEx(szTitle, tbOpt)
