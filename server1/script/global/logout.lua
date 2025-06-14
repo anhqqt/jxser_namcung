@@ -16,7 +16,15 @@ Include("\\script\\misc\\eventsys\\eventsys.lua")
 -----------------------------------------------
 Include("\\script\\msgkiller\\msgkiller.lua")
 -----------------------------------------------
+Include("\\script\\worldrank\\vngglobalvar.lua")
+Include("\\script\\worldrank\\vngtop10.lua")
+Include("\\script\\worldrank\\xephang.lua")
+-----------------------------------------------
+
 function main()
+	XepHang()
+	-- tbTop10:LuuDSNhanVat()
+
 	if IsIPBonus() == 1 then
 		IpBonus_Close()
 	end;
