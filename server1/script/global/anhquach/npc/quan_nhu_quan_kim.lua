@@ -96,7 +96,8 @@ function maintalk()
 	
 	tbDailog.szTitleMsg = "Qu©n Nhu Quan: Ng­¬i cÇn ta gióp g×?"
 	tbDailog:AddOptEntry("Ta muèn mua ®¹o cô", jinshop_sell)
-	tbDailog:AddOptEntry("Ta muèn ®æi ®iÓm kinh nghiÖm", exp_exchange)	
+	tbDailog:AddOptEntry("Ta muèn ®æi ®iÓm kinh nghiÖm", exp_exchange)
+	tbDailog:AddOptEntry("Ta muèn kiÓm tra ®iÓm kinh nghiÖm cã thÓ ®æi", exp_check)
 	--tbDailog:AddOptEntry("Ta muèn ®æi trang bŞ xanh", trangbi_exchange)	
 	tbDailog:AddOptEntry("Sö dông Nh¹c V­¬ng Hån Th¹ch ®Ó ®óc luyÖn Nh¹c V­¬ng KiÕm", yuewang_want)	
 	--tbDailog:AddOptEntry("ChiÕn tr­êng v« song m·nh t­íng",wushuangmengjiang)--ÎŞË«ÃÍ½«	
@@ -165,6 +166,35 @@ function exp_exchange()
 	end
 end;
 
+function exp_check()
+	if( GetLevel() < 40 ) then
+		Talk( 1, "", "Qu©n Nhu quan: B¹n ch­a ®¹t ®­îc cÊp 40, kh«ng thÓ tham gia chiÕn tr­êng, sao cã thÓ lÊy ®iÓm tİch lòy ®æi ®iÓm kinh nghiÖm?");
+	else
+		local expNgay = nt_getTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE)
+		expNgayConLai = 0
+		local expTuan = nt_getTask(1017)
+		expTuanConLai = 0
+		-- LÊy limit exp theo sè lÇn trïng sinh
+		local nNumber = tbVNG2011_ChangeSign:GetTransLife()	
+		local Limit_Exp_Ngay = TONG_KIM_LIMIT_EXP_NGAY[nNumber]
+		local Limit_Exp_Tuan = TONG_KIM_LIMIT_EXP_TUAN[nNumber]
+
+		if (expNgay < Limit_Exp_Ngay) then
+			expNgayConLai = Limit_Exp_Ngay - expNgay
+		end
+
+		if (expTuan < Limit_Exp_Tuan) then
+			expTuanConLai = Limit_Exp_Tuan - expTuan
+		end
+
+		local tbOpt = 
+		{
+			"Xin c¸m ¬n/no"
+		}
+
+		Say("Qu©n Nhu quan: <enter>Kinh nghiÖm cã thÓ ®æi trong ngµy: <color=green>"..expNgayConLai.."<color><enter>Kinh nghiÖm cã thÓ ®æi trong tuÇn: <color=green>"..expTuanConLai.."<color>", getn(tbOpt), tbOpt);
+	end
+end
 
 function wantpayex(mark, nStep)
 	
@@ -172,9 +202,6 @@ function wantpayex(mark, nStep)
 		Talk(1, "", format("Yªu cÇu cÇn %d cÊp trë lªn míi cã thÓ ®æi.", 120))
 		return 
 	end
-
-	nEXP = (nt_getTask(747))*100
-
 	
 	if PlayerFunLib:CheckTaskDaily(2645, 1, "PhÇn th­ëng nµy mçi ngµy chØ cã thÓ nhËn 1 lÇn.", "<") ~= 1 then
 		return
@@ -198,10 +225,10 @@ function wantpayex(mark, nStep)
 	else
 		local level = GetLevel();
 		local bonus = bt_exchangeexp(level, mark)
-		nEXP = mark*100
+		nEXP = mark*TONG_KIM_TY_LE_TICH_LUY_EXP
 		--local tbItem = {szName="M¶nh Bæ Thiªn Th¹ch (trung)", tbProp={6, 1, 1309, 1, 0, 0}}
 		if nStep == 1 then
-			if (expchange_limit_weekly(mark) == 1) then
+			if (expchange_limit_weekly(mark) == 1 and expchange_limit_daily(mark) == 1) then
 				nt_setTask(747, floor(nt_getTask(747) - mark))
 				AddOwnExp(nEXP);
 				Add120SkillExp(bonus);
@@ -209,14 +236,14 @@ function wantpayex(mark, nStep)
 				--tbAwardTemplet:GiveAwardByList(tbItem, "MidAutumn,GetItemFromSongjin")
 				gb_AppendTask("songjin butianshi2009", 2, 1)
 				PlayerFunLib:AddTaskDaily(2645, 1)	
-				Msg2Player("<#>B¹n ®· tèn"..mark.."<#>®iÓm tİch lòy, ®æi lÊy"..bonus .."<#>®iÓm kinh nghiÖm.");
+				Msg2Player("<#>B¹n ®· tèn <color=yellow>"..mark.."<#><color> ®iÓm tİch lòy, ®æi lÊy <color=green>"..bonus .."<#><color> ®iÓm kinh nghiÖm.");
 				WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: §· tèn"..mark.."®iÓm tİch lòy, ®æi lÊy"..bonus.."®iÓm kinh nghiÖm.");
 			end
 			
 			
 			
 		elseif nStep == 0 then
-			Say("Qu©n Nhu quan : B¹n cã thÓ ®æi ®­îc"..bonus.."§iÓm kinh nghiÖm, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#wantpayex("..mark..",1"..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")	
+			Say("Qu©n Nhu quan : B¹n cã thÓ ®æi ®­îc <color=green>"..nEXP.."<color> §iÓm kinh nghiÖm, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#wantpayex("..mark..",1"..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")	
 		end
 		
 	end	
@@ -233,8 +260,8 @@ function wantpay(mark)
 		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
 	else
 		local level = GetLevel();
-		local bonus = bt_exchangeexp(level, mark)
-		Say("Qu©n Nhu quan: B¹n cã thÓ ®æi ®­îc"..bonus.."§iÓm kinh nghiÖm, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#paymark("..mark..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")
+		nEXP = mark*TONG_KIM_TY_LE_TICH_LUY_EXP
+		Say("Qu©n Nhu quan: B¹n cã thÓ ®æi ®­îc <color=green>"..nEXP.." <color>§iÓm kinh nghiÖm, x¸c ®Şnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#paymark("..mark..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")
 	end	
 end
 
@@ -248,31 +275,52 @@ function paymark(mark)
 	elseif (mark == 0) then
 		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tİch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
 	else
-		nEXP = mark*100
+		nEXP = mark*TONG_KIM_TY_LE_TICH_LUY_EXP
 		local level = GetLevel();
 		local bonus = bt_exchangeexp(level, mark)
-		if (expchange_limit_weekly(mark) == 1) then
+		if (expchange_limit_weekly(nEXP) == 1 and expchange_limit_daily(nEXP) == 1) then
 			nt_setTask(747, floor(nt_getTask(747) - mark))
 			AddOwnExp(nEXP);
 			Add120SkillExp(bonus);
-			Msg2Player("<#>B¹n ®· tèn"..mark.."<#>®iÓm tİch lòy, ®æi lÊy"..bonus .."<#>®iÓm kinh nghiÖm.");
-			WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: §· tèn"..mark.."®iÓm tİch lòy, ®æi lÊy"..bonus.."®iÓm kinh nghiÖm.");
+			Msg2Player("<#>B¹n ®· tèn <color=yellow>"..mark.."<#><color>®iÓm tİch lòy, ®æi lÊy <color=green>"..nEXP .."<#><color> ®iÓm kinh nghiÖm.");
+			WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: §· tèn"..mark.."®iÓm tİch lòy, ®æi lÊy"..nEXP.."®iÓm kinh nghiÖm.");
 		end
 	end
 end
 
 
 function expchange_limit_weekly(cost)
-	--local ww = tonumber(date("%W"))
-	--local yy = tonumber(date("%Y")) - 2000
 	local nNumber = tbVNG2011_ChangeSign:GetTransLife()	
 	local Limit_Exp = TONG_KIM_LIMIT_EXP_TUAN[nNumber]
 	if ( (nt_getTask(1017) + cost) <= Limit_Exp) then
 		nt_setTask(1017, nt_getTask(1017) + cost)
 		return 1
 	else
-		Say("Qu©n Nhu quan: §õng tham lam nh­ vËy, trong mét tuÇn kh«ng thÓ ®æi qu¸<color=red>"..Limit_Exp.."<color>®iÓm kinh nghiÖm cña tİch lòy", 0)
+		Say("Qu©n Nhu quan: §õng tham lam nh­ vËy, trong mét tuÇn kh«ng thÓ ®æi qu¸ <color=red>"..Limit_Exp.."<color> ®iÓm kinh nghiÖm cña tİch lòy", 0)
 		return -1
+	end
+end
+
+function expchange_limit_daily(cost)
+	local nNowDate = tonumber(GetLocalDate("%y%m%d"))
+	local nOldDate = nt_getTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_DATE)
+	local nCurrentReceivedExp = nt_getTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE)
+	Msg2Player("Kinh nghiÖm ®· ®æi trong ngµy: <color=green>"..nCurrentReceivedExp.."<color>")
+	-- LÊy limit exp theo sè lÇn trïng sinh
+	local nNumber = tbVNG2011_ChangeSign:GetTransLife()	
+	local Limit_Exp = TONG_KIM_LIMIT_EXP_NGAY[nNumber]
+
+	if (nNowDate ~= nOldDate) then
+		nt_setTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_DATE, nNowDate)
+		nt_setTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE, 0)
+	end
+
+	if (nCurrentReceivedExp + cost > Limit_Exp or cost > Limit_Exp) then
+		Say("Qu©n Nhu quan: §õng tham lam nh­ vËy, trong mét ngµy kh«ng thÓ ®æi qu¸ <color=red>"..Limit_Exp.."<color> ®iÓm kinh nghiÖm cña tİch lòy", 0)
+		return -1
+	else
+		nt_setTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE, nCurrentReceivedExp + cost)
+		return 1
 	end
 end
 
