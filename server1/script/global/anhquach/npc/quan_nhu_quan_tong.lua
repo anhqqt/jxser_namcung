@@ -75,7 +75,7 @@ function no()
 end;
 
 function songshop_sell()
-		Sale(98, 4);			
+	Sale(98, 4);			
 end;
 
 --str1 = "ËÎ¾ü¾üĞè¹Ù£º´ó¼ÒÍ¬Îª´óËÎ×ÓÃñ£¬Äã¼ÈÈ»¾ö¶¨±¨Ğ§¹ú¼Ò£¬¿¹»÷½ğ¿Ü£¬±ã¿ÉÒÔÔÚÎÒÕâÀïÓÃËÎ½ğ»ı·Ö<color=yellow>»»È¡¾­Ñé¡¢ÔÀÍõ»êÖ®Ê¯<color>£¬»¹¿ÉÒÔ¹ºÂò<color=yellow>ËÎ½ğ×¨ÓÃµÀ¾ß<color>¡£"
@@ -96,6 +96,7 @@ function maintalk()
 	tbDailog:AddOptEntry("Ta muèn mua ®¹o cô", songshop_sell)
 	tbDailog:AddOptEntry("Ta muèn ®æi ®iÓm kinh nghiÖm", exp_exchange)
 	tbDailog:AddOptEntry("Ta muèn kiÓm tra ®iÓm kinh nghiÖm cã thÓ ®æi", exp_check)
+	tbDailog:AddOptEntry("Ta muèn kiÓm tra ®iÓm tİch lòy", mark_check)
 	--tbDailog:AddOptEntry("Ta muèn ®æi trang bŞ xanh", trangbi_exchange)
 	tbDailog:AddOptEntry("Sö dông Nh¹c V­¬ng Hån Th¹ch ®Ó ®óc luyÖn Nh¹c V­¬ng KiÕm", yuewang_want)
 	--tbDailog:AddOptEntry("ChiÕn tr­êng v« song m·nh t­íng",wushuangmengjiang)--ÎŞË«ÃÍ½«
@@ -191,6 +192,19 @@ function exp_check()
 		}
 
 		Say("Qu©n Nhu quan: <enter>Kinh nghiÖm cã thÓ ®æi trong ngµy: <color=green>"..expNgayConLai.."<color><enter>Kinh nghiÖm cã thÓ ®æi trong tuÇn: <color=green>"..expTuanConLai.."<color>", getn(tbOpt), tbOpt);
+	end
+end
+
+function mark_check()
+	if( GetLevel() < 40 ) then
+		Talk( 1, "", "Qu©n Nhu quan: B¹n ch­a ®¹t ®­îc cÊp 40, kh«ng thÓ tham gia chiÕn tr­êng, sao cã thÓ lÊy ®iÓm tİch lòy ®æi ®iÓm kinh nghiÖm?");
+	else
+		local tbOpt = 
+		{
+			"Xin c¸m ¬n/no"
+		}
+
+		Say("Qu©n Nhu quan: Ng­¬i hiÖn ®ang cã <color=green>"..nt_getTask(747).."<color> ®iÓm tİch lòy cã thÓ sö dông", getn(tbOpt), tbOpt);
 	end
 end
 
