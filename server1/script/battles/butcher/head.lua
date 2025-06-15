@@ -214,7 +214,7 @@ function sf_winbouns(n_camp)
 	
 	bonuscff1 = BATTLES_WINGAME_POINT * bt_getgn_awardtimes()
    	repute = 3 * bt_getgn_awardtimes()
-	WriteLog("§iÓm tÝch lòy cho phe th¾ng lîi lµ:"..bonuscff1)
+	WriteLog("§iÓm tÝch lòy cho phe th¾ng lîi lµ: "..bonuscff1)
 	
 	sf_itemcount = getn(sf_aryItems)
 	
@@ -225,11 +225,11 @@ function sf_winbouns(n_camp)
             local game_level = BT_GetGameData(GAME_LEVEL);
            local n_bonuscff1 = 0;
 	   		AddRepute(repute);			
-	   		Msg2Player("Danh väng cña b¹n t¨ng thªm "..repute.."®iÓm!")
+	   		Msg2Player("Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color> ®iÓm!")
 			n_bonuscff1 = bt_addtotalpoint(bonuscff1)
-			Msg2Player("B¹n nhËn ®­îc "..n_bonuscff1.." ®iÓm tÝch lòy")
+			Msg2Player("B¹n nhËn ®­îc <color=yellow>"..n_bonuscff1.."<color> ®iÓm tÝch lòy")
 			--Storm Ê¤·½½áÊøÌôÕ½£¬²¢¼ÇÂ¼»ñÊ¤Õß
-			Say("Chóc mõng phe b¹n giµnh th¾ng lîi! Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color>! Vµ nhËn thªm <color=yellow>"..n_bonuscff1.."<color> ®iÓm tÝch lòy", 1, "KÕt thóc ®èi tho¹i/#storm_end(1)")
+			Say("Chóc mõng phe b¹n giµnh th¾ng lîi! Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color> ! Vµ nhËn thªm <color=yellow>"..n_bonuscff1.."<color> ®iÓm tÝch lòy", 1, "KÕt thóc ®èi tho¹i/#storm_end(1)")
 			tb_storm_winner[PlayerIndex] = 1
 
 			
