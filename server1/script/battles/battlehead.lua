@@ -15,26 +15,26 @@ Include("\\script\\misc\\vngpromotion\\ipbonus\\ipbonus_2_head.lua")
 Include("\\script\\event\\jiefang_jieri\\200904\\qianqiu_yinglie\\head.lua");
 
 Include("\\script\\battles\\doubleexp.lua")
-FRAME2TIME = 18;	--18Ö¡ÓÎÏ·Ê±¼äÏàµ±ÓÚ1ÃëÖÓ
-BAOMING_TIME = 10		-- 10·ÖÖÓ±¨ÃûÊ±¼ä	
-FIGHTING_TIME = 60		-- 60·ÖÖÓ±ÈÈüÊ±¼ä
-ANNOUNCE_TIME = 20		-- 20Ãë¹«²¼Ò»ÏÂÕ½¿ö
+FRAME2TIME = 18;	-- 18 khung h×nh thêi gian game t­¬ng ®­¬ng 1 phót
+BAOMING_TIME = 10		-- Thêi gian b¸o danh 10 phót	
+FIGHTING_TIME = 60		-- Thêi gian giao chiÕn 60 phót
+ANNOUNCE_TIME = 20		-- C«ng bè chiÕn b¸o sau 20 phót
 
-TIMER_1 = ANNOUNCE_TIME * FRAME2TIME; --20Ãë¹«²¼Ò»ÏÂÕ½¿ö
-TIMER_2 = (FIGHTING_TIME + BAOMING_TIME) * 60  * FRAME2TIME; -- ½»Õ½Ê±¼äÎª1Ð¡Ê±
-RUNGAME_TIME = BAOMING_TIME * 60 * FRAME2TIME / TIMER_1; --±¨Ãû10·ÖÖÓÖ®ºó£¬×Ô¶¯½øÈëÕ½¶·½×¶Î
-GO_TIME =  BAOMING_TIME * 60 * FRAME2TIME  / TIMER_1; -- ±¨ÃûÊ±¼äÎª10·ÖÖÓ
+TIMER_1 = ANNOUNCE_TIME * FRAME2TIME; -- 20 phót c«ng bè ChiÕn b¸o
+TIMER_2 = (FIGHTING_TIME + BAOMING_TIME) * 60  * FRAME2TIME; -- Thêi gian giao chiÕn lµ 1 giê
+RUNGAME_TIME = BAOMING_TIME * 60 * FRAME2TIME / TIMER_1; -- Sau khi b¸o danh 10 phót, tù ®éng vµo giai ®o¹n chiÕn ®Êu
+GO_TIME =  BAOMING_TIME * 60 * FRAME2TIME  / TIMER_1; -- Thêi gian b¸o danh lµ 10 phót
 
-SONGJIN_SIGNUP_FEES = 3000  -- ±¨Ãû·Ñ
+SONGJIN_SIGNUP_FEES = 3000  -- PhÝ b¸o danh
 
-JUNGONGPAI = 1773 --ËÎ½ð¾ü¹¦ÅÆID 6£¬1£¬1477
-EXPIRED_TIME = 24*60  --ËÎ½ð¾ü¹¦ÅÆ¹ýÆÚ
-JUNGONGPAI_Task_ID = 1830 -- --ËÎ½ð¾ü¹¦ÅÆÈÎÎñ±äÁ¿
+JUNGONGPAI = 1773 -- ID Nguyªn so¸i Tèng Kim: 6, 1, 1477
+EXPIRED_TIME = 24*60  -- Nguyªn so¸i Tèng Kim qu¸ h¹n
+JUNGONGPAI_Task_ID = 1830 -- BiÕn nhiÖm vô Nguyªn so¸i Tèng Kim
 
-TIME_GAME_LIMIT = 5 * 60	--Íæ¼ÒÄÜ¹»ÔÚºóÓªÍ£ÁôµÄÊ±¼ä£¬³¬¹ýÊ±¼ä½«ÍË³öÕ½³¡»Øµ½±¨Ãûµã
+TIME_GAME_LIMIT = 5 * 60	-- Thêi gian ng­êi ch¬i cã thÓ ë l¹i HËu Doanh, nÕu qu¸ thêi gian sÏ tho¸t khái chiÕn tr­êng vÒ ®iÓm b¸o danh
 
-----------------------------------------------------------ÒÔÏÂby ÁÎÖ¾É½
-TIME_EXHIBIT_BOSS = 18 * 60 * (20 + BAOMING_TIME) / (20 * 18)--±ÈÈü20·ÖÖÓ,¼´¿ªÊ¼±¨Ãûºó50·ÖÖÓ
+------------------------------------------------------------ D­íi ®©y bëi Liªu TrÝ S¬n
+TIME_EXHIBIT_BOSS = 18 * 60 * (20 + BAOMING_TIME) / (20 * 18)-- So tµi 20 phót, tøc lµ 50 phót sau khi b¾t ®Çu b¸o danh
 -------------------------------------------------
 --BOSSINFO = {BOSSID, BOSSNAME, LEVEL, SERIES}
 -----------------------------------------------
@@ -80,7 +80,7 @@ function ExhibitBoss()
 	local NewsStr = "Theo b¸o c¸o cña th¸m tö tiÒn tuyÕn "..BOSSINFO[BossID_Index][2].." ®· xuÊt hiÖn t¹i khu vùc cao cÊp!";
 	AddGlobalNews(NewsStr);	
 end
-----------------------------------------------------------ÒÔÉÏby ÁÎÖ¾É½
+---------------------------------------------------------- PhÝa trªn bëi Liªu TrÝ S¬n
 
 		PL_TOTALPOINT = 1
 		PL_KILLPLAYER = 2
@@ -94,8 +94,8 @@ end
 		PL_KILLRANK5 = 10
 		PL_KILLRANK6 = 11
 		PL_KILLRANK7 = 12
-		PL_MAXSERIESKILL = 13		--Íæ¼ÒÕû¸öÕ½¾ÖµÄ×î´óÁ¬Õ¶Êý
-		PL_SERIESKILL = 14			--Íæ¼Òµ±Ç°µÄÁ¬Õ¶Êý
+		PL_MAXSERIESKILL = 13		-- Sè liªn tr¶m tèi ®a cña ng­êi ch¬i trong toµn bé chiÕn tr­êng
+		PL_SERIESKILL = 14			-- Sè liªn tr¶m hiÖn t¹i cña ng­êi ch¬i
 		PL_FINISHGOAL = 15
 		PL_1VS1 = 16
 		PL_GETITEM = 17
@@ -103,28 +103,28 @@ end
 		PL_PRISEGRADE = 19	
 		PL_AVERAGEGRADE = 20
 		PL_WINGRADE = 21	
-		PL_PARAM1 = 22	-- ÓÃÓÚ¼ÇÂ¼¶áÆìµÄ×ø±êX
-		PL_PARAM2 = 23	-- ÓÃÓÚ¼ÇÂ¼¶áÆìµÄ×ø±êY
-		PL_PARAM3 = 24	-- ÓÃÓÚ¼ÇÂ¼ËÍÁ¸
+		PL_PARAM1 = 22	-- Dïng ®Ó ghi l¹i täa ®é X cña l¸ cê
+		PL_PARAM2 = 23	-- Dïng ®Ó ghi l¹i täa ®é Y cña l¸ cê
+		PL_PARAM3 = 24	-- Dïng ®Ó ghi l¹i sè lÇn Tèng Kim
 		PL_PARAM4 = 25
 		PL_PARAM5 = 26
-		PL_CURRANK = 27	-- =PL_PARAM6 = 27 ±íÊ¾Íæ¼Òµ±Ç°µÄ¹ÙÖ°£¬Ä¿Ç°Ê¹ÓÃµÚ6ºÅ²ÎÊý
+		PL_CURRANK = 27	-- =PL_PARAM6 = 27 -- BiÓu thÞ chøc vô hiÖn t¹i cña ng­êi ch¬i, hiÖn ®ang sö dông tham sè thø 6
 		
 		PL_BATTLEID=41
 		PL_RULEID=42
 		PL_BATTLECAMP = 43
-		PL_BATTLESERIES = 44 --¼ÇÂ¼Íæ¼ÒÉÏÒ»´Î²Î¼ÓÕ½ÒÛµÄÕ½ÒÛÁ÷Ë®ºÅ
+		PL_BATTLESERIES = 44 -- Ghi l¹i sè thø tù trËn chiÕn mµ ng­êi ch¬i tham gia lÇn tr­íc
 		PL_KEYNUMBER = 45
 		PL_LASTDEATHTIME = 46
-		PL_BATTLEPOINT = 47	--¼ÇÂ¼Íæ¼Ò±¾Õ½ÒÛµÄ×Ü»ý·Ö£¬×Ü»ý·ÖÊÇÍæ¼ÒËù²Î¼ÓµÄ¸÷³¡Õ½¾ÖµÄ»ý·Ö×ÜºÍ, E(PL_TOTALPOINT1 + PL_TOTALPOINT2+ ...)
+		PL_BATTLEPOINT = 47	-- Ghi l¹i tæng ®iÓm cña ng­êi ch¬i trong trËn chiÕn nµy, tæng ®iÓm lµ tæng ®iÓm cña c¸c trËn chiÕn mµ ng­êi ch¬i ®· tham gia, E(PL_TOTALPOINT1 + PL_TOTALPOINT2+ ...)
 		PL_ROUND = 48
 		
 		GAME_KEY = 1
 		GAME_BATTLEID = 2
 		GAME_RULEID = 3
 		GAME_MAPID = 4	
-		GAME_CAMP1 = 5	-- ËÎ·½¶áÆìÊýÁ¿£¨ËÍÁ¸ÊýÁ¿£©
-		GAME_CAMP2 = 6	-- ½ð·½¶áÆìÊýÁ¿£¨ËÍÁ¸ÊýÁ¿£©
+		GAME_CAMP1 = 5	-- Sè l­îng cê Tèng Kim (sè lÇn Tèng Kim)
+		GAME_CAMP2 = 6	-- Sè l­îng cê Tèng Kim (sè lÇn Tèng Kim)
 		GAME_MAPICONID = 7
 		GAME_RESTTIME = 8
 		GAME_LEVEL = 9 
@@ -138,38 +138,38 @@ end
 
 		MS_STATE = 1
 		
-		MS_TRANK1_S = 30; --ËÎ1¼¶NpcµÄÄ£°åIDµÄMissionV ID
-		MS_TRANK1_J = MS_TRANK1_S + 6; --½ð·½1¼¶NpcµÄÄ£°åIDµÄMissionV ID	36
-		MS_RANK1LVL_S = MS_TRANK1_J + 6;--ËÎ·½1¼¶NpcµÄµÈ¼¶ MissionV ID		42
-		MS_RANK1LVL_J = MS_RANK1LVL_S + 6;--½ð·½1¼¶NpcµÄµÈ¼¶ MissionV ID	48
-		MS_NPCCOUNT1_S = MS_RANK1LVL_J + 6;							--		54
-		MS_NPCCOUNT1_J = MS_NPCCOUNT1_S + 6;						--		60
-		MS_CALLNPCCOUNT_S = MS_NPCCOUNT1_J + 6 --¼ÇÂ¼ËÎ·½ÕÙ»½NpcµÄ´ÎÊý	--	66
-		MS_CALLNPCCOUNT_J = MS_CALLNPCCOUNT_S + 1 --¼ÇÂ¼½ð·½ÕÙ»½NpcµÄ´ÎÊý	67
+		MS_TRANK1_S = 30; -- MissionV ID cña NPC cÊp 1 phe Tèng
+		MS_TRANK1_J = MS_TRANK1_S + 6; -- MissionV ID cña NPC cÊp 1 phe Kim					36
+		MS_RANK1LVL_S = MS_TRANK1_J + 6; -- Level MissionV ID cña NPC cÊp 1 phe Tèng		42
+		MS_RANK1LVL_J = MS_RANK1LVL_S + 6;-- Level MissionV ID cña NPC cÊp 1 phe Kim		48
+		MS_NPCCOUNT1_S = MS_RANK1LVL_J + 6; --												54
+		MS_NPCCOUNT1_J = MS_NPCCOUNT1_S + 6; --												60
+		MS_CALLNPCCOUNT_S = MS_NPCCOUNT1_J + 6 -- Ghi l¹i sè lÇn triÖu håi NPC phe Tèng		66
+		MS_CALLNPCCOUNT_J = MS_CALLNPCCOUNT_S + 1 -- Ghi l¹i sè lÇn triÖu håi NPC phe Kim	67
 		
-		MS_PL2RANK1_S = 70		--µ±Ç°mission£¬ËÎ·½ÖÐÒÑ¾­³ÉÎª"Ê¿±ø"Í·ÏÎµÄÈËÊý
+		MS_PL2RANK1_S = 70		-- NhiÖm vô hiÖn t¹i, sè l­îng ng­êi ®· trë thµnh "SÜ binh" phe Tèng
 		MS_PL2RANK2_S = 71
 		MS_PL2RANK3_S = 72
 		MS_PL2RANK4_S = 73
 		MS_PL2RANK5_S = 74
 		MS_PL2RANK6_S = 75
 	
-		MS_PL2RANK1_J = 76		--µ±Ç°mission£¬½ð·½ÖÐÒÑ¾­³ÉÎª"Ê¿±ø"Í·ÏÎµÄÈËÊý
-		MS_PL2RANK2_J = 77		--Ð£Î¾
-		MS_PL2RANK3_J = 78		--Í³Áì
-		MS_PL2RANK4_J = 79		--¸±½«
-		MS_PL2RANK5_J = 80		--´ó½«
-		MS_PL2RANK6_J = 81		--ÔªË§
+		MS_PL2RANK1_J = 76		-- NhiÖm vô hiÖn t¹i, sè l­îng ng­êi ®· trë thµnh "SÜ binh" phe Kim
+		MS_PL2RANK2_J = 77		-- HiÖu óy
+		MS_PL2RANK3_J = 78		-- Thèng lÜnh
+		MS_PL2RANK4_J = 79		-- Phã t­íng
+		MS_PL2RANK5_J = 80		-- §¹i t­íng
+		MS_PL2RANK6_J = 81		-- Nguyªn so¸i
 	
-		MS_HUANGZHIZHANG = 90	--»ÍÖ®ÕÂ»î¶¯½±Àø±¶Êý
-		MS_WUXINGZHUCNT_S = 91 --¼ÇÂ¼ËÎ·½ÕÙ»½ÎåÐÐÖùµÄÊýÁ¿	68
-		MS_WUXINGZHUCNT_J = 92 --¼ÇÂ¼½ð·½ÕÙ»½ÎåÐÐÖùµÄÊýÁ¿	69
+		MS_HUANGZHIZHANG = 90	-- Sè Cóp nhËn ®­îc tõ ho¹t ®éng ch­¬ng Håi øc
+		MS_WUXINGZHUCNT_S = 91 -- Ghi l¹i sè l­îng Trô Ngò Hµnh phe Tèng ®­îc triÖu håi	68
+		MS_WUXINGZHUCNT_J = 92 -- Ghi l¹i sè l­îng Trô Ngò Hµnh phe Kim ®­îc triÖu håi	69
 	
 		MAX_CALLNPCCOUNT = 10;	
 		MAX_CALLWUXINGZHU	= 4;
 		GLB_BATTLESTATE = 30
-		GLB_FORBIDBATTLE = 31;--µ±¸ÃÖµ1Ê±±íÊ¾Í£Ö¹Õ½ÒÛµÄÆô¶¯
-	--Èý¸öµÈ¼¶±¨ÃûµãµÄ×ø±ê
+		GLB_FORBIDBATTLE = 31;-- Khi gi¸ trÞ nµy lµ 1, biÓu thÞ viÖc khëi ®éng dõng trËn chiÕn
+	-- Täa ®é ba ®iÓm b¸o danh
 	S_SIGNUPTAB = {};
 	
 	TV_LASTDEATHTIME = 2306	
@@ -222,7 +222,7 @@ end
 	BONUS_1VS1 = 400
 	
 	RA_KILL_PL_RANK = {10, 2.334, 0.934, 0.84, 0.56, 0.35}	
- 	--7 Íæ¼ÒÊ¿±ø	--7/3 Íæ¼ÒÐ£Î¾	--14/15 Íæ¼ÒÍ³Áì	--21/25 Íæ¼Ò¸±½«	--14/25 Íæ¼Ò´ó½«	--7/20 Íæ¼ÒÔªË§
+ 	-- 7 SÜ binh ng­êi ch¬i -- 7/3 HiÖu óy ng­êi ch¬i -- 14/15 Thèng lÜnh ng­êi ch¬i -- 21/25 Phã t­íng ng­êi ch¬i -- 14/25 §¹i t­íng ng­êi ch¬i -- 7/20 Nguyªn so¸i ng­êi ch¬i
  	
  	RANK_PKBONUS = {
  	{1,		6/5,	7/5,	8/5,	2	}, 
@@ -232,7 +232,7 @@ end
 	{1/5,	2/5,	3/5,	4/5,	1	},
 	};
 	
-	TAB_SERIESKILL =    --¼ÇÂ¼²»Í¬rankµÄÍæ¼Ò£¬ÔÚPKÊ±£¬ÊÇ·ñ¼ÇÂ¼Êµ¼ÊÁ¬Õ¶µÄ±í£¬1±íÊ¾¼ÇÂ¼£¬0±íÊ¾²»¼ÇÂ¼
+	TAB_SERIESKILL =    -- Ghi l¹i xem ng­êi ch¬i ë c¸c **rank kh¸c nhau cã ghi l¹i b¶ng liªn tr¶m thùc tÕ khi PK hay kh«ng**, 1 lµ ghi l¹i, 0 lµ kh«ng ghi l¹i
 	{
 		{1,1,1,1,1},
 		{1,1,1,1,1},
@@ -241,8 +241,8 @@ end
 		{0,0,1,1,1},
 	};
 	
-	BALANCE_MAMCOUNT = 5;	--ËÎ½ðË«·½ÈËÊý²îµ÷ÕûÎª5ÈË
-	BALANCE_GUOZHAN_MAXCOUNT = 100; -- ¹úÕ½ËÎ½ð×î¶àÔÊÐíµÄµ¥±ßÈËÊý
+	BALANCE_MAMCOUNT = 5;	-- Chªnh lÖch sè ng­êi hai phe Tèng Kim ®iÒu chØnh thµnh 5 ng­êi
+	BALANCE_GUOZHAN_MAXCOUNT = 100; -- Sè ng­êi tèi ®a cho phÐp cña mét bªn trong quèc chiÕn Tèng Kim
 	TAB_RANKBONUS = {0, 1000, 3000, 6000,10000};
 	RANK_SKILL = 661;
 	TAB_RANKMSG = {
@@ -253,30 +253,30 @@ end
 	"B¹n ®­îc phong lµ <color=yellow><bclr=red>§¹i T­íng<bclr><color>! Sinh lùc t¨ng 50%, phßng thñ t¨ng 15%.",
 	"B¹n ®­îc phong lµ <color=yellow>Nguyªn So¸i<color=>!"}
 	
-	TITLE_BONUSRANK1 = 0		--³ÉÎªÏàÓ¦Í·ÏÎËùÐè»ý·ÖÖµ
-	TITLE_BONUSRANK2 = 10000
-	TITLE_BONUSRANK3 = 20000
-	TITLE_BONUSRANK4 = 40000
-	TITLE_BONUSRANK5 = 60000
-	TITLE_BONUSRANK6 = 80000
+	TITLE_BONUSRANK1 = 0		-- Gi¸ trÞ ®iÓm cÇn thiÕt ®Ó trë thµnh chøc vô t­¬ng øng
+	TITLE_BONUSRANK2 = 10000	-- HiÖu óy
+	TITLE_BONUSRANK3 = 20000	-- Thèng lÜnh
+	TITLE_BONUSRANK4 = 40000	-- Phã t­íng
+	TITLE_BONUSRANK5 = 60000	-- §¹i t­íng
+	TITLE_BONUSRANK6 = 80000	-- Nguyªn so¸i
 	
-	TITLE_PL2RANK1_N = 400		--ÏàÓ¦Í·ÏÎµÄÍæ¼Ò×î´óÈËÊý
-	TITLE_PL2RANK2_N = 60
-	TITLE_PL2RANK3_N = 25
-	TITLE_PL2RANK4_N = 10
-	TITLE_PL2RANK5_N = 5
-	TITLE_PL2RANK6_N = 1
+	TITLE_PL2RANK1_N = 400		-- Sè ng­êi ch¬i tèi ®a cña chøc vô t­¬ng øng
+	TITLE_PL2RANK2_N = 60		-- HiÖu óy
+	TITLE_PL2RANK3_N = 25		-- Thèng lÜnh
+	TITLE_PL2RANK4_N = 10		-- Phã t­íng
+	TITLE_PL2RANK5_N = 5		-- §¹i t­íng
+	TITLE_PL2RANK6_N = 1		-- Nguyªn so¸i
 
-	TV_SERIESKILL_REALY = 2305  --Íæ¼Òµ±Ç°µÄÊµ¼ÊÁ¬Õ¶Öµ£¨¸ß¼¶É±±È½ÏµÍ¼¶µÄÍæ¼Ò£¬¼ÆÁ¬Õ¶£¬µ«²»¼ÆÕæÊµÁ¬Õ¶£©
+	TV_SERIESKILL_REALY = 2305  -- Gi¸ trÞ liªn tr¶m thùc tÕ hiÖn t¹i cña ng­êi ch¬i (GiÕt ng­êi ch¬i cÊp cao h¬n sÏ tÝnh liªn tr¶m, nh­ng kh«ng tÝnh liªn tr¶m thËt sù)
 
 	
-	tbGAME_SIGNMAP = {323, 324, 325} --¼ÇÂ¼¸÷µÈ¼¶±¨ÃûµãµÄµØÍ¼IDºÅ £¬µÈ¼¶°´µÍ¼¶Ïò¸ß¼¶ÅÅ²¼
+	tbGAME_SIGNMAP = {323, 324, 325} -- Ghi l¹i ID b¶n ®å cña c¸c ®iÓm b¸o danh theo cÊp ®é, s¾p xÕp cÊp ®é tõ thÊp ®Õn cao
 	tbSIGNMAP_POS = {{1541, 3178} , {1570, 3085}}
 	szGAME_GAMELEVEL = {"ChiÕn tr­êng S¬ cÊp", "ChiÕn tr­êng Trung cÊp", "ChiÕn tr­êng Cao cÊp"}
 	
 	tbBATTLEMAP = {44, 326, 327, 328, 329, 330, 331, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 868, 869, 870,876,877,878,879,880,881,883,884,885, 898, 899, 900, 902, 903, 904,970,971};--ËùÓÐÕ½ÒÛÓÃµ½µÄµØÍ¼ÁÐ±í
 	tbNPCPOS = {"npcpos1", "npcpos2"}
-	TNPC_DOCTOR1 = 55;--¾üÒ½µÄNpcÄ£°åIDºÅ
+	TNPC_DOCTOR1 = 55;	-- ID mÉu NPC cña Qu©n y
 	TNPC_DOCTOR2 = 49;
 	TNPC_SYMBOL1 = 629;
 	TNPC_SYMBOL2 = 630;
@@ -286,14 +286,14 @@ end
 	TNPC_FLAG1 = 628;
 	TNPC_FLAG2 = 627;
 
-	TNPC_TRANSPORT1 = 55; -- ´«ËÍÔ±µÄNpcÄ£°åIDºÅ
+	TNPC_TRANSPORT1 = 55; -- ID mÉu NPC cña TruyÒn Tèng Quan
 	TNPC_TRANSPORT2 = 49;
 	
 	
 	tbTNPC_SOLDIER = {{631,632,633,634,635,636}, {637, 638, 639, 640, 641, 642}}
-	BATTLES_WINGAME_POINT	= 1200;	--„ÙÀû·½·e·Öª„„î
-	BATTLES_LOSEGAME_POINT	= 600;	--Ê§”¡·½·e·Öª„„î
-	BATTLES_TIEGAME_POINT	= 900;	--Æ½¾Öëp·½·e·Öª„„î
+	BATTLES_WINGAME_POINT	= 1200;	--„§iÓm nhËn ®­îc khi th¾ng
+	BATTLES_LOSEGAME_POINT	= 600;	-- §iÓm nhËn ®­îc khi thua
+	BATTLES_TIEGAME_POINT	= 900;	-- §iÓm nhËn ®­îc khi hßa
 
 --¸ù¾Ý±¨ÃûµØÍ¼µÄid£¬»ñµÃËùÊôµÄÕ½ÒÛµÈ¼¶
 function bt_map2battlelevel(mapid)
@@ -323,7 +323,7 @@ function bt_camp_getbonus(camp, bonus,strmsg, percent)
 	PlayerIndex = OldPlayerIndex
 end;
 
---»ñµÃÄ³¸öµÈ¼¶±¨ÃûµãµÄ×ø±ê
+-- LÊy täa ®é cña mét ®iÓm b¸o danh cÊp ®é nµo ®ã
 function bt_getsignpos(camp)
 	if (camp <= 0 or camp > 2) then
 		camp = 1
@@ -341,7 +341,7 @@ function bt_getsignpos(camp)
 end;
 		
 		
---¸ù¾ÝtrapfileµÄÎÄ¼þµÄ×ø±ê¼¯ºÏ±í£¬²úÉúËùÓÐµÄtrapµã£¬²¢¹ØÁªscriptfileµÄ½Å±¾		
+-- Dùa vµo b¶ng tËp hîp täa ®é trong file trapfile, t¹o ra tÊt c¶ c¸c ®iÓm bÉy (trap) vµ liªn kÕt víi scriptfile	
 function bt_addtrap(trapfile, scriptfile)
 	local count = GetTabFileHeight(trapfile);
 	scriptid = FileName2Id(scriptfile);
@@ -355,7 +355,7 @@ function bt_addtrap(trapfile, scriptfile)
 	end;
 end;	
 
---"123,234" -> 123 , 234,½«Ò»¸ö×Ö·û´®Ð´³ÉµÄ×ø±êÊý¾Ý×ª»¯³ÉÁ½¸öÊý×Ö±äÁ¿
+-- ChuyÓn ®æi chuçi täa ®é "123,234" thµnh hai biÕn sè: 123 vµ 234
 function bt_str2xydata(str)
 	m = strfind(str,",")
 	x = tonumber(strsub(str,0,m-1))
@@ -363,7 +363,7 @@ function bt_str2xydata(str)
 	return x,y
 end
 
---´Ó×ø±êÎÄ¼þÖÐËæ»ú»ñµÃÒ»¸ö×ø±ê
+-- NgÉu nhiªn lÊy mét täa ®é tõ file täa ®é
 function bt_getadata(file)
 	local totalcount = GetTabFileHeight(file) - 1;
 	id = random(totalcount);
@@ -372,7 +372,7 @@ function bt_getadata(file)
 	return x,y
 end
 
---¸ù¾ÝnpcfileµÄÎÄ¼þµÄ×ø±ê¼¯ºÏ±í£¬²úÉúËùÓÐµÄnpcÄ£°åºÅÎªtnpcidµÄ¶Ô»°npc£¬²¢¹ØÁªscriptfileµÄ½Å±¾		
+-- Dùa vµo b¶ng tËp hîp täa ®é trong file npcfile, t¹o ra tÊt c¶ c¸c NPC ®èi tho¹i cã ID mÉu lµ tnpc_id vµ liªn kÕt víi scriptfile		
 function bt_adddiagnpc(npcfile, scriptfile, tnpcid, name)
 	addcount = 0;
 	local count = GetTabFileHeight(npcfile);
@@ -410,7 +410,7 @@ function bt_add_a_diagnpc(scriptfile, tnpcid, x, y, name)
 		return npcidx
 end
 
---¸ù¾ÝnpcfileµÄÎÄ¼þµÄ×ø±ê¼¯ºÏ±í£¬²úÉúËùÓÐµÄnpcÄ£°åºÅÎªtnpcidµÄÕ½¶·ÀàÐÍnpc
+-- Dùa vµo b¶ng tËp hîp täa ®é trong file npcfile, t¹o ra tÊt c¶ c¸c NPC chiÕn ®Êu cã ID mÉu lµ tnpc_id
 function bt_addfightnpc (npcfile, tnpcid, level, camp, removewhendeath, name, boss)
 	addcount = 0;
 	local count = GetTabFileHeight(npcfile) - 1;
@@ -446,7 +446,7 @@ function bt_addfightnpc (npcfile, tnpcid, level, camp, removewhendeath, name, bo
 end;	
 
 
---¸ù¾ÝnpcfileµÄÎÄ¼þµÄ×ø±ê¼¯ºÏ±í£¬ Ëæ»úµÄ²úÉúÒÔnpcÄ£°åºÅÎªtnpcidµÄÕ½¶·ÀàÐÍnpc
+-- Dùa vµo b¶ng tËp hîp täa ®é trong file npcfile, ngÉu nhiªn t¹o ra c¸c NPC chiÕn ®Êu cã ID mÉu lµ tnpc_id
 function bt_addrandfightnpc(npcfile, tnpcid, level, camp,count, deathscript, removewhendeath, name, boss)
 	addcount = 0;
 	
@@ -507,10 +507,10 @@ end;
 
 
 -------------------------------------------------------------------------
---Camp±íÊ¾¶Ô»°µÄÖ÷¹ÜÊÇÄÄ·½µÄ£¬1ÎªËÎ£¬2Îª½ð·½
---Èç¹ûµÈÓÚ1 ±íÊ¾ÒÑ¾­ÔÚ±¾³¡Õ½¾ÖÖÐ±¨¹ýÃûÁË£¬²¢ÇÒÊôÓÚÕâ¸öÕóÓª
---Èç¹ûµÈÓÚ2 ±íÊ¾ÒÑ¾­ÔÚ±¾³¡Õ½¾ÖÖÐ±¨¹ýÃûÁË£¬µ«ÊÇ²»ÊôÓÚÕâ¸öÕóÓª
---Èç¹ûµÈÓÚ0 ±íÊ¾ÉÐÎ´±¨Ãû¡£
+-- Camp biÓu thÞ chñ qu¶n ®èi tho¹i thuéc phe nµo, 1 lµ Tèng, 2 lµ Kim
+-- NÕu b»ng 1 nghÜa lµ ®· b¸o danh trong trËn chiÕn nµy, vµ thuéc vÒ phe nµy
+-- NÕu b»ng 2 nghÜa lµ ®· b¸o danh trong trËn chiÕn nµy, nh­ng kh«ng thuéc vÒ phe nµy
+-- NÕu b»ng 0 nghÜa lµ ch­a b¸o danh
 
 function bt_checklastbattle(Camp)
 
@@ -531,16 +531,16 @@ end;
 end
 -------------------------------------------------------------------------
 function bt_setnormaltask2type()
---701ÒÑ¾­±»Õ¼ÓÃ£¬ËùÒÔ¸ü»»µ½751
+-- 701 ®· bÞ chiÕm dông, v× vËy ®· ®æi sang 751
 BT_SetType2Task(1, 751)
 for i = 2, 50 do 
 	BT_SetType2Task(i, 700 + i);
 end
 end
 --------------------------------------------------------------------------
--- ½«×Ö·û´®°´·Ö¸î·û·Ö¸î£¬·µ»Ø¸÷·Ö¸î¶Î×é³ÉµÄÊý×é
--- Àý1£ºstrsplit( "abc,bcd,efg", "," ) -> { "abc", "bcd", "efg" }
--- Àý2£ºstrsplit( ",abc,,bcd,,,efg,,", ",," ) -> { ",abc", "bcd", ",efg" }
+-- T¸ch chuçi theo dÊu ph©n c¸ch, tr¶ vÒ mét m¶ng chøa c¸c phÇn ®· t¸ch
+-- VÝ dô 1: strsplit( "abc,bcd,efg", "," ) -> { "abc", "bcd", "efg" }
+-- VÝ dô 2: strsplit( ",abc,,bcd,,,efg,,", ",," ) -> { ",abc", "bcd", ",efg" }
 function strsplit( strText, strSeparator )
 	local arySlice = {};
 	local nSliceCount = 0;
@@ -643,11 +643,11 @@ function sf_buildfightnpcdata()
 		SetMissionV(MS_NPCCOUNT1_J + i - 1, count)
 	end
 	
-	--¿ªÊ¼Ê±Ê¿±øÒ»´ÎÈ«²¿³öÏÖ¡ª¡ª¡ª¡ªËÎ
+	-- Khi b¾t ®Çu, SÜ binh phe Tèng xuÊt hiÖn toµn bé mét lÇn
 	npcfile = GetIniFileData(mapfile, "Area_"..s_area, tbNPCPOS[2]);
 	bt_addrandfightnpc(npcfile, GetMissionV(MS_TRANK1_S), GetMissionV(MS_RANK1LVL_S), 1, GetMissionV(MS_NPCCOUNT1_S), tabFILE_NPCDEATH[1], 0)
 	
-	--¿ªÊ¼Ê±Ê¿±øÒ»´ÎÈ«²¿³öÏÖ¡ª¡ª¡ª¡ª½ð
+	-- Khi b¾t ®Çu, SÜ binh phe Kim xuÊt hiÖn toµn bé mét lÇn
 	npcfile = GetIniFileData(mapfile, "Area_"..j_area, tbNPCPOS[2]);
 	bt_addrandfightnpc(npcfile, GetMissionV(MS_TRANK1_J), GetMissionV(MS_RANK1LVL_J), 2, GetMissionV(MS_NPCCOUNT1_J), tabFILE_NPCDEATH[1], 0)
 
@@ -699,7 +699,7 @@ function bt_addtotalpoint(point)
 			point = TB_QIANQIU_YINGLIE0904:add_sj_point_ex(point);
 		end
 	end
-	-- µ÷ÕûÕ½³¡Ó¢ÐÛÃæ¾ß
+	-- §iÒu chØnh mÆt n¹ anh hïng chiÕn tr­êng
 --	local nHour = tonumber(GetLocalDate("%H"));
 --	if nWeekDay ~=1 and nHour ~= 21 then
 --		point = TB_QIANQIU_YINGLIE0904:add_sj_point_ex(point);
@@ -725,17 +725,17 @@ function bt_addtotalpoint(point)
 	end
 	point = Songjin_checkdoubleexp(point)
 	
-	-- »ý·Ö¼ì²é
+	-- KiÓm tra ®iÓm tÝch lòy
 	if BT_GetData(PL_BATTLEPOINT) > 1000000 then
 		
-		local szName		= GetName();					-- ½ÇÉ«Ãû
-		local nGameLevel 	= BT_GetGameData(GAME_LEVEL);	-- ËÎ½ðµÈ¼¶
-		local nSubWorldID 	= SubWorldIdx2ID();				-- µØÍ¼ID
+		local szName		= GetName();					-- Tªn nh©n vËt
+		local nGameLevel 	= BT_GetGameData(GAME_LEVEL);	-- CÊp ®é Tèng Kim
+		local nSubWorldID 	= SubWorldIdx2ID();				-- ID b¶n ®å
 
-		local nAddPoint		= point;						-- ±¾´ÎÔö¼ÓµÄ»ý·Ö
-		local nTotalPoint	= BT_GetData(PL_TOTALPOINT);	-- ±¾³¡»ý·Ö
-		local nBattlePoint	= BT_GetData(PL_BATTLEPOINT);	-- ½ÇÉ«»ý·Ö
-		local nKillPlayer	= BT_GetData(PL_KILLPLAYER);	-- É±ÈËÊý
+		local nAddPoint		= point;						-- §iÓm tÝch lòy ®­îc thªm vµo lÇn nµy
+		local nTotalPoint	= BT_GetData(PL_TOTALPOINT);	-- §iÓm tÝch lòy trËn nµy
+		local nBattlePoint	= BT_GetData(PL_BATTLEPOINT);	-- §iÓm tÝch lòy nh©n vËt
+		local nKillPlayer	= BT_GetData(PL_KILLPLAYER);	-- Sè ng­êi bÞ giÕt
 		
 		WriteLog(format("Warning[Too Much Battle Point] %s in Level_%d Battle(%d) want to add %d Ponit. Now Total Point is %d, Battle Point is %d, Kill %d Players!", 
 			szName, nGameLevel, nSubWorldID, nAddPoint, nTotalPoint, nBattlePoint, nKillPlayer));
@@ -751,7 +751,7 @@ function bt_addtotalpoint(point)
 	return point
 end
 
-function bt_assignrank(camp)--¸Ã¹¦ÄÜÒÑÎÞÐ§
+function bt_assignrank(camp)-- Chøc n¨ng nµy ®· v« hiÖu
 	camptab={}
 	--Çå³ýµ±Ç°µÄ¹ÙÎ»Êý¾Ý
 	for tt = 70 , 81 do 
@@ -801,7 +801,7 @@ function bt_assignrank(camp)--¸Ã¹¦ÄÜÒÑÎÞÐ§
 		end
 	end
 end
---------------------------¼ÆËã»ý·ÖÏµÊý£¬ÖØÖÃ»ý·Ö---------------------------------------
+--------------------------TÝnh to¸n hÖ sè ®iÓm, ®Æt l¹i ®iÓm---------------------------------------
 function ResetBonus()
 	CAMP1CUN = GetMSPlayerCount(MISSIONID, 1)
 	CAMP2CUN = GetMSPlayerCount(MISSIONID, 2)
@@ -815,13 +815,13 @@ function ResetBonus()
 		bonuscff2 = 1-(CAMP2CUN-AVRCUN)/AVRCUN
 	end
 	
-	-- ¹úÕ½ËÎ½ðºöÂÔË«·½Æ½ºâ
+	-- Quèc chiÕn Tèng Kim bá qua c©n b»ng hai phe
 	if BT_GetGameData(GAME_BATTLEID) == 2 then
 		bonuscff1 = 1
 		bonuscff2 = 1
 	end
 	
-	--µ±ÍíÈç¹û´¦ÓÚ»ÍÖ®ÕÂ»î¶¯ÖÐ£¬½±Àø·­±¶
+	-- NÕu vµo buæi tèi ®ang trong ho¹t ®éng Hoµng Chi Ch­¬ng, tÝch lòy sÏ ®­îc nh©n ®«i
 	bonuscff1 = bonuscff1 * bt_getgn_awardtimes()
 	bonuscff2 = bonuscff2 * bt_getgn_awardtimes()
 	
@@ -855,9 +855,9 @@ function ResetBonus()
 end
 ------------------------------------------------------------------------------------
 
----------------------½øÈëÕ½³¡Ê±¸³¸øÍæ¼ÒÏàÓ¦Í·ÏÎ BEGIN------------------------------------------
+---------------------Khi vµo chiÕn tr­êng sÏ g¸n chøc vô t­¬ng øng cho ng­êi ch¬i BEGIN------------------------------------------
 function bt_JudgePLAddTitle()
---»ñµÃµ±Ç°µÄRank£¬Èç¹û»ý·Ö´ïµ½ÁËÏÂÒ»¼¶RankµÄÒªÇóÖµÔò¸ø¸ÃÍæ¼Ò¸ÃRank,Èç¹ûRankÖµÒÑ¾­´ïµ½ÉÏÏÞÔò²»¼Ó
+-- LÊy Rank hiÖn t¹i. NÕu ®iÓm ®¹t yªu cÇu cña Rank cÊp tiÕp theo th× g¸n Rank ®ã cho ng­êi ch¬i. NÕu gi¸ trÞ Rank ®· ®¹t giíi h¹n trªn th× kh«ng céng thªm.
 	local nCurRank = BT_GetData(PL_CURRANK)
 	if ( nCurRank >= getn(TAB_RANKBONUS)) then
 		return
@@ -874,7 +874,7 @@ function bt_JudgePLAddTitle()
 	end
 end
 
---¸øÓÚÍ·ÏÎ
+-- G¸n chøc vô
 function bt_RankEffect(rank)
 	if (rank == 0) then
 		rank = 1
@@ -890,10 +890,10 @@ function bt_RankEffect(rank)
 	BT_SetData(PL_CURRANK, rank);
 end
 
--------------------------½øÈëÕ½³¡Ê±¸³¸øÍæ¼ÒÏàÓ¦Í·ÏÎ ENDING----------------------------------
+-------------------------Khi vµo chiÕn tr­êng sÏ g¸n chøc vô t­¬ng øng cho ng­êi ch¬i ENDING----------------------------------
 
 
-function bt_autoselectmaparea(mapfile,areacount)		--Ëæ»úÑ¡Ôñ³¡µØÖÐ£¬Ë«·½ËùÔÚµÄÕóÓªµØ
+function bt_autoselectmaparea(mapfile,areacount)		-- NgÉu nhiªn chän mét ®Þa ®iÓm trong b¶n ®å, lµ khu vùc c¨n cø cña c¶ hai phe
 	local s_area = 0
 	local j_area = 0
 	local areatmp = random(areacount);
@@ -929,24 +929,24 @@ function bt_exchangeexp(level, mark)
 		if (level < 40) then
 			return 0
 		end
-		local base_exp = (( 700 + floor(( level - 40 ) / 5 ) * 100 ) * 60 * 7 / 3000 );	-- 1¸ö»ý·ÖµãµÄ»ù´¡¾­ÑéÖµ
+		local base_exp = (( 700 + floor(( level - 40 ) / 5 ) * 100 ) * 60 * 7 / 3000 );	-- Gi¸ trÞ kinh nghiÖm c¬ b¶n cña 1 ®iÓm tÝch lòy
 		local bonus = floor( mark * base_exp )
 		
-		-- ËÎ½ðµ÷Õû By ²¯ÁÑÆßÏÒ 09/07/27
+		-- Tèng Kim ®iÒu chØnh bëi BÝ tÞch 120 27/07/09
 		if (level >= 120) then
 			bonus = floor( bonus * 2.5 * 2 )
 		end
 		
 		return bonus
 end
------½«Ãë´«»»³É·ÖÓëÃë£¬±ÈÈç62s = 1m2s
+-- ChuyÓn ®æi gi©y thµnh phót vµ gi©y, vÝ dô: 62s = 1m2s
 function GetMinAndSec(nSec)
 nRestMin = floor(nSec / 60);
 nRestSec = mod(nSec,60)
 return nRestMin, nRestSec;
 end;
 
-function bt_pop2signmap()	--²»ÔÊÐíÍæ¼ÒÔÚºóÓªÍ£Áô5·ÖÖÓ£¬ÔÚ¶áÆìÄ£Ê½£¬ºÍÔªË§Ä£Ê½£¬É±Â¾Ä£Ê½ÒòÎª2·ÖÖÓ»á½«Íæ¼Ò¶ªµ½Õ½³¡£¬ËùÒÔ²»×ö´¦Àí
+function bt_pop2signmap()	-- Kh«ng cho phÐp ng­êi ch¬i ë l¹i hËu cø qu¸ 5 phót. Trong chÕ ®é §å S¸t vµ chÕ ®é Nguyªn So¸i, chÕ ®é S¸t Lôc sÏ kh«ng xö lý v× sau 2 phót ng­êi ch¬i sÏ bÞ nÐm ra chiÕn tr­êng.
 	local oldPlayerIndex = PlayerIndex
 	local tbPlayer = {}
 	local count = 0
@@ -976,7 +976,7 @@ function bt_pop2signmap()	--²»ÔÊÐíÍæ¼ÒÔÚºóÓªÍ£Áô5·ÖÖÓ£¬ÔÚ¶áÆìÄ£Ê½£¬ºÍÔªË§Ä£Ê½£¬É
 			SetLogoutRV(0);
 			SetCreateTeam(1);
 			SetDeathScript("");
-			SetFightState(0)		-- ´òÍêÕÌºó¸ÄÎª·ÇÕ½¶·×´Ì¬£¨by Dan_Deng£©
+			SetFightState(0)		-- Sau khi ®¸nh xong qu¸i th× chuyÓn sang tr¹ng th¸i kh«ng chiÕn ®Êu (by Dan_Deng)
 			SetPunish(1)
 			ForbidChangePK(0);
 			SetPKFlag(0)
@@ -1027,19 +1027,19 @@ function check_pl_level(pl_level)
 	end
 end
 
----ÐÂ¼ÓÈëStart
---ËÎ½ðÈÙÓþ»ý·ÖÅÅÐÐ£¬½ö¸ß¼¶ËÎ½ð
---Ã¿³¡±ÈÈü½áÊøÊ±£¬¼´Ê±Õ½±¨ÅÅÐÐµÄÃû´ÎºÍ»ý·Ö£¬
---	´æÔÚÕ½¶ÓÍ³¼Æ£¨LEAGUERESULT£©ÖÐÓëÒÑÓÐ³É¼¨ÅÅÐò£¬±£ÁôÇ°10Ãû
---	¸üÐÂÅÅÐÐ°ñ£¨·çÔÆÅÅÐÐ°ñ10250£©£¬°´Ãû´Î
---ÔÚÖÜÈÕÍí23Ê±£¬½«Õ½¶ÓÅÅÐòµÄ½á¹û£¨Ç°5Ãû£©±£´æÔÚÅÅÐÐ°ñ£¨10239£©ÖÐ£¬¹©Áì½±
---Í¬Ê±£¬Çå³ýÕ½¶ÓÍ³¼Æ£¨LEAGUERESULT£©ÖÐµÄ³É¼¨
---2545
+--- B¾t ®Çu thªm míi
+-- B¶ng xÕp h¹ng ®iÓm Tèng Kim Vinh Dù, chØ dµnh cho Tèng Kim cÊp cao
+-- Khi mçi trËn ®Êu kÕt thóc, ngay lËp tøc thèng kª thø h¹ng vµ ®iÓm trong chiÕn b¸o,
+-- L­u tr÷ trong thèng kª chiÕn ®éi (LEAGUERESULT) cïng víi xÕp h¹ng thµnh tÝch hiÖn cã, gi÷ l¹i 10 thø h¹ng ®Çu
+-- CËp nhËt b¶ng xÕp h¹ng (b¶ng xÕp h¹ng Phong V©n 10250), theo thø h¹ng
+-- Vµo 23 giê Chñ NhËt hµng tuÇn, l­u kÕt qu¶ xÕp h¹ng chiÕn ®éi (top 5) vµo b¶ng xÕp h¹ng (10239) ®Ó ph¸t th­ëng
+-- §ång thêi, xãa thµnh tÝch trong thèng kª chiÕn ®éi (LEAGUERESULT)
+-- 2545
  LG_SONGJINHONOUR = 535;
  LG_TSK_HONOURPOINT = 1;
  LG_TSK_TOTALPOINT = 2;
- LG_TSK_SECT = 3;	--ÃÅÅÉ
- LG_TSK_GENDER = 4; --ÐÔ±ð
+ LG_TSK_SECT = 3;	-- M«n ph¸i
+ LG_TSK_GENDER = 4; -- Giíi tÝnh
 function bt_sortbthonour()
 	--±¾´Î½á¹û
 	local tbCurPlayer = {};
@@ -1055,7 +1055,7 @@ function bt_sortbthonour()
 		return 0;
 	end;
 	
-	bt_reportworldresult(tbCurPlayer);	--½«±¾´ÎÅÅÃû³É¼¨¹«¸æÊÀ½ç£¨ËùÓÐ·þÎñÆ÷£©
+	bt_reportworldresult(tbCurPlayer);	-- C«ng bè thµnh tÝch xÕp h¹ng lÇn nµy ra thÕ giíi (tÊt c¶ c¸c m¸y chñ)
 	
 	local tbNewPlayer = {};
 	local nlg_idx = LG_GetFirstLeague(LG_SONGJINHONOUR);
@@ -1087,27 +1087,27 @@ function bt_sortbthonour()
 		end;
 	end;
 	
-	--²åÈëµ½Ö®Ç°µÄ½á¹û
+	-- ChÌn vµo kÕt qu¶ tr­íc ®ã
 	for i = 1, getn(tbCurPlayer) do
 		local nlg_idx = LG_GetLeagueObj(LG_SONGJINHONOUR, tbCurPlayer[i][1]);
-		if (nlg_idx == nil or nlg_idx == 0) then	--Èç¹ûÃ»ÓÐÔò´´½¨£¬²»ÔÙ´ÎÅÅÐò
-			if (bt_createleague(tbCurPlayer[i][1]) == 1) then	--´´½¨³É¹¦
+		if (nlg_idx == nil or nlg_idx == 0) then	-- NÕu kh«ng cã th× t¹o míi, kh«ng xÕp h¹ng l¹i
+			if (bt_createleague(tbCurPlayer[i][1]) == 1) then	-- T¹o thµnh c«ng
 				LG_ApplyAppendLeagueTask(LG_SONGJINHONOUR, tbCurPlayer[i][1], LG_TSK_HONOURPOINT, tbCurPlayer[i][2]);
 				LG_ApplyAppendLeagueTask(LG_SONGJINHONOUR, tbCurPlayer[i][1], LG_TSK_TOTALPOINT, tbCurPlayer[i][3]);
 				LG_ApplySetLeagueTask(LG_SONGJINHONOUR, tbCurPlayer[i][1], LG_TSK_SECT, tbCurPlayer[i][4]);
 				LG_ApplySetLeagueTask(LG_SONGJINHONOUR, tbCurPlayer[i][1], LG_TSK_GENDER, tbCurPlayer[i][5]);
 			end;
-		else										--Èç¹û´æÔÚ¾ÍÀÛ¼Æ
+		else										-- NÕu tån t¹i th× tÝch lòy
 			LG_ApplyAppendLeagueTask(LG_SONGJINHONOUR, tbCurPlayer[i][1], LG_TSK_HONOURPOINT, tbCurPlayer[i][2]);
 			LG_ApplyAppendLeagueTask(LG_SONGJINHONOUR, tbCurPlayer[i][1], LG_TSK_TOTALPOINT, tbCurPlayer[i][3]);
 		end;
 	end;
 	
-	Ladder_ClearLadder(10250);	--ÇåÅÅÃû
+	Ladder_ClearLadder(10250);	-- Xãa b¶ng xÕp h¹ng
 
 	if (getn(tbNewPlayer) >= 1) then
 		sort(tbNewPlayer, bt_sortmaxhonour);
-		for i = 1, 10 do			--ÖØÐ´ÅÅÃû
+		for i = 1, 10 do			-- ViÕt l¹i b¶ng xÕp h¹ng
 			if (tbNewPlayer[i]) then
 				Ladder_NewLadder(10250, tbNewPlayer[i][1],tbNewPlayer[i][2], 0, tbNewPlayer[i][4], tbNewPlayer[i][5]);
 			end;
@@ -1126,8 +1126,8 @@ function bt_sortmaxhonour(tb1, tb2)
 end;
 
 function bt_createleague(szlgname)
-	local nNewLeagueID = LG_CreateLeagueObj()	--Éú³ÉÉçÍÅÊý¾Ý¶ÔÏó(·µ»Ø¶ÔÏóID)
-	LG_SetLeagueInfo(nNewLeagueID, LG_SONGJINHONOUR, szlgname)	--ÉèÖÃÉçÍÅÐÅÏ¢(ÀàÐÍ¡¢Ãû³Æ)
+	local nNewLeagueID = LG_CreateLeagueObj()	-- T¹o ®èi t­îng d÷ liÖu bang héi (tr¶ vÒ ID ®èi t­îng)
+	LG_SetLeagueInfo(nNewLeagueID, LG_SONGJINHONOUR, szlgname)	-- ThiÕt lËp th«ng tin bang héi (lo¹i, tªn)
 	local ret = LG_ApplyAddLeague(nNewLeagueID, "", "") 
 	LG_FreeLeagueObj(nNewLeagueID)
 	return ret
@@ -1155,7 +1155,7 @@ end
 ---ÐÂ¼ÓÈëEnd
 
 
---by zero 2007-7-30 ·µ»Ø»ý·ÖÆ½ºâ±ÈÀý ËÎ£¬½ð
+-- by zero 2007-7-30 Tr¶ vÒ tû lÖ c©n b»ng ®iÓm: Tèng, Kim
 function bonus_rate()
 	CAMP1CUN = GetMSPlayerCount(MISSIONID, 1)
 	CAMP2CUN = GetMSPlayerCount(MISSIONID, 2)
@@ -1210,15 +1210,15 @@ function mar_addmissionpoint(totalpoint, nCurCamp)
 end
 
 
--- ÊµÊ±ÏÔÊ¾Õ½³¡µÄ¸÷ÖÖÅÅÃûÐÅÏ¢ by ²¯ÁÑÆßÏÒ 09/07/27
+-- HiÓn thÞ th«ng tin xÕp h¹ng c¸c lo¹i cña chiÕn tr­êng theo thêi gian thùc bëi SÜ L·ng ThÊt TÞch 27/07/09
 function bt_announce (lsf_level, n_time)
 	
-	-- Ã¿10·ÖÖÓ(30´Î*¼ä¸ô20Ãë)¹«²¼Ò»´ÎÐÅÏ¢
+	-- Mçi 10 phót (30 lÇn * c¸ch nhau 20 gi©y) c«ng bè mét lÇn th«ng tin
 	if (mod(n_time, 30) ~= 0) then
 		return
 	end
 	
-	-- ½ö¸ß¼¶Õ½³¡¹«²¼ÐÅÏ¢
+	-- ChØ c«ng bè th«ng tin chiÕn tr­êng cÊp cao
 	if (lsf_level ~= 3) then
 		return
 	end
@@ -1235,7 +1235,7 @@ function bt_announce (lsf_level, n_time)
 	local nStrLen_Camp_Text		= 6;
 	local nStrLen_Score_Text	= 6;
 	
-	-- Á¬Õ¶ÅÅÃû
+	-- B¶ng xÕp h¹ng liªn tr¶m
 	tbPlayer = {};
 	battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_SER);
 	Msg2MSAll(MISSIONID, "<color=green>"..strfill_center("Top liªn tr¶m", nStrLen_Total));
@@ -1251,7 +1251,7 @@ function bt_announce (lsf_level, n_time)
 		end
 	end
 	
-	-- PKÍæ¼ÒÅÅÃû
+	-- B¶ng xÕp h¹ng ng­êi ch¬i PK
 	tbPlayer = {};
 	battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_PK);
 	Msg2MSAll(MISSIONID, "<color=green>"..strfill_center("TOP PK", nStrLen_Total));
@@ -1267,7 +1267,7 @@ function bt_announce (lsf_level, n_time)
 		end
 	end
 	
-	-- ÍÀÉ±NPCÅÅÃû ½öÔªË§±£ÎÀÄ£Ê½
+	-- B¶ng xÕp h¹ng h¹ gôc NPC chØ chÕ ®é Nguyªn So¸i B¶o VÖ
 	if (MISSIONID == 16) then
 		tbPlayer = {};
 		battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_NPC);
