@@ -1,5 +1,7 @@
 Include("\\script\\dailogsys\\dailogsay.lua")
 Include("\\script\\lib\\remoteexc.lua")
+-- Th™m bi’n global
+Include("\\script\\global\\anhquach\\env.lua")
 
 function QuanLyHD_Say(szTitle)
     dofile("script/global/anhquach/gm/quan_ly_hoat_dong.lua")
@@ -21,7 +23,9 @@ function QuanLyTK_Say(szTitle)
         {"MÎ hoπt ÆÈng", QuanLyTK_MoHoatDongSay},
         {"T®ng Æi”m t›ch lÚy", QuanLyTK_TangTichLuySay},
         {"Reset Æi”m t›ch lÚy", QuanLyTK_ResetTichLuy},
-        {"Ki”m tra Æi”m t›ch lÚy", QuanLyTK_KiemTraTichLuy},
+        {"Reset EXP ngµy", QuanLyTK_ResetExpNgay},
+        {"Reset EXP tu«n", QuanLyTK_ResetExpTuan},
+        -- {"Ki”m tra Æi”m t›ch lÚy", QuanLyTK_KiemTraTichLuy},
         {"Tho∏t"}
     }
     CreateNewSayEx(szTitle, tbOpt)
@@ -65,6 +69,16 @@ end
 function QuanLyTK_KiemTraTichLuy()
     nTichLuy = GetTask(747)
     Talk(1,"","Hi÷n tπi bπn c„ <color=green>" .. nTichLuy .. "<color> Æi”m t›ch lÚy")
+end
+
+function QuanLyTK_ResetExpNgay()
+    SetTask(TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE, 0)
+    Msg2Player("<color=yellow>ß∑ reset giÌi hπn EXP quy ÆÊi trong ngµy v“ <color=green>0<color><color>")
+end
+
+function QuanLyTK_ResetExpTuan()
+    SetTask(1017, 0)
+    Msg2Player("<color=yellow>ß∑ reset giÌi hπn EXP quy ÆÊi trong tu«n v“ <color=green>0<color><color>")
 end
 
 --  //////////////////////////////////////////////////////////////
