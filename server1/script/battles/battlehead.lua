@@ -161,7 +161,7 @@ end
 		MS_PL2RANK5_J = 80		-- §¹i t­íng
 		MS_PL2RANK6_J = 81		-- Nguyªn so¸i
 	
-		MS_HUANGZHIZHANG = 90	-- Sè Cóp nhËn ®­îc tõ ho¹t ®éng ch­¬ng Håi øc
+		MS_HUANGZHIZHANG = 90  -- Sè Cóp nhËn ®­îc tõ ho¹t ®éng Hoµng Chi Ch­¬ng
 		MS_WUXINGZHUCNT_S = 91 -- Ghi l¹i sè l­îng Trô Ngò Hµnh phe Tèng ®­îc triÖu håi	68
 		MS_WUXINGZHUCNT_J = 92 -- Ghi l¹i sè l­îng Trô Ngò Hµnh phe Kim ®­îc triÖu håi	69
 	
@@ -291,9 +291,9 @@ end
 	
 	
 	tbTNPC_SOLDIER = {{631,632,633,634,635,636}, {637, 638, 639, 640, 641, 642}}
-	BATTLES_WINGAME_POINT	= 1200;	--„§iÓm nhËn ®­îc khi th¾ng
-	BATTLES_LOSEGAME_POINT	= 600;	-- §iÓm nhËn ®­îc khi thua
-	BATTLES_TIEGAME_POINT	= 900;	-- §iÓm nhËn ®­îc khi hßa
+	BATTLES_WINGAME_POINT	= 1200;	-- TÝch lòy nhËn ®­îc khi th¾ng
+	BATTLES_LOSEGAME_POINT	= 600;	-- TÝch lòy nhËn ®­îc khi thua
+	BATTLES_TIEGAME_POINT	= 900;	-- TÝch lòy nhËn ®­îc khi hßa
 
 --¸ù¾Ý±¨ÃûµØÍ¼µÄid£¬»ñµÃËùÊôµÄÕ½ÒÛµÈ¼¶
 function bt_map2battlelevel(mapid)
@@ -685,14 +685,16 @@ function bt_addtotalpoint(point)
 	end
 
 	local nWeekDay = tonumber(GetLocalDate("%w"));
+	-- NÕu kh«ng ph¶i ngµy TK Thiªn Tö th× dïng mÆt n¹ b×nh th­êng
 	if nWeekDay ~= 2 and nWeekDay ~= 4 and nWeekDay ~= 6 then
 		point = BigBoss:AddSongJinPoint(point);	
 		point = TB_QIANQIU_YINGLIE0904:add_sj_point(point);
 		point = TB_QIANQIU_YINGLIE0904:add_sj_point_ex(point);
 	else
+	-- NÕu lµ ngµy TK Thiªn Tö th× chØ dïng mÆt n¹ ®­îc ë c¸c trËn TK th­êng (ko ph¶i 21:00)
 		local nHour = tonumber(GetLocalDate("%H%M"))
 		--DinhHQ
-		--20110406: kh«ng kÝch ho¹t hiÖu øng x2 x3 ®iÓm khi sö dông mÆt n¹  trong TK  Thiªn tö 
+		--20110406: kh«ng kÝch ho¹t hiÖu øng x2 x3 ®iÓm khi sö dông mÆt n¹ trong TK Thiªn tö (21:00)
 		if( nHour < 2045 or nHour >= 2250)then
 			point = BigBoss:AddSongJinPoint(point);	
 			point = TB_QIANQIU_YINGLIE0904:add_sj_point(point);
@@ -1004,10 +1006,13 @@ function bt_getgn_awardtimes()
 		local nHour = tonumber(GetLocalDate("%H%M"))
 		--DinhHQ
 		--20110409: kh«ng kÝch ho¹t hiÖu øng x4 ®iÓm tÝch lòy cña TK Thiªn Tö trong c¸c giê TK th­êng
+		-- NghÜa lµ chØ kÝch ho¹t hiÖu øng x4 trong giê TK Thiªn Tö (21:00)
 		if( nHour >= 2045 and nHour < 2250)then
 			return 4
 		end
 	end
+	-- KiÓm tra Hoµng Chi Ch­¬ng
+	-- MS_HUANGZHIZHANG = hÖ sè x tõ ho¹t ®éng Hoµng Chi Ch­¬ng
 	if (GetMissionV(MS_HUANGZHIZHANG) == 0 or GetMissionV(MS_HAUNGZHIZHANG) == 1) then
 		return 1
 	else
