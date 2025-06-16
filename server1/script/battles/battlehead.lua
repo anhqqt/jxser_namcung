@@ -1,6 +1,9 @@
-		IncludeLib("FILESYS");
-		IncludeLib("TITLE");
-		IncludeLib("SETTING");
+-- Thªm biÕn global
+Include("\\script\\global\\anhquach\\env.lua")
+--
+IncludeLib("FILESYS");
+IncludeLib("TITLE");
+IncludeLib("SETTING");
 Include("\\script\\event\\storm\\function.lua")	--Storm
 Include("\\script\\event\\great_night\\huangzhizhang\\event.lua")	--HUANGZHIZHANG
 Include("\\script\\missions\\boss\\bigboss.lua")	-- big boss
@@ -66,7 +69,7 @@ function ExhibitBoss()
 			break;
 		end
 	end;
-	if (0 == ExhibitArray_Index) then	-- Èç¹û²»ÊÇ¸ß¼¶µØÍ¼Ôò½øÐÐBOSSÏÔÊ¾
+	if (0 == ExhibitArray_Index) then	-- NÕu kh«ng ph¶i b¶n ®å cao cÊp th× tiÕn hµnh hiÓn thÞ BOSS
 		return	
 	end;
 	local BossID_Index = random(1, 3);
@@ -291,9 +294,9 @@ end
 	
 	
 	tbTNPC_SOLDIER = {{631,632,633,634,635,636}, {637, 638, 639, 640, 641, 642}}
-	BATTLES_WINGAME_POINT	= 1200;	-- TÝch lòy nhËn ®­îc khi th¾ng
-	BATTLES_LOSEGAME_POINT	= 600;	-- TÝch lòy nhËn ®­îc khi thua
-	BATTLES_TIEGAME_POINT	= 900;	-- TÝch lòy nhËn ®­îc khi hßa
+	BATTLES_WINGAME_POINT	= TONG_KIM_THUONG_THANG;	-- TÝch lòy nhËn ®­îc khi th¾ng
+	BATTLES_LOSEGAME_POINT	= TONG_KIM_THUONG_THUA;		-- TÝch lòy nhËn ®­îc khi thua
+	BATTLES_TIEGAME_POINT	= TONG_KIM_THUONG_HOA;		-- TÝch lòy nhËn ®­îc khi hßa
 
 --¸ù¾Ý±¨ÃûµØÍ¼µÄid£¬»ñµÃËùÊôµÄÕ½ÒÛµÈ¼¶
 function bt_map2battlelevel(mapid)
@@ -1046,7 +1049,7 @@ end
  LG_TSK_SECT = 3;	-- M«n ph¸i
  LG_TSK_GENDER = 4; -- Giíi tÝnh
 function bt_sortbthonour()
-	--±¾´Î½á¹û
+	-- KÕt qu¶ lÇn nµy
 	local tbCurPlayer = {};
 	for i = 1, 10 do
 		local szname, npoint, nsect, ngender = BT_GetTopTenInfo(i, PL_TOTALPOINT);
