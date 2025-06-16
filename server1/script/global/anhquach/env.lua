@@ -19,6 +19,10 @@ GM_DANH_SACH = {
     ["1"] =
         { 
             "test5d"
+        },
+    ["2"] =
+        { 
+            "testhd"
         }
 }
 
@@ -58,15 +62,34 @@ THAM_CAU_CHIEU_DA   = 2000
 -- //                        Tèng Kim                          //
 --//////////////////////////////////////////////////////////////
 TONG_KIM_LIMIT_EXP_TUAN  = {
-    [0] = 700000,
-    [3] = 800000,
-    [4] = 1000000,
+    [0] = 70000000,
+    [3] = 70000000,
+    [4] = 70000000,
 }
 TONG_KIM_LIMIT_EXP_NGAY  = {
-    [0] = 100000,
-    [3] = 120000,
-    [4] = 150000,
+    [0] = 10000000,
+    [3] = 10000000,
+    [4] = 10000000,
 }
-TONG_KIM_TY_LE_TICH_LUY_EXP       = 100
+TONG_KIM_LE_BAO_AWARD = {
+    {szName = "Khiªu chiÕn LÔ bao", tbProp = {6,1,2006,1,1,0}, nRate = 50},
+    {szName = "ThÇn bÝ kho¸ng th¹ch", tbProp = {6,1,398,1,0,0}, nRate = 0.05},
+    {szName = "Tö Thñy Tinh", tbProp = {4,239,1,1,1,0}, nRate = 0.2},
+    {szName = "Lôc Thñy Tinh", tbProp = {4,240,1,1,1,0}, nRate = 0.2},
+    {szName = "Lam Thñy Tinh", tbProp = {4,238,1,1,1,0}, nRate = 0.2},
+    {szName = "Tinh Hång B¶o Th¹ch", tbProp = {4,353,1,1,1,0}, nRate = 0.5},
+    {szName = "B¹ch Ch©n §¬n", tbProp = {6,1,1676,1,0,0}, nRate = 0.03, tbParam = {500000000}},
+    {szName = "HuyÕt Ch©n §¬n", tbProp = {6,1,1677,1,0,0}, nRate = 0.02, tbParam = {1000000000}},
+    {szName = "HuyÒn Ch©n §¬n", tbProp = {6,1,1678,1,0,0}, nRate = 0.01, tbParam = {1500000000}},
+    {szName = "An Bang B¨ng Tinh Th¹ch H¹ng Liªn", nQuality=1, tbProp = {0,164}, nRate = 0.01},
+    {szName = "An Bang Kª HuyÕt Th¹ch Giíi ChØ ", nQuality=1, tbProp = {0,167}, nRate = 0.02},
+    {szName = "An Bang Cóc Hoa Th¹ch ChØ hoµn", nQuality=1, tbProp = {0,165}, nRate = 0.02},
+    {szName = "An Bang §iÒn Hoµng Th¹ch Ngäc Béi", nQuality=1, tbProp = {0,166}, nRate = 0.02},
+    {szName = "Hai tr¨m v¹n ®iÓm kinh nghiÖm", nExp = 2000000, nRate = 48.72},
+}
+TONG_KIM_TY_LE_TICH_LUY_EXP       = 500
 TONG_KIM_TSK_LIMIT_EXP_NGAY_DATE  = 1900
 TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE = 1901
+TONG_KIM_THUONG_THANG             = 1200
+TONG_KIM_THUONG_THUA              = 600
+TONG_KIM_THUONG_HOA               = 900
