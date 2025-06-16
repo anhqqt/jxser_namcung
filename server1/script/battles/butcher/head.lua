@@ -108,138 +108,151 @@ end
 function sf_winbouns(n_camp)
 	local wincamp = n_camp;
 	local failcamp = 0
-	
+
 	if (wincamp == 0) then
 		wincamp = 1;
 	end
-	
-	--Èç¹û½áÊø¶Ô·½ÕóÓªÃ»ÓÐÍæ¼Ò£¬ÔòÊ¤·½²»¸ø½±Àø
+
+	-- NÕu kÕt thóc ®èi ph­¬ng trËn doanh kh«ng cã ng­êi ch¬i, th× bªn th¾ng kh«ng cho th­ëng
 	if (wincamp == 1) then
 		failcamp = 2;
 	else
 		failcamp = 1;
 	end
-	
+
 	if (GetMSPlayerCount(MISSIONID, failcamp) == 0) then
 		WriteLog("Do phe b¹i kh«ng cã ng­êi ch¬i, phe th¾ng kh«ng ®­îc tÆng th­ëng!")
 		return
 	end
-	
-	--by zero 2007-8-1 »ñµÃËùÓÐÓ®·½
+
+	--by zero 2007-8-1 -- LÊy tÊt c¶ phe ®Þch
 	local All_Players_Table = {};
 	local Win_Players_Table = {};
 	idx = 0;
-	
-	for i = 1 , GetMSPlayerCount(MISSIONID, wincamp) do
+
+	for i = 1, GetMSPlayerCount(MISSIONID, wincamp) do
 		idx, pidx = GetNextPlayer(MISSIONID, idx, wincamp)
 		if (pidx > 0) then
-			Win_Players_Table[getn(Win_Players_Table)+1]=pidx
-			All_Players_Table[getn(All_Players_Table)+1]=pidx
+			Win_Players_Table[getn(Win_Players_Table) + 1] = pidx
+			All_Players_Table[getn(All_Players_Table) + 1] = pidx
 		end
-		if (idx <= 0) then 
+		if (idx <= 0) then
 			break
 		end;
 	end
-	
+
 	local Los_Players_Table = {};
 	idx = 0;
-	for i = 1 , GetMSPlayerCount(MISSIONID, failcamp) do
+	for i = 1, GetMSPlayerCount(MISSIONID, failcamp) do
 		idx, pidx = GetNextPlayer(MISSIONID, idx, failcamp)
 		if (pidx > 0) then
-			Los_Players_Table[getn(Los_Players_Table)+1]=pidx
-			All_Players_Table[getn(All_Players_Table)+1]=pidx
+			Los_Players_Table[getn(Los_Players_Table) + 1] = pidx
+			All_Players_Table[getn(All_Players_Table) + 1] = pidx
 		end
-		if (idx <= 0) then 
+		if (idx <= 0) then
 			break
 		end;
 	end
 	battle_finish_activity(BT_GetGameData(GAME_LEVEL), All_Players_Table, Win_Players_Table, Los_Players_Table, n_camp)
 	tbChangeDestiny:completeMission_Battle(All_Players_Table)
+
+	-- Random th­ëng 3 x MÆt n¹ nguyªn so¸i cho toµn bé ng­êi ch¬i
 	TB_QIANQIU_YINGLIE0904:add_lucky_award(All_Players_Table)
-	
+
+	-- Th­ëng Tèng Kim LÔ Bao
+	-- Th¾ng = 3
+	-- Hßa = 2
+	-- Thua = 1
 	if (n_camp ~= 0) then
 		TB_QIANQIU_YINGLIE0904:add_end_award(Win_Players_Table, 2);
 		TB_QIANQIU_YINGLIE0904:add_end_award(Los_Players_Table, 0);
 	else
 		TB_QIANQIU_YINGLIE0904:add_end_award(All_Players_Table, 1);
 	end
-	
-	--end 
-	--by zero 2007-7-30 »ñµÃËÎ½ð¾ü¹¦ÅÆ Ò»Ìì»ñµÃ2´Î
+
+	--end
+	--by zero 2007-7-30 -- NhËn ®­îc qu©n c«ng bµi Tèng Kim. Mét ngµy nhËn 2 lÇn.
+	-- ChØ bªn Th¾ng míi nhËn ®­îc qu©n c«ng bµi Tèng Kim
 	local OldPlayerIndex = PlayerIndex
-	for i=1,getn(Win_Players_Table) do
-		PlayerIndex=Win_Players_Table[i];
-		local player_total_point=BT_GetData(PL_TOTALPOINT) --»ñµÃ»ý·Ö
-		
-		--ÁìÈ¡2007ÖÐÇï»¨µÆ
-		--2007Äê9ÔÂ21ÈÕ£¨ÀýÐÐÎ¬»¤ºó£©~9ÔÂ28ÈÕ00£º30
-		local nTime=0;
+	for i = 1, getn(Win_Players_Table) do
+		PlayerIndex = Win_Players_Table[i];
+		local player_total_point = BT_GetData(PL_TOTALPOINT) -- NhËn ®­îc ®iÓm
+
+		-- NhËn 2007 Trung Thu Hoa §¨ng
+		-- 2007 n¨m 9 th¸ng 21 ngµy (sau b¶o tr× ®Þnh kú) ~ 9 th¸ng 28 ngµy 00:30
+		local nTime = 0;
 		nTime = tonumber(GetLocalDate("%y%m%d%H%M"))
-		
-		
-		--ÁìÈ¡¾ü¹¦ÅÆ
-		local jg_ndate=tonumber(GetLocalDate("%y%m%d"))
-		jg_ndate=jg_ndate*10+2;
-		local JG_T_Value=GetTask(JUNGONGPAI_Task_ID) --¾ü¹¦ÅÆ»ñÈ¡ÈÎÎñ±äÁ¿
-		
-		
-		
+
+
+		-- L·nh nhËn Qu©n c«ng Bµi
+		local jg_ndate = tonumber(GetLocalDate("%y%m%d"))
+		jg_ndate = jg_ndate * 10 + 2;
+		local JG_T_Value = GetTask(JUNGONGPAI_Task_ID) -- BiÕn nhiÖm vô nhËn Qu©n c«ng Bµi
+
+
+
 		--print(format("%d %d",player_total_point,JG_T_Value))
-		if(player_total_point >= 1000 and JG_T_Value < jg_ndate) then
-			local ItemIdx = AddItem(6,1,JUNGONGPAI,1,0,0);
-			
-			local Tdate=FormatTime2Number(GetCurServerTime()+24*60*60)--ÁìÈ¡µÄµÚ¶þÌì
-			Tdate=floor(Tdate/10000) --È¡Äê,ÔÂ,ÈÕ
-			nEndYear=floor(Tdate/10000)+2000
-			nEndMonthDay=floor(mod(Tdate,10000))
-			SetSpecItemParam(ItemIdx, 1,nEndYear);--ÉèÖÃÎïÆ·Äê
-			SetSpecItemParam(ItemIdx, 2,nEndMonthDay);--ÉèÖÃÎïÆ·ÔÂÈÕ
+		if (player_total_point >= 1000 and JG_T_Value < jg_ndate) then
+			local ItemIdx = AddItem(6, 1, JUNGONGPAI, 1, 0, 0);
+
+			local Tdate = FormatTime2Number(GetCurServerTime() + 24 * 60 * 60) -- Ngµy thø hai nhËn l·nh
+			Tdate = floor(Tdate / 10000)                      -- LÊy n¨m, th¸ng, ngµy
+			nEndYear = floor(Tdate / 10000) + 2000
+			nEndMonthDay = floor(mod(Tdate, 10000))
+			SetSpecItemParam(ItemIdx, 1, nEndYear); -- ThiÕt lËp n¨m vËt phÈm
+			SetSpecItemParam(ItemIdx, 2, nEndMonthDay); -- ThiÕt lËp ngµy th¸ng vËt phÈm
 			SyncItem(ItemIdx)
-			SetItemBindState(ItemIdx, -2);-- °ó¶¨
+			SetItemBindState(ItemIdx, -2);    -- Rµng buéc
 			Msg2Player("B¹n nhËn ®­îc 1 Hu©n c«ng bµi Tèng Kim")
 			WriteLog(format("[ChiÕn tr­êng Tèng Kim]\t%s\tName:%s\tAccount:%s\t 1000 ®iÓm tÝch lòy trë lªn sÏ nhËn ®­îc 1 Hu©n c«ng bµi Tèng Kim",
-					GetLocalDate("%y%m%d %X"), GetName(), GetAccount()));
-			if(JG_T_Value == (jg_ndate-1)) then --ÁìÈ¡ÁË2´Î	
-				SetTask(JUNGONGPAI_Task_ID,jg_ndate);
-			elseif(JG_T_Value ~= jg_ndate) then --ÁìÈ¡ÁË1´Î	
-				SetTask(JUNGONGPAI_Task_ID,jg_ndate-1);
+							GetLocalDate("%y%m%d %X"), GetName(), GetAccount()));
+			if (JG_T_Value == (jg_ndate - 1)) then -- §· nhËn 2 lÇn
+				SetTask(JUNGONGPAI_Task_ID, jg_ndate);
+			elseif (JG_T_Value ~= jg_ndate) then -- §· nhËn 1 lÇn
+				SetTask(JUNGONGPAI_Task_ID, jg_ndate - 1);
 			end
 		end
 	end
 	PlayerIndex = OldPlayerIndex
 	--end
-	
-	local award_over = floor(BATTLES_LOSEGAME_POINT * bt_getgn_awardtimes())
-	bt_camp_getbonus(failcamp, award_over, "LÇn nµy phe ta b¹i! Th¾ng b¹i lµ chuyÖn th­êng t×nh cña binh gia, t­íng sÜ ®õng n¶n lßng! LÇn sau sÏ quyÕt 1 trËn th­ hïng. (NhËn ®­îc <color=yellow>", 50);
-	
-	bonuscff1 = BATTLES_WINGAME_POINT * bt_getgn_awardtimes()
-   	repute = 3 * bt_getgn_awardtimes()
-	WriteLog("§iÓm tÝch lòy cho phe th¾ng lîi lµ: "..bonuscff1)
-	
-	sf_itemcount = getn(sf_aryItems)
-	
-	-- by zero ÐÞ¸Ä»ñÈ¡Ó®·½ÈËÔ±µÄ·½Ê½
-	OldPlayerIndex = PlayerIndex	
-	for i=1,getn(Win_Players_Table) do
-		PlayerIndex=Win_Players_Table[i];
-            local game_level = BT_GetGameData(GAME_LEVEL);
-           local n_bonuscff1 = 0;
-	   		AddRepute(repute);			
-	   		Msg2Player("Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color> ®iÓm!")
-			n_bonuscff1 = bt_addtotalpoint(bonuscff1)
-			Msg2Player("B¹n nhËn ®­îc <color=yellow>"..n_bonuscff1.."<color> ®iÓm tÝch lòy")
-			--Storm Ê¤·½½áÊøÌôÕ½£¬²¢¼ÇÂ¼»ñÊ¤Õß
-			Say("Chóc mõng phe b¹n giµnh th¾ng lîi! Danh väng cña b¹n t¨ng thªm <color=yellow>"..repute.."<color> ! Vµ nhËn thªm <color=yellow>"..n_bonuscff1.."<color> ®iÓm tÝch lòy", 1, "KÕt thóc ®èi tho¹i/#storm_end(1)")
-			tb_storm_winner[PlayerIndex] = 1
 
-			
-			randitem = random(1, sf_itemcount);
-			if (randitem > 0) then
-				local szItemName = sf_aryItems[randitem][1];
-				local arySelItemID =  sf_aryItems[randitem][2];
-				AddItem( arySelItemID[1], arySelItemID[2], arySelItemID[3], arySelItemID[4], arySelItemID[5], arySelItemID[6], 0);
-				Msg2Player("<#>Chóc mõng B¹n! LÊy ®­îc gi¶i th­ëng "..szItemName);
-			end;
+	-- TÝnh ®iÓm th­ëng bªn Thua
+	local award_over = floor(BATTLES_LOSEGAME_POINT * bt_getgn_awardtimes())
+	-- Add ®iÓm th­ëng bªn Thua
+	bt_camp_getbonus(failcamp, award_over, "LÇn nµy phe ta b¹i! Th¾ng b¹i lµ chuyÖn th­êng t×nh cña binh gia, t­íng sÜ ®õng n¶n lßng! LÇn sau sÏ quyÕt 1 trËn th­ hïng. (NhËn ®­îc <color=yellow>", 50);
+
+	-- TÝnh ®iÓm th­ëng bªn Th¾ng
+	bonuscff1 = BATTLES_WINGAME_POINT * bt_getgn_awardtimes()
+	-- TÝnh danh väng th­ëng bªn Th¾ng
+	repute = 3 * bt_getgn_awardtimes()
+	WriteLog("§iÓm tÝch lòy cho phe th¾ng lîi lµ: " .. bonuscff1)
+
+	-- Random th­ëng vËt phÈm ë danh s¸ch ®Çu trang
+	sf_itemcount = getn(sf_aryItems)
+
+	-- by zero -- Söa ®æi c¸ch thøc lÊy thµnh viªn phe ®Þch
+	OldPlayerIndex = PlayerIndex
+	-- TiÕn hµnh add th­ëng bªn Th¾ng
+	for i = 1, getn(Win_Players_Table) do
+		PlayerIndex = Win_Players_Table[i];
+		local game_level = BT_GetGameData(GAME_LEVEL);
+		local n_bonuscff1 = 0;
+		AddRepute(repute);
+		Msg2Player("Danh väng cña b¹n t¨ng thªm <color=yellow>" .. repute .. "<color> ®iÓm!")
+		n_bonuscff1 = bt_addtotalpoint(bonuscff1)
+		Msg2Player("B¹n nhËn ®­îc <color=yellow>" .. n_bonuscff1 .. "<color> ®iÓm tÝch lòy")
+		--Storm -- Phe th¾ng kÕt thóc khiªu chiÕn, vµ ghi l¹i ng­êi th¾ng
+		Say("Chóc mõng phe b¹n giµnh th¾ng lîi! Danh väng cña b¹n t¨ng thªm <color=yellow>" .. repute .. "<color> ! Vµ nhËn thªm <color=yellow>" .. n_bonuscff1 .. "<color> ®iÓm tÝch lòy", 1, "KÕt thóc ®èi tho¹i/#storm_end(1)")
+		tb_storm_winner[PlayerIndex] = 1
+
+
+		randitem = random(1, sf_itemcount);
+		if (randitem > 0) then
+			local szItemName = sf_aryItems[randitem][1];
+			local arySelItemID = sf_aryItems[randitem][2];
+			AddItem(arySelItemID[1], arySelItemID[2], arySelItemID[3], arySelItemID[4], arySelItemID[5], arySelItemID[6], 0);
+			Msg2Player("<#>Chóc mõng B¹n! LÊy ®­îc gi¶i th­ëng " .. szItemName);
+		end;
 	end
 	PlayerIndex = OldPlayerIndex
 end;
@@ -262,10 +275,10 @@ function GameOver()
 	local resultstr = "";
 	local OldPlayerIndex = PlayerIndex
 	
-	--¸üÐÂËÎ½ðÏà¹ØµÄÊÀ½çÅÅÃû°ñ
+	-- CËp nhËt b¶ng xÕp h¹ng thÕ giíi liªn quan ®Õn Tèng Kim
 	WriteLog("[Battle Log] Sorting World Ladder");
 
---	--Ä£Ê½×ÜÅÅÐÐ°ñ
+	-- ChÕ ®é tæng xÕp h¹ng b¶ng
 
 		BT_SortWorldLadder(PL_TOTALPOINT, 10147)
 		BT_SortWorldLadder(PL_KILLPLAYER, 10148)
@@ -275,13 +288,13 @@ function GameOver()
 	
 	local game_level = BT_GetGameData(GAME_LEVEL);
 	
-	--Ä£Ê½¼ÓµÈ¼¶ÅÅÐÐ°ñ
+	-- ChÕ ®é céng ®¼ng cÊp xÕp h¹ng b¶ng
 		if (game_level == 3) then
 			BT_SortWorldLadder(PL_KILLPLAYER, 10151)
 			BT_SortWorldLadder(PL_MAXSERIESKILL, 10152)
 			BT_SortWorldLadder(PL_GETITEM, 10153)
 			BT_SortWorldLadder(PL_TOTALPOINT, 10154)
-			bt_sortbthonour();			--ËÎ½ðÈÙÓþ»ý·ÖÅÅÐÐ
+			bt_sortbthonour();			-- Tèng Kim Vinh Dù §iÓm XÕp H¹ng
 		elseif (game_level == 2) then
 			BT_SortWorldLadder(PL_KILLPLAYER, 10155)
 			BT_SortWorldLadder(PL_MAXSERIESKILL, 10156)
@@ -310,7 +323,9 @@ function GameOver()
 	elseif (game_level == 3) then
 		resultstr = "Khu vùc Cao cÊp "
 	end
-	--edit by zero ¸ù¾ÝÅÅÃû¸ø½±Àø
+	--edit by zero -- Dùa vµo xÕp h¹ng cho th­ëng
+	
+	-- HiÓn thÞ xÕp h¹ng TOP 1 -> 20
 	
 	battle_rank_award0808(game_level)
 	battle_rank_activity(game_level)
@@ -320,9 +335,9 @@ function GameOver()
 	--end
 	
 	
-	--edit by Ð¡ÀË¶à¶à
-	--°Ñ3ÖÖÄ£Ê½½±ÀøÖ¸ÏòÒ»¸öÎÄ¼þ±àÐ´
-	--ËùÓÐ¶ÓÔ±½±Àø,Ê¤¸ºÆ½½ÔÓÐ
+	-- edit by TiÓu L«i §a §a
+	-- ChuyÓn phÇn th­ëng cña 3 chÕ ®é vµo mét tËp tin
+	-- TÊt c¶ thµnh viªn trong ®éi ®Òu nhËn th­ëng, dï th¾ng, thua hay hßa ®Òu cã
 	--sign start
 	local Win_Players_Table={}
 	local idx = 0;
@@ -346,8 +361,11 @@ function GameOver()
 	end 
 	--sign end
 	
-	tb_storm_winner = {}	--Storm	Çå¿Õ»ñÊ¤Õß
+	tb_storm_winner = {}	--Storm	-- Xãa ng­êi th¾ng
 	
+	-- Th­ëng TOP 3
+	-- TOP 1: MÆt n¹ §¹i t­íng qu©n + 3 Tèng Kim LÔ Bao
+	-- TOP 2 + 3: 3 Tèng Kim LÔ Bao
 	TB_QIANQIU_YINGLIE0904:sorter_award(game_level)
 	
 
@@ -359,14 +377,14 @@ function GameOver()
 			Msg2MSAll(MISSIONID, resultstr)
 			WriteLog(resultstr)
 			BT_ReportResult(1)
-			RecordBTCount_Win(1)		--ÔÚÃ¿¸öÈËÈÎÎñ±äÁ¿Àï¼ÇÂ¼Ëü´Ë´ÎËÎ½ðÕ½³¡Ê¤¸º×´¿ö
+			RecordBTCount_Win(1)		-- Ghi l¹i tr¹ng th¸i th¾ng thua cña trËn chiÕn Tèng Kim nµy vµo biÕn nhiÖm vô cña mçi ng­êi ch¬i
 			sf_winbouns(1)
 		elseif (bonus_s < bonus_j) then
 			resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, tû lÖ ®iÓm tÝch lòy lµ "..bonus_s..":"..bonus_j..", phe Kim giµnh ®­îc th¾ng lîi!"
 			Msg2MSAll(MISSIONID, resultstr)
 			WriteLog(resultstr)
 			BT_ReportResult(2)
-			RecordBTCount_Win(2)	--ÔÚÃ¿¸öÈËÈÎÎñ±äÁ¿Àï¼ÇÂ¼Ëü´Ë´ÎËÎ½ðÕ½³¡Ê¤¸º×´¿ö
+			RecordBTCount_Win(2)	-- Ghi l¹i tr¹ng th¸i th¾ng thua cña trËn chiÕn Tèng Kim nµy vµo biÕn nhiÖm vô cña mçi ng­êi ch¬i
 			sf_winbouns(2)
 		else
 			resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, tû lÖ ®iÓm tÝch lòy lµ "..bonus_s..":"..bonus_j
@@ -386,7 +404,7 @@ function GameOver()
 		WriteLog(resultstr)
 		BT_ReportResult(1)
 		sf_winbouns(1)
-		RecordBTCount_Win(1)		--ÔÚÃ¿¸öÈËÈÎÎñ±äÁ¿Àï¼ÇÂ¼Ëü´Ë´ÎËÎ½ðÕ½³¡Ê¤¸º×´¿ö
+		RecordBTCount_Win(1)		-- Ghi l¹i tr¹ng th¸i th¾ng thua cña trËn chiÕn Tèng Kim nµy vµo biÕn nhiÖm vô cña mçi ng­êi ch¬i
 		AddGlobalCountNews(resultstr, 1) 
 	elseif (GetMissionV(MS_MOSTDEATH) == 2) then
 		resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, phe Kim giµnh ®­îc th¾ng lîi!"
@@ -394,7 +412,7 @@ function GameOver()
 		WriteLog(resultstr)
 		BT_ReportResult(2)
 		sf_winbouns(2)
-		RecordBTCount_Win(2)		--ÔÚÃ¿¸öÈËÈÎÎñ±äÁ¿Àï¼ÇÂ¼Ëü´Ë´ÎËÎ½ðÕ½³¡Ê¤¸º×´¿ö
+		RecordBTCount_Win(2)		-- Ghi l¹i tr¹ng th¸i th¾ng thua cña trËn chiÕn Tèng Kim nµy vµo biÕn nhiÖm vô cña mçi ng­êi ch¬i
 		AddGlobalCountNews(resultstr, 1) 
 	end
 	
@@ -421,7 +439,7 @@ function GameOver()
 		SetLogoutRV(0);
 		SetCreateTeam(1);
 		SetDeathScript("");
-		SetFightState(0)		-- ´òÍêÕÌºó¸ÄÎª·ÇÕ½¶·×´Ì¬£¨by Dan_Deng£©
+		SetFightState(0)		-- Sau khi ®¸nh xong chuyÓn thµnh tr¹ng th¸i kh«ng chiÕn ®Êu (by Dan_Deng)
 		SetPunish(1)
 		ForbidChangePK(0);
 		SetPKFlag(0)
@@ -429,7 +447,7 @@ function GameOver()
 		-- Big Boss Remove bonus state
 		BigBoss:RemoveSongJinBonus();
 		
-		--Storm ¸ø»ñÊ¤ÕßÒÔÍâµÄ½áÊøÌôÕ½
+		--Storm -- KÕt thóc khiªu chiÕn cho nh÷ng ng­êi kh«ng ph¶i ng­êi th¾ng
 		if (tb_storm_winner[PlayerIndex] == nil) then
 			storm_end(1)
 		end
@@ -563,7 +581,7 @@ end;
 
 ------------------------------------------------------
 
-function RecordBTCount_Win(camp)		--ÔÚÃ¿¸öÈËÈÎÎñ±äÁ¿Àï¼ÇÂ¼Ëü´Ë´ÎËÎ½ðÕ½³¡Ê¤¸º×´¿ö
+function RecordBTCount_Win(camp)		-- Ghi l¹i tr¹ng th¸i th¾ng thua cña trËn chiÕn Tèng Kim nµy vµo biÕn nhiÖm vô cña mçi ng­êi ch¬i
 	if (camp ~= 1 and camp ~= 2) then
 		print("ERROR: Tèng Kim kÕt thóc! L­u tr÷ th«ng tin cã sai sãt!!!")
 		return
