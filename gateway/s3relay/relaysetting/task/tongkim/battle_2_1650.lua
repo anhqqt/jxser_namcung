@@ -1,7 +1,7 @@
 -- QuËc chi’n TËng Kim
 -- Dongzhi
 function TaskShedule()
-    TaskName("QUOC CHIEN TONG KIM 16:50")
+    TaskName("Chi’n dﬁch quËc chi’n TËng Kim 17:00")
     TaskInterval(1440)
     TaskTime(16, 50)
     TaskCountLimit(0)

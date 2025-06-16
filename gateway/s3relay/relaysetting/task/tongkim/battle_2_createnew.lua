@@ -4,7 +4,7 @@ Include("\\RelaySetting\\battle\\script\\rf_header.lua")
 
 function TaskShedule()
 
-    TaskName("QUOC CHIEN TONG KIM TONG DIEU DONG")
+    TaskName("Quèc chiÕn Tèng Kim tæng ®iÒu ®éng")
     TaskTime(20, 00)
     TaskInterval(1440)
     TaskCountLimit(0)

@@ -3,7 +3,7 @@
 Include("\\RelaySetting\\battle\\script\\rf_header.lua")
 
 function TaskShedule()
-    TaskName("KHOI DONG NHIEM VU TONG KIM CHIEN QUOC")
+    TaskName("TÊng chÿ huy Chi’n dﬁch TËng Kim")
     TaskSetMode(1)
 
     -- MÁi tu«n (Th¯ Hai) bæt Æ«u mÈt vﬂng mÌi
