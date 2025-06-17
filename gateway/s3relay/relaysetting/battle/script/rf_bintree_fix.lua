@@ -1,10 +1,10 @@
--- ¶þ²æÊ÷¹Ì¶¨Õ½ÒÛÁ÷³Ì
+-- Binary tree fixed campaign process
 -- Fanghao Wu
 -- 2004.12.15
 
 Include( "\\RelaySetting\\battle\\script\\rf_header.lua" );
 
--- S3Relayµ÷ÓÃ½Ó¿Ú£¬Æô¶¯ÐÂÕ½¾Ö
+-- S3Relay calls the interface to start a new battle situation
 function battle_StartNewRound( nBattleID, nBattleLevel )
 	local bDBSuccess, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, nBattleMapID, nWorldMapID, strMapName, nRuleID, nBattleResult;
 	
@@ -14,13 +14,13 @@ function battle_StartNewRound( nBattleID, nBattleLevel )
 	
 	if( bDBSuccess ~= 1 ) then
 		bDBSuccess, nLatestIssueID, nRoundCount = battle_GetLatestIssueInfo( nBattleID, nBattleLevel );
-		if( bDBSuccess ~= 1 ) then	-- µÚÒ»ÆÚÕ½ÒÛ
+		if( bDBSuccess ~= 1 ) then	-- TrËn chiÕn ®Çu tiªn
 			nLatestIssueID = 1;
 			nRoundCount = 1;
 			nRoundID = 1;
-		else						-- Êý¾Ý¶ªÊ§»ò´íÎóÈÝ´í´¦Àí£º¸ù¾Ýµ±Ç°¾ÖÊýÑ¡¶¨Õ½¾Ö
+		else						-- Xö lý lçi mÊt d÷ liÖu hoÆc sai sè: X¸c ®Þnh chiÕn tr­êng dùa trªn sè trËn hiÖn t¹i
 			nRoundID = 2 ^ ( nRoundCount - 1);
-			if (nRoundID >= 15) then	--³ö´íÇ¿ÖÆÉèÎª2
+			if (nRoundID >= 15) then	-- Khi cã lçi, buéc thiÕt lËp thµnh 2
 				nRoundID = 2;
 			end;
 		end
@@ -28,9 +28,9 @@ function battle_StartNewRound( nBattleID, nBattleLevel )
 		arynMapPatternID, arynFollowingRoundID = Battle_GetRoundInfo( nBattleID, nRoundID );
 		nFollowingRoundCount = getn( arynFollowingRoundID );
 		if( nFollowingRoundCount > 1 ) then
-			if( nBattleResult == 1 ) then		-- ËÎÊ¤
+			if( nBattleResult == 1 ) then		-- Tèng Th¾ng
 				nRoundID = arynFollowingRoundID[1];
-			else								-- ½ðÊ¤
+			else								-- Kim Th¾ng
 				nRoundID = arynFollowingRoundID[2];
 			end
 			nRoundCount = nRoundCount + 1;
@@ -54,11 +54,11 @@ function battle_StartNewRound( nBattleID, nBattleLevel )
 	battle_SaveRoundInfo( nBattleID, nBattleLevel, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID, 0 );
 	
 	battle_Msg_NewRound( nBattleID, nBattleLevel, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, nBattleMapID, nWorldMapID, strMapName, nRuleID );
-	
+
 	return nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID;
 end
 
--- S3Relayµ÷ÓÃ½Ó¿Ú£¬±£´æÕ½¾Ö½á¹û
+-- S3Relay calls the interface to save the battle results
 function battle_SaveRoundResult( nBattleID, nBattleLevel, nIssueID, nRoundCount, nBattleResult )
 	local bDBSuccess, nRoundID, nMapPatternID, strMapName, nRuleID;
 	local strMsg;
