@@ -193,7 +193,7 @@ function exp_check()
 			"Xin c∏m ¨n/no"
 		}
 
-		Say("Qu©n Nhu quan: <enter>Kinh nghi÷m c„ th” ÆÊi trong ngµy: <color=green>"..expNgayConLai.."<color><enter>Kinh nghi÷m c„ th” ÆÊi trong tu«n: <color=green>"..expTuanConLai.."<color>", getn(tbOpt), tbOpt);
+		Say("Qu©n Nhu quan: Ng≠¨i cﬂn <color=green>"..expNgayConLai.."<color> Æi”m kinh nghi÷m c„ th” ÆÊi trong ngµy", getn(tbOpt), tbOpt);
 	end
 end
 
@@ -242,7 +242,7 @@ function wantpayex(mark, nStep)
 		nEXP = mark*TONG_KIM_TY_LE_TICH_LUY_EXP
 		--local tbItem = {szName="M∂nh BÊ Thi™n Thπch (trung)", tbProp={6, 1, 1309, 1, 0, 0}}
 		if nStep == 1 then
-			if (expchange_limit_weekly(mark) == 1 and expchange_limit_daily(mark) == 1) then
+			if (expchange_limit_daily(nEXP) == 1) then
 				nt_setTask(747, floor(nt_getTask(747) - mark))
 				AddOwnExp(nEXP);
 				Add120SkillExp(bonus);
@@ -250,8 +250,8 @@ function wantpayex(mark, nStep)
 				--tbAwardTemplet:GiveAwardByList(tbItem, "MidAutumn,GetItemFromSongjin")
 				gb_AppendTask("songjin butianshi2009", 2, 1)
 				PlayerFunLib:AddTaskDaily(2645, 1)	
-				Msg2Player("<#>Bπn Æ∑ tËn <color=yellow>"..mark.."<#><color> Æi”m t›ch lÚy, ÆÊi l y <color=green>"..bonus .."<#><color> Æi”m kinh nghi÷m.");
-				WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: ß∑ tËn"..mark.."Æi”m t›ch lÚy, ÆÊi l y"..bonus.."Æi”m kinh nghi÷m.");
+				Msg2Player("<#>Bπn Æ∑ tËn <color=yellow>"..mark.."<#><color> Æi”m t›ch lÚy, ÆÊi l y <color=green>"..nEXP.."<#><color> Æi”m kinh nghi÷m.");
+				WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: ß∑ tËn"..mark.."Æi”m t›ch lÚy, ÆÊi l y"..nEXP.."Æi”m kinh nghi÷m.");
 			end
 			
 			
@@ -292,11 +292,11 @@ function paymark(mark)
 		nEXP = mark*TONG_KIM_TY_LE_TICH_LUY_EXP
 		local level = GetLevel();
 		local bonus = bt_exchangeexp(level, mark)
-		if (expchange_limit_weekly(nEXP) == 1 and expchange_limit_daily(nEXP) == 1) then
+		if (expchange_limit_daily(nEXP) == 1) then
 			nt_setTask(747, floor(nt_getTask(747) - mark))
 			AddOwnExp(nEXP);
 			Add120SkillExp(bonus);
-			Msg2Player("<#>Bπn Æ∑ tËn <color=yellow>"..mark.."<#><color>Æi”m t›ch lÚy, ÆÊi l y <color=green>"..nEXP .."<#><color> Æi”m kinh nghi÷m.");
+			Msg2Player("<#>Bπn Æ∑ tËn <color=yellow>"..mark.."<#><color>Æi”m t›ch lÚy, ÆÊi l y <color=green>"..nEXP.."<#><color> Æi”m kinh nghi÷m.");
 			WriteLog(date("%Y-%m-%d %H:%M:%S").." "..GetAccount()..", ["..GetName().."]: ß∑ tËn"..mark.."Æi”m t›ch lÚy, ÆÊi l y"..nEXP.."Æi”m kinh nghi÷m.");
 		end
 	end
