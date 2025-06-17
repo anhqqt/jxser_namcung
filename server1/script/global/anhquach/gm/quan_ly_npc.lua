@@ -4,15 +4,15 @@ function QuanLyNPC_Say(szTitle)
     dofile("script/global/anhquach/gm/quan_ly_npc.lua")
 
     local tbOpt = {
-        {"Thªm NPC", QuanLyNPC_ThemNPC},
-        {"Xãa NPC", QuanLyNPC_XoaNPC},
+        {"Thªm NPC", QuanLyNPC_ThemNPCSay},
+        {"Xãa NPC", QuanLyNPC_XoaNPCSay},
         {"Tho¸t"}
     }
     CreateNewSayEx(szTitle, tbOpt)
 end
 
-function QuanLyNPC_ThemNPC()
-    g_AskClientNumberEx(1, 2000, "<#>NhËp ID NPC", {QuanLyNPC_ThemNPCTheoID, {nID}})
+function QuanLyNPC_ThemNPCSay()
+    g_AskClientNumberEx(1, 2600, "<#>NhËp ID NPC", {QuanLyNPC_ThemNPCTheoID, {nID}})
 end
 
 function QuanLyNPC_ThemNPCTheoID(nID)
@@ -21,8 +21,8 @@ function QuanLyNPC_ThemNPCTheoID(nID)
     Msg2Player("Thªm NPC <color=green>" .. nID .. "<color> thµnh c«ng")
 end
 
-function QuanLyNPC_XoaNPC()
-    g_AskClientNumberEx(1, 2000, "<#>NhËp ID NPC", {QuanLyNPC_XoaNPCTheoID, {nID}})
+function QuanLyNPC_XoaNPCSay()
+    g_AskClientNumberEx(1, 2600, "<#>NhËp ID NPC", {QuanLyNPC_XoaNPCTheoID, {nID}})
 end
 
 function QuanLyNPC_XoaNPCTheoID(nID)
