@@ -54,6 +54,19 @@ function battle_StartNewRound( nBattleID, nBattleLevel )
 	battle_SaveRoundInfo( nBattleID, nBattleLevel, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID, 0 );
 	
 	battle_Msg_NewRound( nBattleID, nBattleLevel, nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, nBattleMapID, nWorldMapID, strMapName, nRuleID );
+	
+    -- Debug MapPatternIDs
+    local mapStr = "DEBUG: MapPatternIDs = {"
+    for i = 1, getn(arynMapPatternID) do
+        if i > 1 then mapStr = mapStr .. ", " end
+        mapStr = mapStr .. tostring(arynMapPatternID[i])
+    end
+    mapStr = mapStr .. "}"
+    OutputMsg(mapStr)
+
+	if( strExtraMsg ~= nil ) then
+		OutputMsg( strExtraMsg );
+	end
 
 	return nLatestIssueID, nRoundCount, nRoundID, nMapPatternID, strMapName, nRuleID;
 end
