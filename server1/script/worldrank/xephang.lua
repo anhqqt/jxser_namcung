@@ -10,15 +10,15 @@ Include("\\script\\vng_lib\\taskweekly_lib.lua")
 Include("\\script\\vng_lib\\bittask_lib.lua")
 Include("\\script\\lib\\objbuffer_head.lua")
 function XepHang()
-	
-		XepHang_TopMPPhuho()
-		XepHang_Top10ALL()
-		XepHang_Top10MP()
-		XepHang_TopPhuho()
-		--rankList()
-		--XepHang_BinhGiap()
-		--XoaXepHang()
-	
+	dofile("script/worldrank/xephang.lua")
+	XepHang_Top10ALL()
+	XepHang_TopMPPhuho()
+	XepHang_Top10MP()
+	XepHang_TopPhuho()
+	-- XepHang_CaNhan()
+	-- XepHang_BinhGiap()
+	--rankList()
+	--XoaXepHang()
 end
 --=============Luu log nhan vat=================================
 function LuuLogNhanVat()
@@ -69,25 +69,14 @@ Trungsinh={
 }
 
 function XepHang_Top10ALL()
-	--local nlv = GetTask(3022)
-	--if(GetLevel()~=nlv) then
-		--LuuLogNhanVat()
-		--local CapDo = Trungsinh[ST_GetTransLifeCount()][1] + GetLevel()
-		--local TenNV = GetName()
-		--local MonPhai = GetLastFactionNumber()
-		--local DiemEXP = GetExpPercent()
-		--Ladder_NewLadder(10270,TenNV,CapDo,0,MonPhai,DiemEXP);
-		--SetTask(3022,GetLevel());
-		--return
-	--end
 	CapDo = Trungsinh[ST_GetTransLifeCount()][1] + GetLevel()
-	--CapDo = Trungsinh[ST_GetTransLifeCount()][1] + 200*GetTask(5969) + GetLevel()
-	--local level = mod(CapDo,ST_GetTransLifeCount())	
-	--if (GetCamp() ~= 4)  and (GetCamp() ~= 0) then
-	Ladder_NewLadder(10270, GetName(),CapDo,0,GetLastFactionNumber(),GetExpPercent());
-		--Ladder_NewLadder(10270, GetName(),level,ST_GetTransLifeCount(),GetLastFactionNumber(),GetExpPercent());
-
-	--end
+	DiemExp = GetExpPercent()
+	CapDoChinhXac = CapDo * 100 + DiemExp
+	
+	if GetCamp()==0 or GetCamp()==4 and GetFaction() == "" then
+		Ladder_NewLadder(10271, GetName(),CapDoChinhXac,1);
+	end
+	Ladder_NewLadder(10270, GetName(),CapDoChinhXac,1);
 end
 
 function rankList() 
@@ -110,9 +99,13 @@ function XepHang_TopPhuho()
 	if sMoney < 1 then
 		return
 	end
+	if GetCamp()==0 or GetCamp()==4 and GetFaction() == "" then
+		Ladder_NewLadder(10284, TenNV,sMoney,1);
+	end
 	--LuuLogNhanVatPH()
 	Ladder_NewLadder(10283,TenNV,sMoney,0,MonPhai);
 end
+
 function XepHang_TopMPPhuho()
 	local player_Faction = GetFaction()
 	local nMoney = GetBoxMoney()+ GetCash()
@@ -172,39 +165,347 @@ function XepHang_Top10MP()
 		local MonPhai = GetLastFactionNumber()
 
 		CapDo = Trungsinh[ST_GetTransLifeCount()][1] + GetLevel()
+		DiemExp = GetExpPercent()
+		CapDoChinhXac = CapDo * 100 + DiemExp
 
 		if (player_Faction == "cuiyan") then	
-			Ladder_NewLadder(10277, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10277, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "emei") then				
-			Ladder_NewLadder(10276, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10276, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "tangmen") then
-			Ladder_NewLadder(10274, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10274, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "wudu") then
-			Ladder_NewLadder(10275, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10275, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "tianwang") then
-			Ladder_NewLadder(10273, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10273, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "shaolin") then
-			Ladder_NewLadder(10272, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10272, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "wudang") then
-			Ladder_NewLadder(10280, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10280, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "kunlun") then
-			Ladder_NewLadder(10281, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10281, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "tianren") then
-			Ladder_NewLadder(10279, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10279, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (player_Faction == "gaibang") then
-			Ladder_NewLadder(10278, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10278, TenNV,CapDoChinhXac,0,MonPhai);
 
 		elseif (GetLastFactionNumber() == 10) then
-			Ladder_NewLadder(10282, TenNV,CapDo,0,MonPhai);
+			Ladder_NewLadder(10282, TenNV,CapDoChinhXac,0,MonPhai);
+		end
+	end
+end
+
+function XepHang_CaNhan()
+	if GetCamp()==0 or GetCamp()==4 and GetFaction() == "" then
+		for i = 1, 1200 do
+			local szname, nrank = Ladder_GetLadderInfo(10271, i)
+			if (szname == "") then
+				break
+			end
+			if (szname == GetName()) then
+				Ladder_NewLadder(10296, "H¹ng Cao Thñ Hoang D·", i, 0, GetLastFactionNumber())
+				break
+			end
+		end
+
+		for i = 1, 1200 do
+			local szname, nrank = Ladder_GetLadderInfo(10284, i)
+			if (szname == "") then
+				break
+			end
+			if (szname == GetName()) then
+				Ladder_NewLadder(10296, "H¹ng Phó Hé Hoang D·", i, 0, GetLastFactionNumber())
+				break
+			end
+		end
+	else
+		for i = 1, 1200 do
+			local szname, nrank = Ladder_GetLadderInfo(10270, i)
+			if (szname == "") then
+				break
+			end
+			if (szname == GetName()) then
+				Ladder_NewLadder(10296, "H¹ng Cao Thñ Giang Hå", i, 0, GetLastFactionNumber())
+				break
+			end
+		end
+
+		for i = 1, 1200 do
+			local szname, nrank = Ladder_GetLadderInfo(10283, i)
+			if (szname == "") then
+				break
+			end
+			if (szname == GetName()) then
+				Ladder_NewLadder(10296, "H¹ng Phó Hé Giang Hå", i, 0, GetLastFactionNumber())
+				break
+			end
+		end
+
+		local player_Faction = GetFaction()
+		if (player_Faction == "cuiyan") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10277, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "emei") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10276, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "tangmen") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10274, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "wudu") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10275, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "tianwang") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10273, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "shaolin") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10272, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "wudang") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10280, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "kunlun") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10281, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "tianren") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10279, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "gaibang") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10278, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (GetLastFactionNumber() == 10) then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10282, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Cao Thñ M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		end
+
+		if (player_Faction == "cuiyan") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10290, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "emei") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10289, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "tangmen") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10287, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "wudu") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10288, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "tianwang") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10286, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "shaolin") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10285, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "wudang") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10293, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "kunlun") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10294, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "tianren") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10292, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (player_Faction == "gaibang") then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10291, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		elseif (GetLastFactionNumber() == 10) then
+			for i = 1, 1200 do
+				local szname, nrank = Ladder_GetLadderInfo(10295, i)
+				if (szname == "") then
+					break
+				end
+				if (szname == GetName()) then
+					Ladder_NewLadder(10296, "H¹ng Phó Hé M«n Ph¸i", i, 0, GetLastFactionNumber())
+					break
+				end
+			end
+		end
+
+		for i = 1, 1200 do
+			local szname, nrank = Ladder_GetLadderInfo(10268, i)
+			if (szname == "") then
+				return
+			end
+			if (szname == GetName()) then
+				Ladder_NewLadder(10296, "H¹ng binh gi¸p", i, 0, GetLastFactionNumber())
+				return
+			end
 		end
 	end
 end
