@@ -20,7 +20,7 @@ Include("\\script\\missions\\challengeoftime\\rank_perday.lua");
 Include("\\script\\vng_feature\\challengeoftime\\npcNhiepThiTran.lua")
 
 ContentList = {
-	"<#>NÕu ai cã ®ñ 160  s¸t thñ gi¶n trong tay th× giÊc méng trë thµnh ®Ö nhÊt s¸t thñ ®· xem nh­ hoµn thµnh. Mçi ngµy chØ cÇn hoµn thµnh <color=yellow>8nhiÖm vô<color>lµ ®­îc. <enter>H·y tiÕp nhËn nhiÖm vô “th¸ch thøc thêi gian” ®Ó thÓ nghiÖm søc m¹nh ®ång ®éivµ kh¶ n¨ng s¸t thñ cña m×nh.",
+	"<#>NÕu ai cã ®ñ 160  s¸t thñ gi¶n trong tay th× giÊc méng trë thµnh ®Ö nhÊt s¸t thñ ®· xem nh­ hoµn thµnh. Mçi ngµy chØ cÇn hoµn thµnh <color=yellow>".. KILLER_MAXCOUNT .." nhiÖm vô<color>lµ ®­îc. <enter>H·y tiÕp nhËn nhiÖm vô “th¸ch thøc thêi gian” ®Ó thÓ nghiÖm søc m¹nh ®ång ®éivµ kh¶ n¨ng s¸t thñ cña m×nh.",
 	"<#> NhiÖm vô s¸t thñ cÊp 20/killer20",
 	"<#> NhiÖm vô s¸t thñ cÊp 30/killer30",
 	"<#> NhiÖm vô s¸t thñ cÊp 40/killer40",
@@ -226,7 +226,7 @@ function killerCoundTakedTask(nLowLevel, nHighLevel)
 	local nDate = tonumber(GetLocalDate("%y%m%d"));
 	local myDate = nt_getTask(TSKID_KILLERDATE);
 	if (myDate == nDate and nt_getTask(TSKID_KILLERMAXCOUNT) >= KILLER_MAXCOUNT) then
-		Describe(DescLink_NieShiChen.."S¸t thñ cã mét tè chÊt rÊt quan träng gäi lµ khinh kÎ b¹i trËn.  H«m nay ng­¬i ®· bŞ h¹"..KILLER_MAXCOUNT.."  ng­êi råi, ngµy mai h·y quay l¹i.", 1, ContentList[15]);
+		Describe(DescLink_NieShiChen.."S¸t thñ cã mét tè chÊt rÊt quan träng gäi lµ khinh kÎ b¹i trËn.  H«m nay ng­¬i ®· h¹ "..KILLER_MAXCOUNT.."  ng­êi råi, ngµy mai h·y quay l¹i.", 1, ContentList[15]);
 		return 0;
 	elseif (myDate ~= nDate) then
 		nt_setTask(TSKID_KILLERMAXCOUNT, 0);
