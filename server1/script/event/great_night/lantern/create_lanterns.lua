@@ -8,7 +8,7 @@ tbLANTERNS_NPC = {
 }
 
 tbLANTERN_ENTER_POS = {
-		[2] = { 	--huashan
+		[2] = { 	-- Hoa S¬n
 			{ 2287 ,4092 },
 			{ 2595, 3501 },
 			{ 2546, 3618 },
@@ -20,7 +20,7 @@ tbLANTERN_ENTER_POS = {
 			{ 2290, 4087 },
 			{ 2546, 4035 },
 		 },
-		[21] = { 	--qingchengshan
+		[21] = { 	-- Thanh Thµnh S¬n
 			{ 2621, 4501 },
 			{ 2577, 3292 },
 			{ 2387, 3706 },
@@ -32,7 +32,7 @@ tbLANTERN_ENTER_POS = {
 			{ 2830, 3700 },
 			{ 2049, 4107 },
 		 },
-		[167] = { 	--diancangshan
+		[167] = { 	-- §iÓm Th­¬ng S¬n
 			{ 1606, 3214 },
 			{ 1373, 2532 },
 			{ 1689, 2620 },
@@ -44,7 +44,7 @@ tbLANTERN_ENTER_POS = {
 			{ 1671, 3034 },
 			{ 1517, 3215 },
 		 },
-		[193] = { 	--wuyishan
+		[193] = { 	-- Vò Di s¬n
 			{ 1937, 2851},
 			{ 1071, 2843 },
 			{ 1130, 3074 },
@@ -70,8 +70,8 @@ function lantern_enter_lantern(area)
 	end
 end
 
---NPCID:1077, 1, 
--- Éú³ÉµÆÁýNPC
+-- NPCID: 1077, 1, 
+-- T¹o NPC ®¨ng ký
 function create_lanterns()
 	OldSubWorld = SubWorld
 	for i = 1, getn(tbLANTERNS_NPC) do
@@ -80,7 +80,7 @@ function create_lanterns()
 		if (world >= 0) then
 			ClearMapNpcWithName(tbLANTERNS_NPC[i][1], "Hoa ®¨ng");
 			SubWorld = world
-			local lantern_count = 0					-- GetGlbValue( tbLANTERNS_NPC[i][2] ) ²»ÔÙ¼ÆËãÉÏ´ÎÊ£Óà»¨µÆÊýÁ¿
+			local lantern_count = 0					-- GetGlbValue( tbLANTERNS_NPC[i][2] ) -- Kh«ng cßn tÝnh to¸n sè l­îng hoa ®¨ng cßn l¹i cña lÇn tr­íc
 			local lantern_addent = tbLANTERNS_NPC[i][3]
 			if ( lantern_count + lantern_addent > tbLANTERNS_NPC[i][4] ) then
 				lantern_addent = tbLANTERNS_NPC[i][4] - lantern_count

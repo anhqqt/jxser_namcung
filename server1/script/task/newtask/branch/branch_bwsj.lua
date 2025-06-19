@@ -54,7 +54,7 @@ function branchTask_JoinSJend1()
 	
 	if (nt_getTask(1061) == 20 and nt_getTask(1013) == 10 and BT_GetData(PL_TOTALPOINT) >= 200) then--ÍØ°Ï»³´¨ÈÃÄãÈ¥²ÎÓëËÎ½ğ´óÕ½£¬»ñÈ¡¶ş°Ù¸ö»ı·Ö¡£	
 		nt_setTask(1013, 20)
-		Msg2Player("B¹n ®· ®¹t ®­îc 200 ®iÓm tİch ph©n, cã thÓ quay vÒ t×m Th¸c B¹t Hoµi Xuyªn phôc mÖnh!")
+		Msg2Player("B¹n ®· ®¹t ®­îc 200 ®iÓm tİch lòy, cã thÓ quay vÒ t×m Th¸c B¹t Hoµi Xuyªn phôc mÖnh!")
 		return
 	end
 

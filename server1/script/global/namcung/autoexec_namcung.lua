@@ -1,6 +1,6 @@
 new_npc = { 
 {1135,80,4,53,1619,3189,0,"Ch©n Nhi",0,"\\script\\global\\namcung\\namcung_say.lua"}, 
-{1623,80,4,53,1620,3176,0,"CËp NhËt XÕp H¹ng",0,"\\script\\global\\namcung\\xephang\\capnhat.lua"}, 
+-- {1623,80,4,53,1620,3176,0,"CËp NhËt XÕp H¹ng",0,"\\script\\global\\namcung\\xephang\\capnhat.lua"}, 
 --{715,80,4,53,1617,3202,0,"B¾c ®Èu l·o nh©n",0,"\\script\\event\\springfestival08\\allbrother\\beidoulaoren.lua"}, 
 {1849,80,4,53,1622,3184,0,"Hæ trî T©n Thñ",0,"\\script\\global\\namcung\\hotro_test.lua"}, 
 }

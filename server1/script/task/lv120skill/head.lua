@@ -381,7 +381,7 @@ function lvl120skill_skillinfo()
                  "<enter>LuyÖn cÊp khu vùc qu¸i vËt : ®¸nh mét lo¹i tr¸ch, xanh biÕc boss, hoµng kim boss;", 
                  "<enter>Ho¹t ®éng trung ®İch tr¸ch : ®¸nh vµo cöa thø nhÊt ®İch tr¸ch, s¸t thñ boss;", 
                  "<enter>NhiÖm vô trung ®İch tr¸ch : ®¸nh vµo hoµng kim nhiÖm vô trung ®İch tr¸ch ;", 
-                 "<enter>Tèng kim chiÕn tr­êng : sö dông tİch ph©n ®æi häc hái kinh nghiÖm nghiÖm trŞ gi¸ , nh­ng lµ , kh«ng thÓ v­ît qua mçi ng­êi th­îng h¹n .", 
+                 "<enter>Tèng kim chiÕn tr­êng : sö dông tİch lòy ®æi häc hái kinh nghiÖm nghiÖm trŞ gi¸ , nh­ng lµ , kh«ng thÓ v­ît qua mçi ng­êi th­îng h¹n .", 
                  "<enter><color=green>2. ñy th¸c nhiÖm vô <color>", 
                   "<enter>Sö dông b¹ch c©u hoµn kü n¨ng , râ rµng c©u hoµn kü n¨ng , râ rµng c©u hoµn ®Æc hiÖu kü n¨ng .", 
                   "<enter>B¹ch c©u hoµn kü n¨ng : sö dông sau ®em ®Ò cao 120 kü n¨ng ®İch luyÖn tËp ®é , mçi n¨m phót luyÖn tËp ®é ®em gia t¨ng mét lÇn .", 

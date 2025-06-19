@@ -1,26 +1,24 @@
--- 国战宋金
+-- Qu鑓 Chi課 T鑞g Kim
 -- DongZhi
-Include( "\\RelaySetting\\battle\\script\\rf_header.lua" )
+Include("\\RelaySetting\\battle\\script\\rf_header.lua")
 
 function TaskShedule()
-	
-	TaskName( "宋金国战总调动" );	--任务名称
-	TaskTime( 20, 00 );				--启动时间
-	TaskInterval(1440);				--间隔时间:一天
-	TaskCountLimit(0);				--无次数限制
-	
-	OutputMsg("****************KHOI DONG NHIEM VU TONG KIM CHIEN QUOC ****************")	
+
+    TaskName("Qu鑓 chi課 T鑞g Kim t鎛g 甶襲 ng")
+    TaskTime(20, 00)
+    TaskInterval(1440)
+    TaskCountLimit(0)
+    OutputMsg("=====> [Khoi dong] Tong dieu dong Quoc Chien Tong Kim")
 end
 
 function TaskContent()
-	
-	local nWeekday = tonumber(date("%w"));
-	
-	if nWeekday == 1 then
-		OutputMsg("**************** Create GUOZHAN New Battle ****************")	
-		battle_StartNewIssue(2, 3);	
-		OutputMsg("***********************************************************")
-	end
+    local nWeekday = tonumber(date("%w"))
+
+    if nWeekday == 1 then
+        OutputMsg("****************TONG DIEU DONG QUOC CHIEN TONG KIM****************")
+        battle_StartNewIssue(2, 3)
+        OutputMsg("******************NHIEM VU KHOI DONG THANH CONG*******************")
+    end
 
 end
 

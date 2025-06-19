@@ -500,7 +500,8 @@ if (result == 0) then
 		local nlevel = BT_GetGameData(GAME_LEVEL)
 		G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nleve)
 	else
-		Say("Muèn tham gia chiÕn tr­êng Tèng Kim h·y ñng hé 3000 l­îng", 0)
+		-- §ång nhÊt ®o¹n chat NPC - Modifed by Anh Quach - 05062025
+		Say("Xin lçi, tham gia ®ît Tèng Kim ®¹i chiÕn nµy, cÇn ph¶i nép phÝ b¸o danh lµ 3000 l­îng", 0)
 		return 
 	end
 end

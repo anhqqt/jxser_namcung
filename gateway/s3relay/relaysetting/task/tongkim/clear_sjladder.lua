@@ -104,7 +104,7 @@ end
 
 function TaskShedule()
 	-- ÉèÖÃ·½°¸Ãû³Æ
-	TaskName( "Tong Kim Reset thong tin lien quan den xep hang!" );
+	TaskName( "Xãa tÊt c¶ b¶ng xÕp h¹ng Tèng Kim!" );
 	-- Ö»Ö´ĞĞÒ»´Î£¬ÓÃÓÚ½â¾ö2005Äê11ÔÂ·İËÎ½ğË¢·ÖµÄbugµÄÊÂºó´¦Àí
 	TaskInterval( 244000 );
 	-- ÉèÖÃ´¥·¢´ÎÊı£¬0±íÊ¾ÎŞÏŞ´ÎÊı

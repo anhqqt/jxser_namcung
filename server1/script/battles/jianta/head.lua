@@ -422,21 +422,22 @@ function sf_join(camp)
 		end
 	end
 
-if (result == 0) then
-	if (GetCash() >= 3000) then
-		Pay(3000)
-		BT_LeaveBattle() -- Çå³ıÍæ¼Ò¿Í»§¶Ëµ±Ç°µÄÅÅÃûÊı¾İ
-		BT_ClearPlayerData()
-		SetTask(2435, 0);--±¾³¡ËÎ½ğÒÑ¾­ÁìÈ¡µÄ°ï»á¹±Ï×¶ÈÇåÁã--by ÁÎÖ¾É½
-		Msg2Player("Nh¾c nhë: cã thÓ Ên phİm ~ ë gãc tr¸i phİa trªn bµn phİm ®Ó xem tin tøc chiÕn sù!");
-		BT_SetData(PL_ROUND,BT_GetGameData(GAME_ROUND))
-		local nlevel = BT_GetGameData(GAME_LEVEL)
-		G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
-	else
-		Say("Muèn tham gia chiÕn tr­êng Tèng Kim h·y ñng hé 3000 l­îng", 0)
-		return 
+	if (result == 0) then
+		if (GetCash() >= 3000) then
+			Pay(3000)
+			BT_LeaveBattle() -- Çå³ıÍæ¼Ò¿Í»§¶Ëµ±Ç°µÄÅÅÃûÊı¾İ
+			BT_ClearPlayerData()
+			SetTask(2435, 0); --±¾³¡ËÎ½ğÒÑ¾­ÁìÈ¡µÄ°ï»á¹±Ï×¶ÈÇåÁã--by ÁÎÖ¾É½
+			Msg2Player("Nh¾c nhë: cã thÓ Ên phİm ~ ë gãc tr¸i phİa trªn bµn phİm ®Ó xem tin tøc chiÕn sù!");
+			BT_SetData(PL_ROUND, BT_GetGameData(GAME_ROUND))
+			local nlevel = BT_GetGameData(GAME_LEVEL)
+			G_ACTIVITY:OnMessage("SignUpSongJin", PlayerIndex, nlevel)
+		else
+			-- §ång nhÊt ®o¹n chat NPC - Modifed by Anh Quach - 05062025
+			Say("Xin lçi, tham gia ®ît Tèng Kim ®¹i chiÕn nµy, cÇn ph¶i nép phİ b¸o danh lµ 3000 l­îng", 0)
+			return
+		end
 	end
-end
 
 gametime = floor(GetMSRestTime(MISSIONID, 100) / 18);
 AddMSPlayer(MISSIONID,camp);

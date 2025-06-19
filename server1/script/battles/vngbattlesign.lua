@@ -37,7 +37,7 @@ function tbVNG2011_ChangeSign:GetTransLife()
 	return nTransLife
 end
 
-----Kiem tra dieu kien nguoi choi	dang ky battle
+----Kiem tra dieu kien nguoi choi dang ky battle
 function tbVNG2011_ChangeSign:CheckChangeSign()
 	local nSignHM= tonumber(date("%H%M")) ;
 	for i = 1, getn(self.tbSIGN) do
@@ -52,7 +52,7 @@ function tbVNG2011_ChangeSign:CheckChangeSign()
 end
 
 
-----Kiem tra dieu kien nguoi choi	dang ky battle
+----Kiem tra dieu kien nguoi choi dang ky battle
 function tbVNG2011_ChangeSign:GetTimeNow()
 	local nTimeNow= tonumber(date("%H%M")) ;
 	local nTime = 0;

@@ -8,7 +8,7 @@ IncludeLib("TONG")
 IncludeLib("LEAGUE")
 
 Include("\\script\\lib\\remoteexc.lua")
-Include("\\script\\global\\login.lua")
+-- Include("\\script\\global\\login.lua") -- Disabled by Anh Quach
 Include("\\script\\event\\birthday_jieri\\200905\\class.lua"); 
 Include("\\script\\task\\system\\task_string.lua"); 
 Include("\\script\\tagnewplayer\\fucmain.lua"); 
