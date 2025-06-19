@@ -2,16 +2,22 @@ IncludeLib("TIMER")
 Include("\\script\\global\\login_head.lua")
 -- Anh Quach
 Include("\\script\\global\\anhquach\\lib.lua")
+Include("\\script\\global\\anhquach\\env.lua")
 -- Nam Cung
 Include("\\script\\global\\namcung\\gmquanlyserver\\gmroleitem_player.lua")
+
 
 -- ================================================================
 function AnhQuach_Login()
     dofile("script/global/anhquach/login.lua")
 
-    -- Say
-    -- Talk(1, "", "Chµo mõng b¹n ®Õn víi thÕ giíi Vâ L©m")
-    
+    -- CÊp ®é khi vµo server
+    if GetLevel() < LEVEL_KHOI_TAO_NHAN_VAT then
+        local nCurLevel = GetLevel()
+        local nAddLevel = LEVEL_KHOI_TAO_NHAN_VAT - nCurLevel
+        ST_LevelUp(nAddLevel)
+    end
+
     -- Skill Phôc håi + bÊt tö
     SetProtectTime(18 * 3)
     AddSkillState(963, 1, 0, 18 * 3)
