@@ -23,6 +23,10 @@ GM_DANH_SACH = {
     ["2"] =
         { 
             "testhd"
+        },
+    ["3"] =
+        { 
+            "testva"
         }
 }
 
