@@ -1,3 +1,5 @@
+-- Thªm biÕn global
+Include("\\script\\global\\anhquach\\env.lua")
 --AddEventItem(489)·çÁê¶ÉÁìÅÆ
 IncludeLib("FILESYS")
 Include("\\script\\lib\\log.lua")
@@ -31,6 +33,11 @@ function fld_cancel()
 end
 
 function fld_wanttakeboat(addr)
+
+	if PHONG_LANG_DO_MO ~= 1 then
+		Say("Xin lçi! Tİnh n¨ng nµy ®ang t¹m ®ãng! Xin ®¹i hiÖp vui lßng quay l¹i sau",0)
+		return 0
+	end
 
 	-- Gia nhËp m«n ph¸i míi lªn thuyÒn Modified - by AnhHH - 20110724
 	if (GetLastFactionNumber() == -1)then

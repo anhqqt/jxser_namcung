@@ -100,3 +100,8 @@ TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE = 1901
 TONG_KIM_THUONG_THANG             = 1200
 TONG_KIM_THUONG_THUA              = 600
 TONG_KIM_THUONG_HOA               = 900
+
+--  //////////////////////////////////////////////////////////////
+-- //                     Phong L¨ng §é                        //
+--//////////////////////////////////////////////////////////////
+PHONG_LANG_DO_MO = 1
