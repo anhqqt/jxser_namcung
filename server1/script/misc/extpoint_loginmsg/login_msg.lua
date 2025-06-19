@@ -1,7 +1,7 @@
 Include("\\script\\global\\login_head.lua")
 Include("\\script\\global\\systemconfig.lua")
 Include("\\script\\misc\\vngpromotion\\ipbonus\\ipbonus_2_head.lua");
-Include("\\script\\vng_feature\\top10\\vngtop10.lua");
+
 --tinhpn 20100805: VLMC
 Include("\\script\\bonusvlmc\\head.lua");
 Include("\\script\\vonghoa\\item\\head.lua");

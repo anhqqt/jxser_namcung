@@ -1,4 +1,3 @@
-Include("\\script\\global\\namcung\\xephang\\top10_all.lua")
 function SendRankData(handle)
 	local nResultHandle = OB_Create()
 	OB_PushInt(nResultHandle, 10268) 
@@ -7,5 +6,4 @@ function SendRankData(handle)
 	OB_PushInt(nResultHandle, GetAllEquipValue())
 	SendScriptData(2, nResultHandle)
 	OB_Release(nResultHandle)
-	XepHang_CaNhan()
 end

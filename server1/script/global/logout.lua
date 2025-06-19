@@ -11,9 +11,20 @@ Include("\\script\\event\\storm\\logout.lua")	--Storm
 Include("\\script\\misc\\vngpromotion\\ipbonus\\ipbonus_2_head.lua");
 Include("\\script\\global\\playerlist.lua")
 Include("\\script\\global\\logout_head.lua")
-Include("\\script\\global\\namcung\\logout\\logout.lua")
+
+Include("\\script\\misc\\eventsys\\eventsys.lua")
+-----------------------------------------------
+Include("\\script\\msgkiller\\msgkiller.lua")
+-----------------------------------------------
+Include("\\script\\worldrank\\vngglobalvar.lua")
+Include("\\script\\worldrank\\vngtop10.lua")
+Include("\\script\\worldrank\\xephang.lua")
+-----------------------------------------------
+
 function main()
-logout()
+	XepHang()
+	-- tbTop10:LuuDSNhanVat()
+
 	if IsIPBonus() == 1 then
 		IpBonus_Close()
 	end;
@@ -28,9 +39,10 @@ logout()
 	if ( MapId >= 387  and MapId <= 395) then
 		messenger_livegame()
 	end
-	
+	DelPlayer(PlayerIndex)
 	storm_logout()	--Storm
 	PlayerList:DelPlayer(PlayerIndex)
+	EventSys:GetType("OnLogout"):OnPlayerEvent(0, PlayerIndex)
 end
 
 -- ¿ç·þ½Å±¾

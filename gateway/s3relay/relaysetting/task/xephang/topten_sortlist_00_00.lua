@@ -1,19 +1,19 @@
---ÏµÍ³½ÓÊÜµÇ¼Ç£¬ÅÅÃûÇ°Ê®Õß - Created by DinhHQ - 20110614
-local nStartDate	 = 20120202;
-local nCloseDate	 = 20120229;	
+-- HÖ thèng tiÕp nhËn ®¨ng ký vµ xÕp h¹ng 10 ng­êi level cao nhÊt server  - Created by DinhHQ - 20110614
+local nStartDate = 20110707;
+local nCloseDate = 20120713;
 function TaskShedule()
-	TaskName("Top 10 server -SERVER 0h")
-	TaskInterval(24 * 60)
-	TaskTime(0, 05)
-	TaskCountLimit(0)
-	OutputMsg("=====> DANH SACH TOP 10 TOAN SERVER 0H")
+    TaskName("TOP 10 SERVER - XEP HANG 0H")
+    TaskInterval(24 * 60)
+    TaskTime(00, 0)
+    TaskCountLimit(0)
+    OutputMsg("=====> [Khoi dong] Top 10 Level cao nhat - 00:00 moi ngay")
 end
 
 function TaskContent()
-	local nDate = tonumber(date("%Y%m%d"))
-	if nDate < %nStartDate or nDate > %nCloseDate then
-		return 
-	end
-	RemoteExecute("\\script\\activitysys\\config\\1008\\give_rose_toplist.lua",	"tbTop10:UpdateTopList", 0)
-	OutputMsg("======> Toplist sorted")
+    -- local nDate = tonumber(date("%Y%m%d"))
+    -- if nDate < %nStartDate or nDate > %nCloseDate then
+    -- 	return 
+    -- end
+    RemoteExecute("\\script\\vng_feature\\top10\\vngtop10.lua", "tbTop10:UpdateTopList", 0)
+    OutputMsg("=====> Cap nhat Top 10 Level thanh cong <====")
 end

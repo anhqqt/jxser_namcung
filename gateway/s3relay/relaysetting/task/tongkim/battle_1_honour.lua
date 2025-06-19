@@ -11,7 +11,7 @@
  
 function TaskShedule()
 	-- ÉèÖÃ·½°¸Ãû³Æ
-	TaskName( "ËÎ½ğÈÙÓşÖµ" );
+	TaskName( "§iÓm vinh dù Tèng Kim" );
 	--ĞÇÆÚÈÕ23Ê±¿ªÊ¼ĞÂµÄÒ»ÂÖ
 	-- Ò»ÖÜÒ»¸öÑ­»·
 	TaskInterval(1440);

@@ -1,7 +1,6 @@
--- Ê±¼äµÄÌôÕ½±ÈÈü¶¨Ê±Æ÷
+-- Bé hÑn giê thi ®Êu thö th¸ch thêi gian
 
-INTERVAL_TIME = 60	-- Ã¿Ð¡Ê±´¥·¢
--- INTERVAL_TIME = 10	-- Ã¿Ð¡Ê±´¥·¢
+INTERVAL_TIME = 60	-- KÝch ho¹t mçi giê
 
 function GetNextTime()
     local hour = tonumber(date("%H"));
@@ -14,26 +13,27 @@ function GetNextTime()
 end
 
 function TaskShedule()
-	TaskName("Thach Thuc Thoi Gian");	
-
-	-- 60·ÖÖÓÒ»´Î
+	TaskName("Thi ®Êu 'Th¸ch thøc thêi gian'");	
 	TaskInterval(INTERVAL_TIME);
-	-- ÉèÖÃ´¥·¢Ê±¼ä
 	local h, m = GetNextTime();
 	TaskTime(h, m);
-	OutputMsg(format("=====> VUOT AI KHIEU CHIEN THOI GIAN BAT DAU %d:%d...", h, m));
-	-- Ö´ÐÐÎÞÏÞ´Î
+	OutputMsg("=====> [Khoi dong] Vuot Ai - Thach Thuc Thoi Gian - Moi gio 1 lan");
 	TaskCountLimit(0);
-
-	-- OutputMsg("Æô¶¯×Ô¶¯¹ö¶¯¹«¸æ...");
 end
 
 function TaskContent()
-	OutputMsg("VUOT AI KHIEU CHIEN THOI GIAN DANG GHI DANH");
-	-- ´¥·¢GameServerÉÏµÄ½Å±¾
-	GlobalExecute("dwf \\settings\\trigger_challengeoftime.lua OnTrigger()");
-	szMsg = "'Th¸ch thøc thêi gian' §· ®Õn giê b¸o danh. §éi tr­ëng nhanh ch©n ®Õn NhiÕp ThÝ TrÇn ®Ó ghi danh thêi gian ghi danh lµ 10 phót."
-	GlobalExecute(format("dw AddLocalCountNews([[%s]], 2)", szMsg))
+	nCurrentHour = tonumber(date("%H"))
+
+	if (nCurrentHour >= 0 and nCurrentHour < 6) then
+		return -- Khong cho phep bat dau Phong Lang Do tu 0h den 6h sang
+		OutputMsg("=====> Vuot Ai - Thach Thuc Thoi Gian " .. nCurrentHour .. ":00 NGOAI GIO QUY DINH <====")
+	else
+		OutputMsg("=====> Vuot Ai - Thach Thuc Thoi Gian " .. nCurrentHour .. ":00 BAT DAU <====");
+		-- KÝch ho¹t script trªn GameServer
+		GlobalExecute("dwf \\settings\\trigger_challengeoftime.lua OnTrigger()");
+		szMsg = "'Th¸ch thøc thêi gian' §· ®Õn giê b¸o danh. §éi tr­ëng nhanh ch©n ®Õn NhiÕp ThÝ TrÇn ®Ó ghi danh. Thêi gian ghi danh lµ 10 phót."
+		GlobalExecute(format("dw AddLocalCountNews([[%s]], 2)", szMsg))
+	end
 end
 
 function GameSvrConnected(dwGameSvrIP)

@@ -1,9 +1,9 @@
-TB_LOGIN_FUN = {}	--ÓÃÕâ¸öÊı×éÀ´¼ÇÂ¼ËùÓĞÒª¼ÓÔØµÄLoginº¯Êı
+TB_LOGIN_FUN = {}	-- Dïng m¶ng nµy ®Ó ghi l¹i tÊt c¶ c¸c hµm Login cÇn t¶i
 
---Ìí¼ÓÒ»¸öLogin£¨»òÑÓÊ±Í¬²½£©Ê±Òª¼ÓÔØµÄº¯Êı
---´«Èë²ÎÊı£º
---	fun		ÒªÔö¼ÓµÄfunction
---	n_time	ºÎÊ±ÔËĞĞ£¬0¡¢LoginÊ±£»1¡¢µÚÒ»´ÎÑÓÊ±Í¬²½Ê±£»2¡¢µÚ¶ş´ÎÑÓÊ±Í¬²½Ê±£»¡­¡­
+-- Thªm mét hµm cÇn t¶i khi Login (hoÆc ®ång bé hãa dÇn dÇn)
+-- TruyÒn vµo tham sè:
+--   fun     function cÇn thªm
+--   n_time  Khi nµo thùc thi: 0 - lóc Login; 1 - lÇn ®ång bé hãa dÇn dÇn ®Çu tiªn; 2 - lÇn ®ång bé hãa dÇn dÇn thø hai; ...
 function login_add(fun, n_time)
 	if (not fun) then
 		return
@@ -26,8 +26,8 @@ function login_add(fun, n_time)
 end
 
 TB_LOGIN_FILEFUN = {
-	{"\\script\\missions\\sevencity\\loginout.lua", "login"},				-- Æß³Ç´óÕ½
-	{"\\script\\global\\jingli.lua", 				"WorldEntranceLogin"},	-- ¾«Á¦ÏµÍ³
+	{"\\script\\missions\\sevencity\\loginout.lua", "login"},				-- ThÊt Thµnh §¹i ChiÕn
+	{"\\script\\global\\jingli.lua", 				"WorldEntranceLogin"},	-- HÖ thèng Tinh Lùc
 }
 
 
