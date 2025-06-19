@@ -35,7 +35,7 @@ end
 function fld_wanttakeboat(addr)
 
 	if PHONG_LANG_DO_MO ~= 1 then
-		Say("Xin lÁi! T›nh n®ng nµy Æang tπm Æ„ng! Xin Æπi hi÷p vui lﬂng quay lπi sau",0)
+		Talk(1,"","<color=Orange>Thuy“n Phu: <color>T›nh n®ng nµy Æang tπm Æ„ng! Xin Æπi hi÷p vui lﬂng quay lπi sau")
 		return 0
 	end
 
