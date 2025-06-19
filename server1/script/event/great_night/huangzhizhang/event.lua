@@ -13,22 +13,32 @@ TB_HUANGZHIZHANG_EVENT = {
 GN_HUANG_EVENTID = 1
 GN_HUANG_SWITH = 2
 GN_HUANG_DATE = 3
+
+-- Hµm sÏ ®­îc gäi ë c¸c n¬i kh¸c nh­ D· TÈu, Tèng Kim, v.v...
+-- Môc ®Ých ®Ó kiÓm tra hÖ sè nhËn th­ëng tr­íc khi nhËn
+-- NÕu trong thêi gian diÔn ra "Hoµng chi ch­¬ng" th× sÏ nhËn x2 phÇn th­ëng, ngoµi thêi gian sÏ nhËn x1 phÇn th­ëng
+-- Néi dung: KiÓm tra Hoµng Chi Ch­¬ng cña event cã ®ang kÝch ho¹t hay Kh«ng
+---- event: 1 lµ Tèng Kim
+---- event: 2 lµ NhiÖm vô TÝn Sø
+---- event: 3 lµ Th¸ch thøc thêi gian
+---- event: 4 lµ Chuçi nhiÖm vô D· TÈu
+-- VÝ dô: greatnight_huang_event(1) ®­îc gäi tõ Tèng Kim => NÕu Hoµng Chi Ch­¬ng ®ang diÔn ra cho TK => tr¶ vÒ `award_times` => NÕu ko ph¶i tr¶ vÒ 1
 function greatnight_huang_event(event)
-	--»î¶¯»¹Ã»¿ªÊ¼
+	-- Ho¹t ®éng vÉn ch­a b¾t ®Çu
 	if (gb_GetTask(GN_EVENTNAME, GN_HUANG_EVENTID) == 0) then
 		return 1
 	end
 	local award_times = gn_getaward_times()	--µ±Ìì»î¶¯½±Àø·­±¶±¶Êý
-	--Àñ¹Ù²éÑ¯µ±Íí»î¶¯
+	-- LÔ Quan tra cøu ho¹t ®éng buæi tèi
 	if (event == nil) then
-		--·Ç1±íÊ¾·µ»Ø3¸ö²ÎÊý£º 0£¬»î¶¯ID£¬½±Àø·­±¶±¶Êý
+		-- Kh«ng ph¶i 1 biÓu thÞ tr¶ vÒ 3 tham sè: 0, ID ho¹t ®éng, sè lÇn nh©n ®«i phÇn th­ëng
 		return 0, gb_GetTask(GN_EVENTNAME, GN_HUANG_EVENTID), award_times
 	end
---	--»¹²»ÊÇ»î¶¯Ê±¼ä
+--	-- VÉn ch­a ph¶i thêi gian ho¹t ®éng
 --	if (tonumber(GetLocalDate("%H%M")) < 2055 or tonumber(GetLocalDate("%H%M")) > 2255) then
 --		return 1
 --	end
-	--»î¶¯»¹Î´¿ªÊ¼
+	-- Ho¹t ®éng vÉn ch­a b¾t ®Çu
 	if (gb_GetTask(GN_EVENTNAME, GN_HUANG_SWITH) == 0) then
 		return 1
 	end
@@ -40,6 +50,8 @@ function greatnight_huang_event(event)
 	return 1
 end
 
+-- HÖ sè phÇn th­ëng khi trong thêi gian diÔn ra "Hoµng chi ch­¬ng"
+-- MÆc ®Þnh lµ x2, cã thÓ chØnh söa thªm nh­ T6 hoÆc cuèi tuÇn th× x3
 function gn_getaward_times()
 --	local nWeek = tonumber(GetLocalDate("%w"))
 --	if (nWeek == 6 or nWeek == 0) then
