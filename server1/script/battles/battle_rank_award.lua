@@ -111,7 +111,71 @@ function battle_rank_award0808(nBattleLevel)
 	
 end
 
+function battle_rank_award_top(nCompareType, nTop, tbAward)
+	local tbPlayer = {}
 
+	-- LÊy h×nh thøc s¾p xÕp ®iÓm
+	if nCompareType == 1 then
+		battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_Point)
+	elseif nCompareType == 2 then
+		battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_PK)
+	elseif nCompareType == 3 then
+		battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_NPC)
+	elseif nCompareType == 4 then
+		battle_rank_GetSortPlayer0808(tbPlayer, 0, battle_rank_sort_SER)
+	else
+		return
+	end
+
+	Msg2MSAll(MISSIONID, format("PHÇN TH¦ëNG <color=blue> TOP %d <color> TèNG KIM", nTop))
+	for i=1, nTop do
+		if tbPlayer[i] and tbPlayer[i] > 0 then
+			doFunByPlayer(tbPlayer[i], battle_rank_award_add, i, tbAward)
+		end
+	end
+end
+
+function battle_rank_award_add(nRank, tbAward)
+	nAwardCount = getn(tbAward)
+	if nRank > nAwardCount then
+		return
+	end
+
+	-- Msg2Player("<color=green>Debug Player Rank: <color>" .. nRank)
+	-- Msg2Player("<color=green>Debug Award Count: <color>" .. getn(tbAward))
+	-- Msg2Player("<color=green>Debug Player Award Count: <color>" .. getn(tbAward[nRank]))
+
+	-- for i = 1, getn(tbAward[nRank]) do
+	-- 	Msg2Player(format("<color=green>Debug Player Award Item %d: <color>%s", i, tbAward[nRank][i].szName))
+	-- end
+
+	local award = tbAward[nRank]
+	local nRuong = CalcFreeItemCellCount()
+	if nRuong < 10 then
+		Talk(1,"","B¹n kh«ng cã ®ñ <color=yellow>10<color> « trèng trong hµnh trang")
+		return
+	else
+		local szMsg = format("<color=green>H¹ng %d<color>: <color=yellow>%s<color> nhËn ®­îc ", nRank, GetName())
+		local separator = ""
+		for i = 1, getn(award) do
+			if i ~= getn(award) then
+				separator = " vµ "
+			else
+				separator = ""
+			end
+			
+			if (award[i].szName == "§iÓm kinh nghiÖm") then
+				szMsg = szMsg .. format("<color=orange>%d %s<color>%s", award[i].nExp * award[i].nCount, award[i].szName, separator)
+			elseif (award[i].szName == "Ng©n l­îng") then
+				szMsg = szMsg .. format("<color=orange>%d v¹n %s<color>%s", (award[i].nJxb * award[i].nCount)/10000, award[i].szName, separator)
+			else
+				szMsg = szMsg .. format("<color=orange>%d %s<color>%s", award[i].nCount, award[i].szName, separator)
+			end
+		end
+		Msg2MSAll(MISSIONID, szMsg)
+		tbAwardTemplet:GiveAwardByList(award, format("PhÇn th­ëng TOP %d Tèng Kim", nRank))
+	end
+end
  
 function battle_rank_GetSortPlayer0808(tbPlayer, nCamp, pCompare)
 	tbPlayer= tbPlayer or {}

@@ -1,3 +1,6 @@
+-- Thªm biÕn global
+Include("\\script\\global\\anhquach\\env.lua")
+--
 Include("\\script\\battles\\battlehead.lua")
 Include("\\script\\task\\newtask\\branch\\branch_bwsj.lua")
 Include("\\script\\tong\\tong_award_head.lua")		--By Liao Zhishan ÖÜÄ¿±ê
@@ -325,9 +328,28 @@ function GameOver()
 	end
 	--edit by zero -- Dùa vµo xÕp h¹ng cho th­ëng
 	
+	-- Th­ëng TOP
+	local nWeekDay = tonumber(GetLocalDate("%w"));
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if (nHour >= TONG_KIM_THUONG_TOP_GIO_BAT_DAU and nHour < TONG_KIM_THUONG_TOP_GIO_KET_THUC) then
+		-- TOP 10
+		if (TONG_KIM_THUONG_TOP10_BAT == 1) then
+			-- TOP 10 Thø 7
+			if (TONG_KIM_THUONG_TOP10_T7_BAT == 1 and nWeekDay == 6) then
+				battle_rank_award_top(1, 10, TONG_KIM_THUONG_TOP10_T7)
+			else
+				battle_rank_award_top(1, 10, TONG_KIM_THUONG_TOP10)
+			end
+		end
+		-- TOP 3 TH¦ëNG TH£M
+		if (TONG_KIM_THUONG_TOP3_BAT == 1) then
+			battle_rank_award_top(1, 3, TONG_KIM_THUONG_TOP3)
+		end
+	end
+
+
 	-- HiÓn thÞ xÕp h¹ng TOP 1 -> 20
-	
-	battle_rank_award0808(game_level)
+	-- battle_rank_award0808(game_level)
 	battle_rank_activity(game_level)
 	
 	WriteLog("[Battle Log] Awarding Single Player");

@@ -18,15 +18,16 @@ GM_DANH_SACH = {
         },
     ["1"] =
         { 
-            "test5d"
+            "test5d",
+            "test01"
         },
     ["2"] =
         { 
-            "testhd"
+            "test02"
         },
     ["3"] =
         { 
-            "testva"
+            "test03"
         }
 }
 
@@ -73,7 +74,11 @@ THAM_CAU_CHIEU_DA   = 2000
 --  //////////////////////////////////////////////////////////////
 -- //                        TËng Kim                          //
 --//////////////////////////////////////////////////////////////
-TONG_KIM_ANTI_TRUNG_IP            = 1 -- Ch≠a hoπt ÆÈng
+TONG_KIM_ANTI_TRUNG_IP            = 1       -- Ch≠a hoπt ÆÈng
+TONG_KIM_THOI_GIAN_BAO_DANH       = 10      -- GËc = 10
+TONG_KIM_THOI_GIAN_CHIEN_DAU      = 60      -- GËc = 60
+TONG_KIM_THOI_GIAN_CHIEN_BAO      = 20      -- GËc = 20
+TONG_KIM_PHI_BAO_DANH             = 3000    -- L≠Óng
 TONG_KIM_TY_LE_TICH_LUY_EXP       = 500
 TONG_KIM_THUONG_THANG             = 1200
 TONG_KIM_THUONG_THUA              = 600
@@ -105,6 +110,92 @@ TONG_KIM_LE_BAO_AWARD = {
     {szName = "An Bang CÛc Hoa Thπch Chÿ hoµn", nQuality=1, tbProp = {0,165}, nRate = 0.02},
     {szName = "An Bang ßi“n Hoµng Thπch Ng‰c BÈi", nQuality=1, tbProp = {0,166}, nRate = 0.02},
     {szName = "Hai tr®m vπn Æi”m kinh nghi÷m", nExp = 2000000, nRate = 48.72},
+}
+TONG_KIM_THUONG_TOP_GIO_BAT_DAU     = 2049
+TONG_KIM_THUONG_TOP_GIO_KET_THUC    = 2201
+TONG_KIM_THUONG_TOP10_BAT           = 1
+TONG_KIM_THUONG_TOP10_T7_BAT        = 1
+TONG_KIM_THUONG_TOP10 = {
+    [1]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [2]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [3]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [4]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [5]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [6]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [7]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [8]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [9]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    },
+    [10]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=30},
+    }
+}
+TONG_KIM_THUONG_TOP10_T7 = {
+    [1]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [2]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [3]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [4]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [5]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [6]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [7]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [8]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [9]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    },
+    [10]={		             
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=100},
+    }
+}
+TONG_KIM_THUONG_TOP3_BAT = 1
+TONG_KIM_THUONG_TOP3 = {
+    [1]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=20},
+        {szName="ßi”m kinh nghi÷m", nExp = 3000000, nCount = 1},
+        {szName="Ng©n l≠Óng", nJxb = 3000000, nCount = 1},
+    },
+    [2]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=20},
+        {szName="ßi”m kinh nghi÷m", nExp = 2000000, nCount = 1},
+        {szName="Ng©n l≠Óng", nJxb = 2000000, nCount = 1},
+    },
+    [3]={
+        {szName="Ti“n ßÂng",tbProp={4,417},nCount=20},
+        {szName="ßi”m kinh nghi÷m", nExp = 1000000, nCount = 1},
+        {szName="Ng©n l≠Óng", nJxb = 1000000, nCount = 1},
+    }
 }
 
 --  //////////////////////////////////////////////////////////////
