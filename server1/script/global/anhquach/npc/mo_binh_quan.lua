@@ -7,6 +7,9 @@ Include("\\script\\battles\\battleinfo.lua")
 
 Include("\\script\\battles\\vngbattlesign.lua")
 
+-- Chèng trïng IP (ch­a ho¹t ®éng)
+-- Include("\\script\\global\\anhquach\\mission\\tongkim\\check_ip_songjin.lua")
+
 
 function main()
 	dofile("script/global/anhquach/npc/mo_binh_quan.lua")
@@ -188,6 +191,11 @@ function storm_goon_start()
 end
 
 function bt_enterbattle()
+	-- ChÆn trïng IP (ch­a ho¹t ®éng)
+	-- if battlesSongJinCheck:FuncCheckIP(bt_ncamp) then 
+	-- 	return 
+	-- end
+
 	local nOldSubWorld = SubWorld
 		if ( GetLevel() >= 40 and GetLevel() < 80 ) then
 		SubWorld = SubWorldID2Idx(323)

@@ -73,6 +73,13 @@ THAM_CAU_CHIEU_DA   = 2000
 --  //////////////////////////////////////////////////////////////
 -- //                        TËng Kim                          //
 --//////////////////////////////////////////////////////////////
+TONG_KIM_ANTI_TRUNG_IP            = 1 -- Ch≠a hoπt ÆÈng
+TONG_KIM_TY_LE_TICH_LUY_EXP       = 500
+TONG_KIM_THUONG_THANG             = 1200
+TONG_KIM_THUONG_THUA              = 600
+TONG_KIM_THUONG_HOA               = 900
+TONG_KIM_TSK_LIMIT_EXP_NGAY_DATE  = 1900
+TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE = 1901
 TONG_KIM_LIMIT_EXP_TUAN  = {
     [0] = 70000000,
     [3] = 70000000,
@@ -99,12 +106,6 @@ TONG_KIM_LE_BAO_AWARD = {
     {szName = "An Bang ßi“n Hoµng Thπch Ng‰c BÈi", nQuality=1, tbProp = {0,166}, nRate = 0.02},
     {szName = "Hai tr®m vπn Æi”m kinh nghi÷m", nExp = 2000000, nRate = 48.72},
 }
-TONG_KIM_TY_LE_TICH_LUY_EXP       = 500
-TONG_KIM_TSK_LIMIT_EXP_NGAY_DATE  = 1900
-TONG_KIM_TSK_LIMIT_EXP_NGAY_VALUE = 1901
-TONG_KIM_THUONG_THANG             = 1200
-TONG_KIM_THUONG_THUA              = 600
-TONG_KIM_THUONG_HOA               = 900
 
 --  //////////////////////////////////////////////////////////////
 -- //                     Phong L®ng ßÈ                        //
