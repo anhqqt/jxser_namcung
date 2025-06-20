@@ -18,17 +18,17 @@ Include("\\script\\misc\\vngpromotion\\ipbonus\\ipbonus_2_head.lua")
 Include("\\script\\event\\jiefang_jieri\\200904\\qianqiu_yinglie\\head.lua");
 
 Include("\\script\\battles\\doubleexp.lua")
-FRAME2TIME = 18;	-- 18 khung h×nh thêi gian game t­¬ng ®­¬ng 1 phót
-BAOMING_TIME = 10		-- Thêi gian b¸o danh 10 phót	
-FIGHTING_TIME = 60		-- Thêi gian giao chiÕn 60 phót
-ANNOUNCE_TIME = 20		-- C«ng bè chiÕn b¸o sau 20 phót
+FRAME2TIME = 18;									-- 18 khung h×nh thêi gian game t­¬ng ®­¬ng 1 phót
+BAOMING_TIME = TONG_KIM_THOI_GIAN_BAO_DANH			-- Thêi gian b¸o danh
+FIGHTING_TIME = TONG_KIM_THOI_GIAN_CHIEN_DAU		-- Thêi gian giao chiÕn
+ANNOUNCE_TIME = TONG_KIM_THOI_GIAN_CHIEN_BAO		-- C«ng bè chiÕn b¸o sau 20 phót
 
 TIMER_1 = ANNOUNCE_TIME * FRAME2TIME; -- 20 phót c«ng bè ChiÕn b¸o
 TIMER_2 = (FIGHTING_TIME + BAOMING_TIME) * 60  * FRAME2TIME; -- Thêi gian giao chiÕn lµ 1 giê
 RUNGAME_TIME = BAOMING_TIME * 60 * FRAME2TIME / TIMER_1; -- Sau khi b¸o danh 10 phót, tù ®éng vµo giai ®o¹n chiÕn ®Êu
 GO_TIME =  BAOMING_TIME * 60 * FRAME2TIME  / TIMER_1; -- Thêi gian b¸o danh lµ 10 phót
 
-SONGJIN_SIGNUP_FEES = 3000  -- PhÝ b¸o danh
+SONGJIN_SIGNUP_FEES = TONG_KIM_PHI_BAO_DANH  -- PhÝ b¸o danh
 
 JUNGONGPAI = 1773 -- ID Nguyªn so¸i Tèng Kim: 6, 1, 1477
 EXPIRED_TIME = 24*60  -- Nguyªn so¸i Tèng Kim qu¸ h¹n
