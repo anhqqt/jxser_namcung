@@ -84,7 +84,7 @@ TONG_KIM_THOI_GIAN_BAO_DANH       = 1     -- Gèc = 10
 TONG_KIM_THOI_GIAN_CHIEN_DAU      = 3     -- Gèc = 60
 TONG_KIM_THOI_GIAN_CHIEN_BAO      = 20    -- Gèc = 20
 TONG_KIM_PHI_BAO_DANH             = 10000 -- L­îng
-TONG_KIM_TY_QUY_DOI_EXP           = 500   -- Trªn 1 ®iÓm tÝch lòy
+TONG_KIM_TY_LE_QUY_DOI_EXP        = 500   -- Trªn 1 ®iÓm tÝch lòy
 -- PhÇn th­ëng thªm cho bªn th¾ng / thua / hßa
 TONG_KIM_THUONG_THEM_BAT          = 1
 TONG_KIM_THUONG_THEM_GIO_BAT_DAU  = 0130 -- 20:45

@@ -237,7 +237,7 @@ function wantpayex(mark, nStep)
 	else
 		local level = GetLevel();
 		local bonus = bt_exchangeexp(level, mark)
-		nEXP = mark*TONG_KIM_TY_QUY_DOI_EXP		
+		nEXP = mark*TONG_KIM_TY_LE_QUY_DOI_EXP		
 		--local tbItem = {szName="M¶nh Bæ Thiªn Th¹ch (trung)", tbProp={6, 1, 1309, 1, 0, 0}}
 		if nStep == 1 then
 			if (expchange_limit_daily(nEXP) == 1) then
@@ -271,7 +271,7 @@ function wantpay(mark)
 		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tÝch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
 	else
 		local level = GetLevel();
-		nEXP = mark*TONG_KIM_TY_QUY_DOI_EXP
+		nEXP = mark*TONG_KIM_TY_LE_QUY_DOI_EXP
 		Say("Qu©n Nhu quan: B¹n cã thÓ ®æi ®­îc <color=green>"..nEXP.."<color> §iÓm kinh nghiÖm, x¸c ®Þnh ®æi ph¶i kh«ng?", 2, "§óng, ta cÇn ®æi/#paymark("..mark..")", "Uhm, §Ó ta suy nghÜ l¹i!/no")
 	end	
 end
@@ -286,7 +286,7 @@ function paymark(mark)
 	elseif (mark == 0) then
 		Say("Qu©n Nhu quan: Kh«ng cã ®iÓm tÝch lòy mµ muèn ®æi ®iÓm kinh nghiÖm µh, ®óng lµ chuyÖn hoang ®­êng.", 1, "§ãng/no");
 	else
-		nEXP = mark*TONG_KIM_TY_QUY_DOI_EXP
+		nEXP = mark*TONG_KIM_TY_LE_QUY_DOI_EXP
 		local level = GetLevel();
 		local bonus = bt_exchangeexp(level, mark)
 		if (expchange_limit_daily(nEXP) == 1) then
