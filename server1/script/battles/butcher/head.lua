@@ -1,6 +1,3 @@
--- Thªm biÕn global
-Include("\\script\\global\\anhquach\\env.lua")
---
 Include("\\script\\battles\\battlehead.lua")
 Include("\\script\\task\\newtask\\branch\\branch_bwsj.lua")
 Include("\\script\\tong\\tong_award_head.lua")		--By Liao Zhishan ÖÜÄ¿±ê
@@ -157,12 +154,12 @@ function sf_winbouns(n_camp)
 		end;
 	end
 	battle_finish_activity(BT_GetGameData(GAME_LEVEL), All_Players_Table, Win_Players_Table, Los_Players_Table, n_camp)
-	tbChangeDestiny:completeMission_Battle(All_Players_Table)
+	tbChangeDestiny:completeMission_Battle(All_Players_Table) -- NhiÖm vô ThÇn N«ng L·o Gia
 
-	-- Random th­ëng 3 x MÆt n¹ nguyªn so¸i cho toµn bé ng­êi ch¬i
+	-- Random th­ëng 3 x MÆt n¹ nguyªn so¸i cho toµn bé ng­êi ch¬i cã ®iÓm tİch lòy > 3000
 	TB_QIANQIU_YINGLIE0904:add_lucky_award(All_Players_Table)
 
-	-- Th­ëng Tèng Kim LÔ Bao
+	-- Th­ëng Tèng Kim LÔ Bao cho ng­êi ch¬i cã ®iÓm tİch lòy > 6000
 	-- Th¾ng = 3
 	-- Hßa = 2
 	-- Thua = 1
@@ -175,16 +172,11 @@ function sf_winbouns(n_camp)
 
 	--end
 	--by zero 2007-7-30 -- NhËn ®­îc qu©n c«ng bµi Tèng Kim. Mét ngµy nhËn 2 lÇn.
-	-- ChØ bªn Th¾ng míi nhËn ®­îc qu©n c«ng bµi Tèng Kim
+	-- ChØ bªn Th¾ng cã tİch lòy > 1000 míi nhËn ®­îc qu©n c«ng bµi Tèng Kim
 	local OldPlayerIndex = PlayerIndex
 	for i = 1, getn(Win_Players_Table) do
 		PlayerIndex = Win_Players_Table[i];
 		local player_total_point = BT_GetData(PL_TOTALPOINT) -- NhËn ®­îc ®iÓm
-
-		-- NhËn 2007 Trung Thu Hoa §¨ng
-		-- 2007 n¨m 9 th¸ng 21 ngµy (sau b¶o tr× ®Şnh kú) ~ 9 th¸ng 28 ngµy 00:30
-		local nTime = 0;
-		nTime = tonumber(GetLocalDate("%y%m%d%H%M"))
 
 
 		-- L·nh nhËn Qu©n c«ng Bµi
@@ -329,27 +321,9 @@ function GameOver()
 	--edit by zero -- Dùa vµo xÕp h¹ng cho th­ëng
 	
 	-- Th­ëng TOP
-	local nWeekDay = tonumber(GetLocalDate("%w"));
-	local nHour = tonumber(GetLocalDate("%H%M"))
-	if (nHour >= TONG_KIM_THUONG_TOP_GIO_BAT_DAU and nHour < TONG_KIM_THUONG_TOP_GIO_KET_THUC) then
-		-- TOP 10
-		if (TONG_KIM_THUONG_TOP10_BAT == 1) then
-			-- TOP 10 Thø 7
-			if (TONG_KIM_THUONG_TOP10_T7_BAT == 1 and nWeekDay == 6) then
-				battle_rank_award_top(1, 10, TONG_KIM_THUONG_TOP10_T7)
-			else
-				battle_rank_award_top(1, 10, TONG_KIM_THUONG_TOP10)
-			end
-		end
-		-- TOP 3 TH¦ëNG TH£M
-		if (TONG_KIM_THUONG_TOP3_BAT == 1) then
-			battle_rank_award_top(1, 3, TONG_KIM_THUONG_TOP3)
-		end
-	end
-
-
-	-- HiÓn thŞ xÕp h¹ng TOP 1 -> 20
 	-- battle_rank_award0808(game_level)
+	battle_rank_award_top10()
+	battle_rank_award_top3()
 	battle_rank_activity(game_level)
 	
 	WriteLog("[Battle Log] Awarding Single Player");
@@ -377,7 +351,7 @@ function GameOver()
 	for i = 1,getn(Win_Players_Table) do
 		local noldplayerindex = PlayerIndex
 		PlayerIndex = Win_Players_Table[i]
-		local player_total_point=BT_GetData(PL_TOTALPOINT) --»ñµÃ»ı·Ö
+		local player_total_point=BT_GetData(PL_TOTALPOINT) -- NhËn ®­îc ®iÓm
 		battles_award_all_singleplayer(PlayerIndex,player_total_point,game_level)
 		PlayerIndex = noldplayerindex
 	end 
@@ -388,11 +362,12 @@ function GameOver()
 	-- Th­ëng TOP 3
 	-- TOP 1: MÆt n¹ §¹i t­íng qu©n + 3 Tèng Kim LÔ Bao
 	-- TOP 2 + 3: 3 Tèng Kim LÔ Bao
+	-- NÕu 1 ng­êi ®¹t TOP cña nhiÒu h×nh thøc th× sÏ dc th­ëng dån (§iÓm, Liªn Tr¶m, PK, GiÕt NPC)
 	TB_QIANQIU_YINGLIE0904:sorter_award(game_level)
 	
 
 	WriteLog("[Battle Log] Awarding by Result");
-
+	
 	if (GetMissionV(MS_MOSTDEATH) == 0) then
 		if (bonus_s > bonus_j ) then
 			resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, tû lÖ ®iÓm tİch lòy lµ "..bonus_s..":"..bonus_j..", phe Tèng giµnh ®­îc th¾ng lîi!";
@@ -419,7 +394,7 @@ function GameOver()
 		end;
 
 		AddGlobalCountNews(resultstr, 1) 
-
+	-- NÕu sè ng­êi trong mét phe trªn chiÕn tr­êng thÊp h¬n sè l­îng tèi thiÓu, th× kÕt thóc tû thİ, phe nµo ®«ng ng­êi h¬n sÏ trùc tiÕp th¾ng
 	elseif (GetMissionV(MS_MOSTDEATH) == 1) then
 		resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!"
 		Msg2MSAll(MISSIONID, resultstr)

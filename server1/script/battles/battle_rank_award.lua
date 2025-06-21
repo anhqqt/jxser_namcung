@@ -1,4 +1,6 @@
-
+-- Thªm biÕn global
+Include("\\script\\global\\anhquach\\env.lua")
+--
 Include("\\script\\missions\\basemission\\lib.lua")
 Include("\\script\\lib\\awardtemplet.lua")
 
@@ -111,6 +113,33 @@ function battle_rank_award0808(nBattleLevel)
 	
 end
 
+function battle_rank_award_top10()
+	local nWeekDay = tonumber(GetLocalDate("%w"));
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if (nHour >= TONG_KIM_THUONG_TOP_GIO_BAT_DAU and nHour < (TONG_KIM_THUONG_TOP_GIO_BAT_DAU + 160)) then
+		-- TOP 10
+		if (TONG_KIM_THUONG_TOP10_BAT == 1) then
+			-- TOP 10 Thø 7
+			if (TONG_KIM_THUONG_TOP10_T7_BAT == 1 and nWeekDay == 6) then
+				battle_rank_award_top(1, 10, TONG_KIM_THUONG_TOP10_T7)
+			else
+				battle_rank_award_top(1, 10, TONG_KIM_THUONG_TOP10)
+			end
+		end
+	end
+end
+
+function battle_rank_award_top3()
+	local nWeekDay = tonumber(GetLocalDate("%w"));
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if (nHour >= TONG_KIM_THUONG_TOP_GIO_BAT_DAU and nHour < (TONG_KIM_THUONG_TOP_GIO_BAT_DAU + 160)) then
+		-- TOP 3 TH¦ëNG TH£M
+		if (TONG_KIM_THUONG_TOP3_BAT == 1) then
+			battle_rank_award_top(1, 3, TONG_KIM_THUONG_TOP3)
+		end
+	end
+end
+
 function battle_rank_award_top(nCompareType, nTop, tbAward)
 	local tbPlayer = {}
 
@@ -165,7 +194,7 @@ function battle_rank_award_add(nRank, tbAward)
 			end
 			
 			if (award[i].szName == "§iÓm kinh nghiÖm") then
-				szMsg = szMsg .. format("<color=orange>%d %s<color>%s", award[i].nExp * award[i].nCount, award[i].szName, separator)
+				szMsg = szMsg .. format("<color=orange>%d %s<color>%s", award[i].nExp_tl * award[i].nCount, award[i].szName, separator)
 			elseif (award[i].szName == "Ng©n l­îng") then
 				szMsg = szMsg .. format("<color=orange>%d v¹n %s<color>%s", (award[i].nJxb * award[i].nCount)/10000, award[i].szName, separator)
 			else
