@@ -829,6 +829,19 @@ function ResetBonus()
 	-- NÕu vµo buæi tèi ®ang trong ho¹t ®éng Hoµng Chi Ch­¬ng, tÝch lòy sÏ ®­îc nh©n ®«i
 	bonuscff1 = bonuscff1 * bt_getgn_awardtimes()
 	bonuscff2 = bonuscff2 * bt_getgn_awardtimes()
+
+	-- X2 ®iÓm mçi ngµy vµ X4 vµo thø 7 by Anh Quach - 21/06/2025
+	local nWeekDay = tonumber(GetLocalDate("%w"));
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if (TONG_KIM_X2_NGAY_BAT == 1) and (nHour >= TONG_KIM_X2_GIO_BAT_DAU and nHour < (TONG_KIM_X2_GIO_BAT_DAU + 160)) then
+		if (TONG_KIM_X4_T7_BAT == 1 and nWeekDay == 6) then
+			bonuscff1 = bonuscff1 * 4
+			bonuscff2 = bonuscff2 * 4
+		else
+			bonuscff1 = bonuscff1 * 2
+			bonuscff2 = bonuscff2 * 2
+		end
+	end
 	
 	BT_SetTypeBonus(PL_KILLPLAYER, 1, floor(BONUS_KILLPLAYER*bonuscff1))
 	BT_SetTypeBonus(PL_SNAPFLAG, 1, floor(BONUS_SNAPFLAG*bonuscff1))
