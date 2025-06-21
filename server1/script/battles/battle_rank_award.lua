@@ -1,3 +1,4 @@
+
 Include("\\script\\missions\\basemission\\lib.lua")
 Include("\\script\\lib\\awardtemplet.lua")
 
@@ -109,6 +110,8 @@ function battle_rank_award0808(nBattleLevel)
 	end	
 	
 end
+
+
  
 function battle_rank_GetSortPlayer0808(tbPlayer, nCamp, pCompare)
 	tbPlayer= tbPlayer or {}
