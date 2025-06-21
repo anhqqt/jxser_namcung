@@ -130,7 +130,7 @@ function OnTimer()
 	if (t >= RUNGAME_TIME) then
 		AddTeTan(t)  -- Ôö¼ÓËÎ½ğÌØÌ½
 
-		--Èç¹û³¡ÉÏÄ³Ò»ÕóÓªÈËÊıµÍÓÚ×îĞ¡ÊıÁ¿£¬Ôò±ÈÈü½áÊø£¬ÈË¶àµÄÕóÓªÖ±½Ó»ñÊ¤
+		-- NÕu sè ng­êi trong mét phe trªn chiÕn tr­êng thÊp h¬n sè l­îng tèi thiÓu, th× kÕt thóc tû thİ, phe nµo ®«ng ng­êi h¬n sÏ trùc tiÕp th¾ng
 		local group1count = GetMSPlayerCount(MISSIONID, 1)
 		local group2count = GetMSPlayerCount(MISSIONID, 2)
 		if ( group1count < but_getminplayerlimit() or group2count < but_getminplayerlimit()) then
