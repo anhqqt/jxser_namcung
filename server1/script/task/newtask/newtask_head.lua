@@ -1,3 +1,5 @@
+-- Th猰 bi課 global
+Include("\\script\\global\\anhquach\\env.lua")
 -------------------------------------------------------------------------
 -- FileName		:	newtask_head.lua
 -- Author		:	lailigao
@@ -17,7 +19,7 @@ TSKID_KILLERMAXCOUNT =	1193;	--每天杀人次数
 TSKID_KILLTASKID_SPE =	1793;	-- 是否接受高级杀手任务	-- 收费版不用
 TSKID_KILLERDATE_SPE =	1794;	--接高级杀手任务时的日期和次数	-- 收费版不用
 
-KILLER_MAXCOUNT		= 8;	--每天杀人上限8人
+KILLER_MAXCOUNT		= BOSS_ST_LIMIT_NGAY;	--每天杀人上限8人
 
 
 -- 正中邪阵营定义

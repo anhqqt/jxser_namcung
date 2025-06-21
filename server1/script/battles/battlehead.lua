@@ -18,17 +18,17 @@ Include("\\script\\misc\\vngpromotion\\ipbonus\\ipbonus_2_head.lua")
 Include("\\script\\event\\jiefang_jieri\\200904\\qianqiu_yinglie\\head.lua");
 
 Include("\\script\\battles\\doubleexp.lua")
-FRAME2TIME = 18;	-- 18 khung h×nh thêi gian game t­¬ng ®­¬ng 1 phót
-BAOMING_TIME = 10		-- Thêi gian b¸o danh 10 phót	
-FIGHTING_TIME = 60		-- Thêi gian giao chiÕn 60 phót
-ANNOUNCE_TIME = 20		-- C«ng bè chiÕn b¸o sau 20 phót
+FRAME2TIME = 18;									-- 18 khung h×nh thêi gian game t­¬ng ®­¬ng 1 phót
+BAOMING_TIME = TONG_KIM_THOI_GIAN_BAO_DANH			-- Thêi gian b¸o danh
+FIGHTING_TIME = TONG_KIM_THOI_GIAN_CHIEN_DAU		-- Thêi gian giao chiÕn
+ANNOUNCE_TIME = TONG_KIM_THOI_GIAN_CHIEN_BAO		-- C«ng bè chiÕn b¸o sau 20 phót
 
 TIMER_1 = ANNOUNCE_TIME * FRAME2TIME; -- 20 phót c«ng bè ChiÕn b¸o
 TIMER_2 = (FIGHTING_TIME + BAOMING_TIME) * 60  * FRAME2TIME; -- Thêi gian giao chiÕn lµ 1 giê
 RUNGAME_TIME = BAOMING_TIME * 60 * FRAME2TIME / TIMER_1; -- Sau khi b¸o danh 10 phót, tù ®éng vµo giai ®o¹n chiÕn ®Êu
 GO_TIME =  BAOMING_TIME * 60 * FRAME2TIME  / TIMER_1; -- Thêi gian b¸o danh lµ 10 phót
 
-SONGJIN_SIGNUP_FEES = 3000  -- PhÝ b¸o danh
+SONGJIN_SIGNUP_FEES = TONG_KIM_PHI_BAO_DANH  -- PhÝ b¸o danh
 
 JUNGONGPAI = 1773 -- ID Nguyªn so¸i Tèng Kim: 6, 1, 1477
 EXPIRED_TIME = 24*60  -- Nguyªn so¸i Tèng Kim qu¸ h¹n
@@ -829,6 +829,19 @@ function ResetBonus()
 	-- NÕu vµo buæi tèi ®ang trong ho¹t ®éng Hoµng Chi Ch­¬ng, tÝch lòy sÏ ®­îc nh©n ®«i
 	bonuscff1 = bonuscff1 * bt_getgn_awardtimes()
 	bonuscff2 = bonuscff2 * bt_getgn_awardtimes()
+
+	-- X2 ®iÓm mçi ngµy vµ X4 vµo thø 7 by Anh Quach - 21/06/2025
+	local nWeekDay = tonumber(GetLocalDate("%w"));
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if (TONG_KIM_X2_NGAY_BAT == 1) and (nHour >= TONG_KIM_X2_GIO_BAT_DAU and nHour < (TONG_KIM_X2_GIO_BAT_DAU + 160)) then
+		if (TONG_KIM_X4_T7_BAT == 1 and nWeekDay == 6) then
+			bonuscff1 = bonuscff1 * 4
+			bonuscff2 = bonuscff2 * 4
+		else
+			bonuscff1 = bonuscff1 * 2
+			bonuscff2 = bonuscff2 * 2
+		end
+	end
 	
 	BT_SetTypeBonus(PL_KILLPLAYER, 1, floor(BONUS_KILLPLAYER*bonuscff1))
 	BT_SetTypeBonus(PL_SNAPFLAG, 1, floor(BONUS_SNAPFLAG*bonuscff1))

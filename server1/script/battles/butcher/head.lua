@@ -7,6 +7,9 @@ Include("\\script\\lib\\log.lua")
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
 IncludeLib("SETTING");
+-- By Anh Quach - 21/06/2025
+Include("\\script\\global\\anhquach\\hoatdong\\tongkim\\award_rank.lua")
+Include("\\script\\global\\anhquach\\hoatdong\\tongkim\\award_battle.lua")
 
 MISSIONID = 20
 sf_aryItems = {
@@ -154,15 +157,19 @@ function sf_winbouns(n_camp)
 		end;
 	end
 	battle_finish_activity(BT_GetGameData(GAME_LEVEL), All_Players_Table, Win_Players_Table, Los_Players_Table, n_camp)
-	tbChangeDestiny:completeMission_Battle(All_Players_Table)
+	tbChangeDestiny:completeMission_Battle(All_Players_Table) -- NhiÖm vô ThÇn N«ng L·o Gia
 
 	-- Random th­ëng 3 x MÆt n¹ nguyªn so¸i cho toµn bé ng­êi ch¬i
+	---- chiÕn tr­êng cao cÊp
+	---- ®iÓm tÝch lòy > 3000
 	TB_QIANQIU_YINGLIE0904:add_lucky_award(All_Players_Table)
 
-	-- Th­ëng Tèng Kim LÔ Bao
-	-- Th¾ng = 3
-	-- Hßa = 2
-	-- Thua = 1
+	-- Th­ëng Tèng Kim LÔ Bao cho ng­êi ch¬i
+	---- chiÕn tr­êng cao cÊp
+	---- ®iÓm tÝch lòy > 6000
+	---- Th¾ng = 3
+	---- Hßa = 2
+	---- Thua = 1
 	if (n_camp ~= 0) then
 		TB_QIANQIU_YINGLIE0904:add_end_award(Win_Players_Table, 2);
 		TB_QIANQIU_YINGLIE0904:add_end_award(Los_Players_Table, 0);
@@ -172,16 +179,11 @@ function sf_winbouns(n_camp)
 
 	--end
 	--by zero 2007-7-30 -- NhËn ®­îc qu©n c«ng bµi Tèng Kim. Mét ngµy nhËn 2 lÇn.
-	-- ChØ bªn Th¾ng míi nhËn ®­îc qu©n c«ng bµi Tèng Kim
+	-- ChØ bªn Th¾ng cã tÝch lòy > 1000 míi nhËn ®­îc qu©n c«ng bµi Tèng Kim
 	local OldPlayerIndex = PlayerIndex
 	for i = 1, getn(Win_Players_Table) do
 		PlayerIndex = Win_Players_Table[i];
 		local player_total_point = BT_GetData(PL_TOTALPOINT) -- NhËn ®­îc ®iÓm
-
-		-- NhËn 2007 Trung Thu Hoa §¨ng
-		-- 2007 n¨m 9 th¸ng 21 ngµy (sau b¶o tr× ®Þnh kú) ~ 9 th¸ng 28 ngµy 00:30
-		local nTime = 0;
-		nTime = tonumber(GetLocalDate("%y%m%d%H%M"))
 
 
 		-- L·nh nhËn Qu©n c«ng Bµi
@@ -215,6 +217,9 @@ function sf_winbouns(n_camp)
 	end
 	PlayerIndex = OldPlayerIndex
 	--end
+
+	-- Th­ëng thªm kÕt thóc trËn by Anh Quach - 21/06/2025
+	battles_award_additional_end(n_camp, All_Players_Table, Win_Players_Table, Los_Players_Table)
 
 	-- TÝnh ®iÓm th­ëng bªn Thua
 	local award_over = floor(BATTLES_LOSEGAME_POINT * bt_getgn_awardtimes())
@@ -325,9 +330,9 @@ function GameOver()
 	end
 	--edit by zero -- Dùa vµo xÕp h¹ng cho th­ëng
 	
-	-- HiÓn thÞ xÕp h¹ng TOP 1 -> 20
-	
-	battle_rank_award0808(game_level)
+	-- Th­ëng TOP by Anh Quach - 21/06/2025
+	battle_rank_award_top()
+	-- battle_rank_award0808(game_level)
 	battle_rank_activity(game_level)
 	
 	WriteLog("[Battle Log] Awarding Single Player");
@@ -355,7 +360,9 @@ function GameOver()
 	for i = 1,getn(Win_Players_Table) do
 		local noldplayerindex = PlayerIndex
 		PlayerIndex = Win_Players_Table[i]
-		local player_total_point=BT_GetData(PL_TOTALPOINT) --»ñµÃ»ý·Ö
+		local player_total_point=BT_GetData(PL_TOTALPOINT) -- NhËn ®­îc ®iÓm
+		-- ChiÕn tr­êng cao cÊp
+		-- §iÓm tÝch lòy > 3000
 		battles_award_all_singleplayer(PlayerIndex,player_total_point,game_level)
 		PlayerIndex = noldplayerindex
 	end 
@@ -364,13 +371,15 @@ function GameOver()
 	tb_storm_winner = {}	--Storm	-- Xãa ng­êi th¾ng
 	
 	-- Th­ëng TOP 3
+	-- ChiÕn tr­êng cao cÊp
 	-- TOP 1: MÆt n¹ §¹i t­íng qu©n + 3 Tèng Kim LÔ Bao
 	-- TOP 2 + 3: 3 Tèng Kim LÔ Bao
+	-- NÕu 1 ng­êi ®¹t TOP cña nhiÒu h×nh thøc th× sÏ dc th­ëng dån (§iÓm, Liªn Tr¶m, PK, GiÕt NPC)
 	TB_QIANQIU_YINGLIE0904:sorter_award(game_level)
 	
 
 	WriteLog("[Battle Log] Awarding by Result");
-
+	
 	if (GetMissionV(MS_MOSTDEATH) == 0) then
 		if (bonus_s > bonus_j ) then
 			resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, tû lÖ ®iÓm tÝch lòy lµ "..bonus_s..":"..bonus_j..", phe Tèng giµnh ®­îc th¾ng lîi!";
@@ -397,7 +406,7 @@ function GameOver()
 		end;
 
 		AddGlobalCountNews(resultstr, 1) 
-
+	-- NÕu sè ng­êi trong mét phe trªn chiÕn tr­êng thÊp h¬n sè l­îng tèi thiÓu, th× kÕt thóc tû thÝ, phe nµo ®«ng ng­êi h¬n sÏ trùc tiÕp th¾ng
 	elseif (GetMissionV(MS_MOSTDEATH) == 1) then
 		resultstr = resultstr.."ChiÕn sù ®· kÕt thóc, phe Tèng giµnh ®­îc th¾ng lîi!"
 		Msg2MSAll(MISSIONID, resultstr)
@@ -569,6 +578,17 @@ function sf_join(camp)
 	ForbidChangePK(1);
 	SetDeathScript("\\script\\battles\\butcher\\playerdeath.lua");
 	bt_JudgePLAddTitle()
+
+	-- Th«ng b¸o X2 ®iÓm mçi ngµy vµ X4 vµo thø 7 by Anh Quach - 21/06/2025
+	local nWeekDay = tonumber(GetLocalDate("%w"));
+	local nHour = tonumber(GetLocalDate("%H%M"))
+	if (TONG_KIM_X2_NGAY_BAT == 1) and (nHour >= TONG_KIM_X2_GIO_BAT_DAU and nHour < (TONG_KIM_X2_GIO_BAT_DAU + 160)) then
+		if (TONG_KIM_X4_T7_BAT == 1 and nWeekDay == 6) then
+			Talk(1, "", "H«m nay lµ thø 7, Tèng Kim sÏ nhËn ®­îc gÊp bèn lÇn phÇn th­ëng khi tham gia chiÕn tr­êng!")
+		else
+			Talk(1, "", "§©y lµ trËn chiÕn quan träng nhÊt trong ngµy, tham gia sÏ nhËn ®­îc gÊp ®«i lÇn phÇn th­ëng khi tham gia chiÕn tr­êng!")
+		end
+	end
 end;
 ------------------------------------------------------------------
 

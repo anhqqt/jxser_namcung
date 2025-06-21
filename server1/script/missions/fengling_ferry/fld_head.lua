@@ -1,3 +1,5 @@
+-- Th™m bi’n global
+Include("\\script\\global\\anhquach\\env.lua")
 --AddEventItem(489)∑Á¡Í∂…¡Ï≈∆
 IncludeLib("FILESYS")
 Include("\\script\\lib\\log.lua")
@@ -31,6 +33,11 @@ function fld_cancel()
 end
 
 function fld_wanttakeboat(addr)
+
+	if PHONG_LANG_DO_MO ~= 1 then
+		Talk(1,"","<color=Orange>Thuy“n Phu: <color>T›nh n®ng nµy Æang tπm Æ„ng! Xin Æπi hi÷p vui lﬂng quay lπi sau")
+		return 0
+	end
 
 	-- Gia nhÀp m´n ph∏i mÌi l™n thuy“n Modified - by AnhHH - 20110724
 	if (GetLastFactionNumber() == -1)then

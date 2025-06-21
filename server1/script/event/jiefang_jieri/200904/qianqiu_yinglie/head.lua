@@ -218,6 +218,7 @@ function TB_QIANQIU_YINGLIE0904:add_lucky_award(tb_player)
 		return
 	end
 	
+	-- X¸o trén danh s¸ch ng­êi ch¬i
 	for i = 1, getn(tb_player) do
 		local exchangeIndex = random(i,  getn(tb_player)) 
 		if tb_player[i]>0 and tb_player[exchangeIndex]>0 then
@@ -228,6 +229,7 @@ function TB_QIANQIU_YINGLIE0904:add_lucky_award(tb_player)
 		end
 	end
 	
+	-- Trao th­ëng cho 3 ng­êi ch¬i may m¾n ®Çu tiªn cña m¶ng ®· bÞ x¸o trén
 	i = 1;
 	local nLuckyCount = 0;
 	local old_player = PlayerIndex;

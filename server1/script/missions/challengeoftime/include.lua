@@ -1,3 +1,5 @@
+-- Th猰 bi課 global
+Include("\\script\\global\\anhquach\\env.lua")
 IncludeLib("RELAYLADDER")
 Include("\\script\\tong\\tong_award_head.lua")		--By Liao Zhishan
 Include("\\script\\missions\\boss\\bigboss.lua") -- big boss
@@ -26,7 +28,7 @@ CHUANGGUAN30_TIME_LIMIT = 13*60		-- 前二十九关需要提早完成的时间
 CHUANGGUAN30_START_TIME = 10
 CHUANGGUAN30_END_TIME	= 22
 PLAYER_MAP_TASK			= 2852
-COUNT_LIMIT 		= 1
+COUNT_LIMIT 		= VUOT_AI_LIMIT_NGAY
 
 
 
