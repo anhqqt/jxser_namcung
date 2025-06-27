@@ -65,6 +65,9 @@ function award_player(player, exp, objects, time)
 		
 		point = BigBoss:AddChuangGuanPoint(point);
 		point = Chuangguan_checkdoubleexp(point)
+
+		point = point * VUOT_AI_TY_LE_EXP_TUNG_AI
+
 		AddOwnExp(point);
 		Msg2Player("<#>B¹n ®¹t ®­îc <color=yellow>" .. point .. "<color> ®iÓm kinh nghiÖm.");
 	end
@@ -185,7 +188,8 @@ function award_batch_extend(batch)
 				--%tbPro.nCount = 1
 				--tbAwardTemplet:GiveAwardByList(%tbPro, "xiaonieshichen awrad", 1)
 				
-				local nExpCount = 10000000
+				-- local nExpCount = 10000000
+				local nExpCount = VUOT_AI_THUONG_AI_TIEU_NHIEP_NHI_TRAN_EXP
 				nExpCount = Chuangguan_checkdoubleexp(nExpCount)
 				tbAwardTemplet:GiveAwardByList({nExp_tl=1,nCount = nExpCount,}, "xiaonieshichen awrad", 1)
 			end
@@ -329,13 +333,13 @@ function success(npc_index)
 		PlayerIndex = nOldPlayer;
 		
 	end
-	broadcast(GetMissionS(VARS_TEAM_NAME) .. "§éi ngò ®· th¾ng lîi hoµn thµnh nhiÖm vô ®óng thêi gian, ®· dông " .. floor(time / 60) .. " phót " .. mod(time, 60) .. " gi©y! Tr­íc ®ã "..laddertime.." gi©y");
+	broadcast("§éi ngò <color=green>" .. GetMissionS(VARS_TEAM_NAME) .. "<color> ®· th¾ng lîi hoµn thµnh nhiÖm vô ®óng thêi gian, ®· dông " .. floor(time / 60) .. " phót " .. mod(time, 60) .. " gi©y! Tr­íc ®ã "..laddertime.." gi©y");
 		
 	-- DEBUG
 	--print(format("used time: %d seconds", time));
 
-	-- NÕu thêi gian hoµn thµnh Ýt h¬n VUOT_AI_THOI_GIAN_AI_AN phót, ngÉu nhiªn chän 1 khãa trong thÎ Èn ®Ó më
-	if (time < VUOT_AI_THOI_GIAN_AI_AN * 60) then
+	-- NÕu thêi gian hoµn thµnh Ýt h¬n VUOT_AI_DIEU_KIEN_AI_AN phót, ngÉu nhiªn chän 1 khãa trong thÎ Èn ®Ó më
+	if (time < VUOT_AI_DIEU_KIEN_AI_AN * 60) then
 		local map = map_lo_hidden_npc;
 		if (advanced()) then
 			map = map_hi_hidden_npc;
@@ -397,7 +401,7 @@ function batch_finish(index)
 	else
 		-- Th«ng b¸o
 		local batch = GetMissionV(VARV_NPC_BATCH);
-		Msg2MSAll(MISSION_MATCH, GetMissionS(VARS_TEAM_NAME) .. "§éi ngò ®· tiªu diÖt toµn bé <color=yellow>" .. batch .. "<color> ®¸m qu¸i!");
+		Msg2MSAll(MISSION_MATCH, "§éi ngò <color=green>" .. GetMissionS(VARS_TEAM_NAME) .. "<color> ®· tiªu diÖt toµn bé <color=yellow>" .. batch .. "<color> ®¸m qu¸i!");
 		
 		-- PhÇn th­ëng
 		award_batch(batch, index);
