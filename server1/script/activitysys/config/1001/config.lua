@@ -31,7 +31,7 @@ tbConfig[2] =
 	tbActition = 
 	{
 		{"ThisActivity:VngAddWeeklyTask", {nTSK_VUOTAI_WEEKLY_MATCH_COUNT, 1}},
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30162,1,0,0}, nExpiredTime=24*60,},1,"KyNang150", "VuotAi28"} },
+		-- {"PlayerFunLib:GetItem",	{{tbProp={6,1,30162,1,0,0}, nExpiredTime=24*60,},1,"KyNang150", "VuotAi28"} },
 	},
 }
 tbConfig[3] = --Viªm ®Õ
@@ -64,7 +64,7 @@ tbConfig[4] =		--V­ît ¶i 17
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetItem",	{{tbProp={6,1,30162,1,0,0}, nExpiredTime=24*60,},1,"KyNang150", "VuotAi17"} },
+		-- {"PlayerFunLib:GetItem",	{{tbProp={6,1,30162,1,0,0}, nExpiredTime=24*60,},1,"KyNang150", "VuotAi17"} },
 	},
 }
 tbConfig[5] = --Viªm ®Õ - v­ît ¶i thø 10
