@@ -51,7 +51,7 @@ function gotonewworld()
 	end
 	-- wangjingjun
 	local nX,nY, nMapIndex = GetPos()
-	SetTask(PLAYER_MAP_TASK, SubWorldIdx2ID(nMapIndex)) -- 将玩家的当前地图的ID保存下来
+	SetTask(PLAYER_MAP_TASK, SubWorldIdx2ID(nMapIndex)) -- L璾 L筰 ID B秐 у Hi謓 T筰 C馻 Ngi Ch琲
 	-- 从\\settings\\maps\\liandandong\\npc_3.txt中选择的一个位置
-	NewWorld(CHUANGGUAN30_MAP_ID, floor(51072/32), floor(102272/32))	-- 传送到新的地图
+	NewWorld(CHUANGGUAN30_MAP_ID, floor(51072/32), floor(102272/32))	-- Truy襫 t鑞g n b秐  m韎
 end

@@ -26,7 +26,7 @@ function OnDeath(index)
 	end
 	DelMSPlayer(MISSION_MATCH, 1);
 	-- Th«ng b¸o ng­êi ch¬i tö vong trong nhiÖm vô
-	Msg2MSAll(MISSION_MATCH, GetName() .. "Kh«ng may t¹i trËn tö vong!");	
+	Msg2MSAll(MISSION_MATCH, "<color=green>" .. GetName() .. "<color> kh«ng may t¹i trËn tö vong!");	
 	SetLogoutRV(0)	
 	NewWorld(11,3207,4978)
 	-- TruyÒn tèng vÒ ®iÓm b¸o danh

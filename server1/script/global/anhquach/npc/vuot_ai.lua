@@ -81,14 +81,14 @@ function want_playboat()
 	
 	if (startboat == 1) then
 		if (freeboat == 0) then
-			Say("Khu vùc nµy"..strlevel.."®· b¾t ®Çu. Kh«ng cßn chç n÷a….",0)
+			Say("Khu vùc nµy "..strlevel.." ®· b¾t ®Çu. Kh«ng cßn chç n÷a!.",0)
 			return
 		else
-			Say("Khu vùc nµy"..strlevel.."giai ®o¹n b¸o danh ®ua thuyÒn rång, vÉn cßn <color=red>"..freeboat.."<color>Mét b¶n ®å nhiÖm vô miÔn phİ, thêi gian khiªu chiÕn cÇn ph¶i giao <color=red>1 v¹n<color> ng©n l­îng, ng­¬i muèn tham gia kh«ng?",2, "Ph¶i! Ta muèn dÉn d¾t ®éi cña ta tham gia./dragon_join", "Kh«ng cÇn/onCancel")
+			Say("Khu vùc nµy "..strlevel.." giai ®o¹n b¸o danh ®ua thuyÒn rång, vÉn cßn <color=red>"..freeboat.."<color> Mét b¶n ®å nhiÖm vô miÔn phİ, thêi gian khiªu chiÕn cÇn ph¶i giao <color=red>1 v¹n<color> ng©n l­îng, ng­¬i muèn tham gia kh«ng?",2, "Ph¶i! Ta muèn dÉn d¾t ®éi cña ta tham gia./dragon_join", "Kh«ng cÇn/onCancel")
 			return
 		end
 	else
-		Say("Xin lçi! Khu vùc nµy"..strlevel.."HiÖn t¹i kh«ng cã nhiÖm vô khiªu chiÕn thêi gian ®Ó tham gia. B¸o danh vµo  <color=red>®óng mçi tiÕng ®ång hç<color> b¾t ®Çu, lµ" .. TIME_SIGNUP .."phót, xin h·y l­u ı th«ng b¸o cña hÖ thèng.",0)
+		Say("Xin lçi! Khu vùc nµy "..strlevel.." HiÖn t¹i kh«ng cã nhiÖm vô khiªu chiÕn thêi gian ®Ó tham gia. B¸o danh vµo  <color=red>®óng mçi tiÕng ®ång hç<color> b¾t ®Çu, lµ" .. TIME_SIGNUP .."phót, xin h·y l­u ı th«ng b¸o cña hÖ thèng.",0)
 		return
 	end
 	
@@ -249,10 +249,11 @@ function dragon_join()
 				end
 				
 				local ndate = tonumber(GetLocalDate("%H"))
+				-- Trong thêi gian 10h-22h
 				if ndate <= 22 and ndate >= 10 and blevel == 1 then
-					SetMissionV(VARV_BATCH_MODEL,1)
+					SetMissionV(VARV_BATCH_MODEL,1) -- BËt V­ît ¶i Cao CÊp (¶i 30) - MËt Phßng Cöa ¶i + TiÓu NhiÕp Nhİ TrÇn
 				else
-					SetMissionV(VARV_BATCH_MODEL,0)
+					SetMissionV(VARV_BATCH_MODEL,0) -- BËt V­ît ¶i Th­êng
 				end
 				
 				tbLog:PlayerActionLog("EventChienThang042011","BaoDanhVuotAi") -- NhËt kı ®¨ng kı			
@@ -264,9 +265,9 @@ function dragon_join()
 	PlayerIndex = OldPlayer
 	local strlevel ="";
 	if (blevel == 0) then
-		strlevel = "NhiÖm vô Th¸ch thøc thêi gian S¬ cÊp "
+		strlevel = "NhiÖm vô Th¸ch thøc thêi gian S¬ cÊp"
 	else
-		strlevel = " 'NhiÖm vô Th¸ch thøc thêi gian' Cao cÊp "
+		strlevel = "NhiÖm vô Th¸ch thøc thêi gian Cao cÊp"
 	end
-	Say("Xin lçi! HiÖn t¹i khu vùc <color=red>"..strlevel.."<color>®· kh«ng cßn chç. Xin ®îi vßng sau!",0)
+	Say("Xin lçi! HiÖn t¹i khu vùc <color=red>"..strlevel.."<color> ®· kh«ng cßn chç. Xin ®îi vßng sau!",0)
 end
