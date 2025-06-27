@@ -120,8 +120,8 @@ function dragon_join()
 		return
 	end
 	
-	if (GetCash() < VUOT_AI_TIEN) then
-		Say("Tham gia nhi÷m vÙ ìTh∏ch th¯c thÍi gianî c«n <color=red>"..(VUOT_AI_TIEN/10000).."vπn l≠Óng<color>. Chu»n bﬁ ÆÒ ti“n rÂi h∑y quay lπi!", 0)
+	if (GetCash() < VUOT_AI_PHI_BAO_DANH) then
+		Say("Tham gia nhi÷m vÙ ìTh∏ch th¯c thÍi gianî c«n <color=red>"..(VUOT_AI_PHI_BAO_DANH/10000).."vπn l≠Óng<color>. Chu»n bﬁ ÆÒ ti“n rÂi h∑y quay lπi!", 0)
 		return
 	end
 	
@@ -205,7 +205,7 @@ function dragon_join()
 				SetMissionS(VARS_TEAM_NAME,GetName())
 				SetMissionS(VARS_TEAMLEADER_FACTION,GetLastFactionNumber())
 				SetMissionS(VARS_TEAMLEADER_GENDER,GetSex())
-				Pay(VUOT_AI_TIEN)
+				Pay(VUOT_AI_PHI_BAO_DANH)
 				
 
 				for i = 1 , getn(tabplayer) do 
