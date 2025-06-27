@@ -6,6 +6,9 @@ Include("\\script\\battles\\battlehead.lua")
 Include("\\script\\missions\\challengeoftime\\include.lua")
 Include("\\script\\missions\\basemission\\lib.lua")
 Include("\\script\\activitysys\\config\\32\\talkdailytask.lua")
+-- Thªm biÕn global
+Include("\\script\\global\\anhquach\\env.lua")
+--
 
 -- Sè l­îng qu¸i vËt <=> File vÞ trÝ
 map_posfiles = {
@@ -255,9 +258,9 @@ map_transfer_npc = {
 function lo_exp_award(time)
 	local min = floor(time / 60);
 	if (min >= 25) then
-		return 15;
+		return 15 * VUOT_AI_TY_LE_EXP_KET_THUC;
 	else
-		return floor(172 * (1 - min / 25)) + 10;
+		return (floor(172 * (1 - min / 25)) + 10) * VUOT_AI_TY_LE_EXP_KET_THUC;
 	end
 end
 
@@ -272,9 +275,9 @@ map_laward_success = {
 function hi_exp_award(time)
 	local min = floor(time / 60);
 	if (min >= 25) then
-		return 30;
+		return 30 * VUOT_AI_TY_LE_EXP_KET_THUC;
 	else
-		return floor(233 * (1 - min / 25)) + 20;
+		return (floor(233 * (1 - min / 25)) + 20) * VUOT_AI_TY_LE_EXP_KET_THUC;
 	end
 end
 
@@ -286,55 +289,56 @@ map_haward_success = {
 };
 
 -- PhÇn th­ëng ngÉu nhiªn, c¬ sè ngÉu
-map_random_awards = {
-	100000,
-	{0.005, 	{"Tinh Hång B¶o Th¹ch",		353}},
-	{0.005, 	{"Lam Thñy Tinh", 			238}},
-	{0.005, 	{"Tö Thñy Tinh", 			239}},
-	{0.005, 	{"Lôc Thñy Tinh", 			240}},
-	{0.0005, 	{"Vâ L©m MËt TÞch", 		6, 1, 26, 1, 0, 0}},
-	{0.0005, 	{"TÈy Tñy Kinh",			6, 1, 22, 1, 0, 0}},
-	{0.2, 		{"Phóc Duyªn Lé (§¹i) ",	6, 1, 124, 1, 0, 0}},
-	{0.19587, 	{"Phóc Duyªn Lé (Trung) ", 	6, 1, 123, 1, 0, 0}},
-	{0.18, 		{"Phóc Duyªn Lé (TiÓu) ",	6, 1, 122, 1, 0, 0}},
-	{0.15, 		{"Tiªn Th¶o Lé ",			6, 1, 71, 1, 0, 0}},
-	{0.1, 		{"Thiªn s¬n  B¶o Lé ",		6, 1, 72, 1, 0, 0}},
-	{0.1, 		{"B¸ch Qu¶ Lé ",			6, 1, 73, 1, 0, 0}},
-	{0.00, 		{"§¹i B¹ch C©u hoµn",		6, 1, 130, 1, 0, 0}},
-	{0.05, 		{"LÖnh bµi Phong L¨ng §é",		489}},
-	{0.0005, 	{"§Þnh Quèc Thanh Sa Tr­êng Sam",	0, 159}},
-	{0.0005, 	{"§Þnh Quèc ¤ Sa Ph¸t Qu¸n",	0, 160}},
-	{0.0005,	{"§Þnh Quèc XÝch Quyªn NhuyÔn Ngoa",	0, 161}},
-	{0.0005,	{"§Þnh Quèc Tö §»ng Hé uyÓn",	0, 162}},
-	{0.0005,	{"§Þnh Quèc Ng©n Tµm Yªu ®¸i",	0, 163}},
-	{0.0001,	{"An Bang B¨ng Tinh Th¹ch H¹ng Liªn",0, 164}},
-	{0.0001,	{"An Bang Cóc Hoa Th¹ch ChØ hoµn",0, 165}},
-	{0.0001,	{"An Bang §iÒn Hoµng Th¹ch Ngäc Béi",0, 166}},
-	{0.0001,	{"An Bang Kª HuyÕt Th¹ch Giíi ChØ ",0, 167}},
-	{0.00001, 	{"Méng Long Kim Ti ChÝnh Hång Cµ Sa",	0, 2}},
-	{0.00001, 	{"Tø Kh«ng Gi¸ng Ma Giíi ®ao",	0, 11}},
-	{0.00001,	{"Phôc Ma Tö Kim C«n",	0, 6}},
-	{0.00001,	{"KÕ NghiÖp B«n L«i Toµn Long th­¬ng",	0, 21}},
-	{0.00001,	{"Ngù Long L­îng Ng©n B¶o ®ao",	0, 26}},
-	{0.00001,	{"§Þa Ph¸ch H¾c DiÖm Xung Thiªn Liªn",0, 87}},
-	{0.00001,	{"B¨ng Hµn §¬n ChØ Phi §ao",0, 71}},
-	{0.00001,	{"S©m Hoang Phi Tinh §o¹t Hån",0, 81}},
-	{0.00001,	{"Thiªn Quang §Þnh T©m Ng­ng ThÇn Phï ",0, 77}},
-	{0.00001, 	{"Chó Ph­îc DiÖt L«i C¶nh Phï ",	0, 67}},
-	{0.00001, 	{"Minh ¶o Tµ S¸t §éc NhËn",	0, 61}},
-	{0.00001,	{"Tª Hoµng Phông Nghi ®ao",	0, 46}},
-	{0.00001,	{"BÝch H¶i Uyªn ¦¬ng Liªn Hoµn ®ao",	0, 51}},
-	{0.00001,	{"V« Ma Hång Truy NhuyÔn Th¸p hµi",	0, 40}},
-	{0.00001,	{"V« Ma TÈy T­îng Ngäc KhÊu ",0, 39}},
-	{0.00001,	{"CËp Phong Tam Thanh Phï ",0, 122}},
-	{0.00001,	{"Vô ¶o B¾c Minh §¹o qu¸n",0, 136}},
-	{0.00001,	{"S­¬ng Tinh Thiªn Niªn Hµn ThiÕt",0, 126}},
-	{0.00001,	{"L«i Khung Thiªn §Þa Hé phï ",	0, 132}},
-	{0.00001,	{"Ma ThÞ s¬n  H¶i Phi Hång Lý ",	0, 115}},
-	{0.00001,	{"Ma Hoµng ¸n XuÊt Hæ H¹ng Khuyªn",	0, 107}},
-	{0.00001,	{"§ång Cõu Kh¸ng Long Hé UyÓn",0, 94}},
-	{0.00001,	{"§Þch Kh¸i Lôc Ngäc Tr­îng",0, 96}},
-};
+map_random_awards = VUOT_AI_THUONG_AI_AN
+-- map_random_awards = {
+-- 	100000,
+-- 	{0.005, 	{"Tinh Hång B¶o Th¹ch",		353}},
+-- 	{0.005, 	{"Lam Thñy Tinh", 			238}},
+-- 	{0.005, 	{"Tö Thñy Tinh", 			239}},
+-- 	{0.005, 	{"Lôc Thñy Tinh", 			240}},
+-- 	{0.0005, 	{"Vâ L©m MËt TÞch", 		6, 1, 26, 1, 0, 0}},
+-- 	{0.0005, 	{"TÈy Tñy Kinh",			6, 1, 22, 1, 0, 0}},
+-- 	{0.2, 		{"Phóc Duyªn Lé (§¹i) ",	6, 1, 124, 1, 0, 0}},
+-- 	{0.19587, 	{"Phóc Duyªn Lé (Trung) ", 	6, 1, 123, 1, 0, 0}},
+-- 	{0.18, 		{"Phóc Duyªn Lé (TiÓu) ",	6, 1, 122, 1, 0, 0}},
+-- 	{0.15, 		{"Tiªn Th¶o Lé ",			6, 1, 71, 1, 0, 0}},
+-- 	{0.1, 		{"Thiªn s¬n  B¶o Lé ",		6, 1, 72, 1, 0, 0}},
+-- 	{0.1, 		{"B¸ch Qu¶ Lé ",			6, 1, 73, 1, 0, 0}},
+-- 	{0.00, 		{"§¹i B¹ch C©u hoµn",		6, 1, 130, 1, 0, 0}},
+-- 	{0.05, 		{"LÖnh bµi Phong L¨ng §é",		489}},
+-- 	{0.0005, 	{"§Þnh Quèc Thanh Sa Tr­êng Sam",	0, 159}},
+-- 	{0.0005, 	{"§Þnh Quèc ¤ Sa Ph¸t Qu¸n",	0, 160}},
+-- 	{0.0005,	{"§Þnh Quèc XÝch Quyªn NhuyÔn Ngoa",	0, 161}},
+-- 	{0.0005,	{"§Þnh Quèc Tö §»ng Hé uyÓn",	0, 162}},
+-- 	{0.0005,	{"§Þnh Quèc Ng©n Tµm Yªu ®¸i",	0, 163}},
+-- 	{0.0001,	{"An Bang B¨ng Tinh Th¹ch H¹ng Liªn",0, 164}},
+-- 	{0.0001,	{"An Bang Cóc Hoa Th¹ch ChØ hoµn",0, 165}},
+-- 	{0.0001,	{"An Bang §iÒn Hoµng Th¹ch Ngäc Béi",0, 166}},
+-- 	{0.0001,	{"An Bang Kª HuyÕt Th¹ch Giíi ChØ ",0, 167}},
+-- 	{0.00001, 	{"Méng Long Kim Ti ChÝnh Hång Cµ Sa",	0, 2}},
+-- 	{0.00001, 	{"Tø Kh«ng Gi¸ng Ma Giíi ®ao",	0, 11}},
+-- 	{0.00001,	{"Phôc Ma Tö Kim C«n",	0, 6}},
+-- 	{0.00001,	{"KÕ NghiÖp B«n L«i Toµn Long th­¬ng",	0, 21}},
+-- 	{0.00001,	{"Ngù Long L­îng Ng©n B¶o ®ao",	0, 26}},
+-- 	{0.00001,	{"§Þa Ph¸ch H¾c DiÖm Xung Thiªn Liªn",0, 87}},
+-- 	{0.00001,	{"B¨ng Hµn §¬n ChØ Phi §ao",0, 71}},
+-- 	{0.00001,	{"S©m Hoang Phi Tinh §o¹t Hån",0, 81}},
+-- 	{0.00001,	{"Thiªn Quang §Þnh T©m Ng­ng ThÇn Phï ",0, 77}},
+-- 	{0.00001, 	{"Chó Ph­îc DiÖt L«i C¶nh Phï ",	0, 67}},
+-- 	{0.00001, 	{"Minh ¶o Tµ S¸t §éc NhËn",	0, 61}},
+-- 	{0.00001,	{"Tª Hoµng Phông Nghi ®ao",	0, 46}},
+-- 	{0.00001,	{"BÝch H¶i Uyªn ¦¬ng Liªn Hoµn ®ao",	0, 51}},
+-- 	{0.00001,	{"V« Ma Hång Truy NhuyÔn Th¸p hµi",	0, 40}},
+-- 	{0.00001,	{"V« Ma TÈy T­îng Ngäc KhÊu ",0, 39}},
+-- 	{0.00001,	{"CËp Phong Tam Thanh Phï ",0, 122}},
+-- 	{0.00001,	{"Vô ¶o B¾c Minh §¹o qu¸n",0, 136}},
+-- 	{0.00001,	{"S­¬ng Tinh Thiªn Niªn Hµn ThiÕt",0, 126}},
+-- 	{0.00001,	{"L«i Khung Thiªn §Þa Hé phï ",	0, 132}},
+-- 	{0.00001,	{"Ma ThÞ s¬n  H¶i Phi Hång Lý ",	0, 115}},
+-- 	{0.00001,	{"Ma Hoµng ¸n XuÊt Hæ H¹ng Khuyªn",	0, 107}},
+-- 	{0.00001,	{"§ång Cõu Kh¸ng Long Hé UyÓn",0, 94}},
+-- 	{0.00001,	{"§Þch Kh¸i Lôc Ngäc Tr­îng",0, 96}},
+-- };
 
 -- LÊy ID cña NPC
 function get_npc_id(item, index)
