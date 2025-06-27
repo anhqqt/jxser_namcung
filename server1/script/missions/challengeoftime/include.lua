@@ -1,5 +1,6 @@
 -- Thªm biÕn global
 Include("\\script\\global\\anhquach\\env.lua")
+--
 IncludeLib("RELAYLADDER")
 Include("\\script\\tong\\tong_award_head.lua")		--By Liao Zhishan
 Include("\\script\\missions\\boss\\bigboss.lua") -- big boss
@@ -10,7 +11,7 @@ TIMER_BOARD				= 42		-- Bé hÑn giê th«ng c¸o
 TIMER_CLOSE				= 43		-- Bé hÑn giê kÕt thóc V­ît ¶i
 INTERVAL_BOARD			= 1			-- Kho¶ng c¸ch th«ng b¸o (phót): Mçi phót th«ng b¸o mét lÇn
 INTERVAL_MATCH			= 3600		-- Mçi giê V­ît ¶i mét lÇn (gi©y)
-TIME_SIGNUP				= 10
+TIME_SIGNUP				= VUOT_AI_THOI_GIAN_BAO_DANH
 LIMIT_SIGNUP			= TIME_SIGNUP * 60		-- Thêi gian b¸o danh (phót): 10 phót
 LIMIT_FINISH 			= 30 * 60	-- Thêi gian nhiÖm vô (phót): 30 phót
 BOAT_POSX				= 1559		-- Ng­êi ch¬i bÞ truyÒn tèng ®Õn täa ®é X cña ThuyÒn
@@ -24,7 +25,7 @@ SEX_RENYAO				= 2			-- Nh©n yªu
 
 -- §iÒu chØnh ¶i 2011.03.04
 CHUANGGUAN30_MAP_ID		= 957
-CHUANGGUAN30_TIME_LIMIT = 13*60		-- Thêi gian cÇn hoµn thµnh sím h¬n ë ¶i 29
+CHUANGGUAN30_TIME_LIMIT = VUOT_AI_DIEU_KIEN_AI_30*60		-- Thêi gian cÇn hoµn thµnh sím h¬n ë ¶i 29
 CHUANGGUAN30_START_TIME = 10
 CHUANGGUAN30_END_TIME	= 22
 PLAYER_MAP_TASK			= 2852
@@ -492,7 +493,7 @@ function award_item(item, player_index)
 	elseif (getn(item) == 7) then
 		AddItem(item[2], item[3], item[4], item[5], item[6], item[7]);
 	end
-	Msg2Player("<#>B¹n ®¹t ®­îc" .. name .. "!");
+	Msg2Player("<#>B¹n ®¹t ®­îc <color=green> " .. name .. "<color>!");
 	
 	PlayerIndex = old_index;
 end
