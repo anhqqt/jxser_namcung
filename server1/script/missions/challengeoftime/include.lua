@@ -4,81 +4,82 @@ IncludeLib("RELAYLADDER")
 Include("\\script\\tong\\tong_award_head.lua")		--By Liao Zhishan
 Include("\\script\\missions\\boss\\bigboss.lua") -- big boss
 
-MISSION_MATCH			= 22		-- ±ÈÈümission
-TIMER_MATCH				= 41		-- ±ÈÈü¿ªÊ¼¶¨Ê±Æ÷
-TIMER_BOARD				= 42		-- Í¨¸æ¶¨Ê±Æ÷
-TIMER_CLOSE				= 43		-- ±ÈÈü½áÊø¶¨Ê±Æ÷
-INTERVAL_BOARD			= 1			-- Í¨±¨¼ä¸ô£¨·ÖÖÓ£©£ºÃ¿·ÖÖÓÍ¨±¨Ò»´Î
-INTERVAL_MATCH			= 3600		-- Ã¿Ğ¡Ê±±ÈÈüÒ»´Î£¨Ãë£©
+MISSION_MATCH			= 22		-- Vİ dô: nhiÖm vô PVP
+TIMER_MATCH				= 41		-- Bé hÑn giê b¾t ®Çu V­ît ¶i
+TIMER_BOARD				= 42		-- Bé hÑn giê th«ng c¸o
+TIMER_CLOSE				= 43		-- Bé hÑn giê kÕt thóc V­ît ¶i
+INTERVAL_BOARD			= 1			-- Kho¶ng c¸ch th«ng b¸o (phót): Mçi phót th«ng b¸o mét lÇn
+INTERVAL_MATCH			= 3600		-- Mçi giê V­ît ¶i mét lÇn (gi©y)
 TIME_SIGNUP				= 10
-LIMIT_SIGNUP			= TIME_SIGNUP * 60		-- ±¨ÃûÊ±¼äÆÚÏŞ£¨Ãë£©£º10·ÖÖÓ
-LIMIT_FINISH 			= 30 * 60	-- ÈÎÎñÊ±¼äÆÚÏŞ£¨Ãë£©£º30·ÖÖÓ
-BOAT_POSX				= 1559		-- Íæ¼Ò±»´«ËÍµ½ÁúÖÛµÄx×ø±ê
-BOAT_POSY				= 3226		-- Íæ¼Ò±»´«ËÍµ½ÁúÖÛµÄy×ø±ê
-LIMIT_PLAYER_COUNT		= 8			-- Íæ¼ÒÊıÁ¿µÄ×î´óÏŞÖÆ
-AWARD_COUNT				= 10		-- È«²¿´³¹Ø³É¹¦Ö®ºó¿ÉÒÔ¹Ï·Ö10¸ö´³¹Ø±¦Ïä
+LIMIT_SIGNUP			= TIME_SIGNUP * 60		-- Thêi gian b¸o danh (phót): 10 phót
+LIMIT_FINISH 			= 30 * 60	-- Thêi gian nhiÖm vô (phót): 30 phót
+BOAT_POSX				= 1559		-- Ng­êi ch¬i bŞ truyÒn tèng ®Õn täa ®é X cña ThuyÒn
+BOAT_POSY				= 3226		-- Ng­êi ch¬i bŞ truyÒn tèng ®Õn täa ®é Y cña ThuyÒn
+LIMIT_PLAYER_COUNT		= 8			-- Giíi h¹n tèi ®a sè l­îng ng­êi ch¬i
+AWARD_COUNT				= 10		-- Sau khi hoµn thµnh tÊt c¶ c¸c ¶i cã thÓ chia 10 hép b¸u ¶i
 
-SEX_BOY					= 0			-- ÄĞĞÔ
-SEX_GIRL				= 1			-- Å®ĞÔ
-SEX_RENYAO				= 2			-- ÈËÑı
+SEX_BOY					= 0			-- Giíi tİnh nam
+SEX_GIRL				= 1			-- Giíi tİnh n÷
+SEX_RENYAO				= 2			-- Nh©n yªu
 
--- ´³¹Øµ÷Õû 2011.03.04
+-- §iÒu chØnh ¶i 2011.03.04
 CHUANGGUAN30_MAP_ID		= 957
-CHUANGGUAN30_TIME_LIMIT = 13*60		-- Ç°¶şÊ®¾Å¹ØĞèÒªÌáÔçÍê³ÉµÄÊ±¼ä
+CHUANGGUAN30_TIME_LIMIT = 13*60		-- Thêi gian cÇn hoµn thµnh sím h¬n ë ¶i 29
 CHUANGGUAN30_START_TIME = 10
 CHUANGGUAN30_END_TIME	= 22
 PLAYER_MAP_TASK			= 2852
-COUNT_LIMIT 		= VUOT_AI_LIMIT_NGAY
+COUNT_LIMIT 			= VUOT_AI_LIMIT_NGAY -- Sè lÇn v­ît ¶i tèi ®a trong ngµy
 
 
 
--- NPC±í¸ñÁĞº¬Òå
--- NPC²ÎÊı¸÷ÁĞµÄº¬Òå£ººóĞø´¦Àí¡¢ID¡¢Ãû×Ö¡¢µÈ¼¶¡¢ÎåĞĞ¡¢ÊÇ·ñBOSS(0,1)¡¢ÊıÁ¿¡¢Î»ÖÃ
-NPC_ATTRIDX_PROCEED		= 1			-- NPCºóĞø´¦Àí
-NPC_ATTRIDX_ID			= 2			-- NPCµÄID
-NPC_ATTRIDX_NAME		= 3			-- NPCÃû×Ö
-NPC_ATTRIDX_LEVEL		= 4			-- NPCµÈ¼¶
-NPC_ATTRIDX_SERIES		= 5			-- NPCÎåĞĞ
-NPC_ATTRIDX_ISBOSS		= 6			-- ÊÇ·ñBOSS
-NPC_ATTRIDX_COUNT		= 7			-- NPCÊıÁ¿
-NPC_ATTRIDX_POSITION	= 8			-- NPCÎ»ÖÃ
+-- ı nghÜa c¸c cét trong b¶ng NPC
+-- ı nghÜa c¸c cét tham sè cña NPC: xö lı sau ®ã, ID, tªn, cÊp ®é, ngò hµnh, cã ph¶i BOSS kh«ng (0: kh«ng, 1: cã), sè l­îng, vŞ trİ.
+-- {nil, {1026, 1033}, {func_ladder_getname, 10119}, 75, -1, 1, 1, {1568, 3227}}
+NPC_ATTRIDX_PROCEED		= 1			-- Xö lı NPC sau ®ã
+NPC_ATTRIDX_ID			= 2			-- ID cña NPC
+NPC_ATTRIDX_NAME		= 3			-- Tªn NPC
+NPC_ATTRIDX_LEVEL		= 4			-- CÊp ®é NPC
+NPC_ATTRIDX_SERIES		= 5			-- Ngò hµnh NPC
+NPC_ATTRIDX_ISBOSS		= 6			-- Cã ph¶i BOSS kh«ng
+NPC_ATTRIDX_COUNT		= 7			-- Sè l­îng NPC
+NPC_ATTRIDX_POSITION	= 8			-- VŞ trİ NPC
 
-USE_NAME_ALL_PLAYERS	= 1			-- Ê¹ÓÃÈ«ÌåÍæ¼ÒÃû×Ö
-USE_NAME_THE_TOPLIST	= 2			-- Ê¹ÓÃËæ»ú°ñÉÏÃû
+USE_NAME_ALL_PLAYERS	= 1			-- Sö dông tªn cña toµn thÓ ng­êi ch¬i
+USE_NAME_THE_TOPLIST	= 2			-- Sö dông ngÉu nhiªn tªn cña top ng­êi ch¬i ®óng ®Çu
 
-VARS_TEAM_NAME			= 1			-- ¶ÓÎéÃû³Æ
+VARS_TEAM_NAME			= 1			-- Tªn ®éi
 -- ÒÔÏÂ±äÁ¿´Ó(VARS_PLAYER_NAME + 1)µ½(VARS_PLAYER_NAME + LIMIT_PLAYER_COUNT)·Ö±ğ±£´æ²»Í¬Íæ¼ÒµÄÃû×Ö
-VARS_PLAYER_NAME		= 2			-- Íæ¼ÒÃû×Ö
-VARS_TEAMLEADER_FACTION = 11        -- ¶Ó³¤ÃÅÅÉ
-VARS_TEAMLEADER_GENDER  = 12        -- ¶Ó³¤ĞÔ±ğ
+VARS_PLAYER_NAME		= 2			-- Tªn ng­êi ch¬i
+VARS_TEAMLEADER_FACTION = 11        -- M«n ph¸i ®éi tr­ëng
+VARS_TEAMLEADER_GENDER  = 12        -- Giíi tİnh ®éi tr­ëng
 
-VARV_NPC_BATCH 			= 1			-- ¹ÖµÄÅú´Î
-VARV_NPC_COUNT 			= 2			-- ¹ÖµÄÊıÁ¿
-VARV_PLAYER_COUNT		= 3			-- Íæ¼ÒµÄÊıÁ¿
-VARV_STATE 				= 4			-- mission×´Ì¬£¬1±íÊ¾±¨Ãû£¬2±íÊ¾±ÈÈü
-VARV_SIGNUP_WORLD		= 5			-- ±¨ÃûµØÍ¼
-VARV_SIGNUP_POSX		= 6			-- ±¨ÃûµØµãµÄX×ø±ê
-VARV_SIGNUP_POSY		= 7			-- ±¨ÃûµØµãµÄY×ø±ê 
-VARV_BOARD_TIMER		= 8			-- ±ÈÈü½øĞĞµÄÊ±¼ä£¨Ãë£©
-VARV_PLAYER_TOTAL_COUNT = 9		-- Íæ¼Ò×ÜµÄÊıÁ¿(²»¹ÜÊÇ·ñÒÑ¾­ËÀÍö)
-VARV_PLAYER_USE_INDEX	= 10		-- Ê¹ÓÃµ½µÄÍæ¼ÒË÷Òı
-VARV_NPC_USE_INDEX		= 11		-- Ê¹ÓÃµ½µÄºòÑ¡NPCË÷Òı
-VARV_MISSION_RESULT		= 12		-- ÈÎÎñ½á¹û£¬£±ÎªÊ¤ÀûÍ¨¹Ø£¬£°ÎªÊ§°Ü
+VARV_NPC_BATCH 			= 1			-- §ît qu¸i
+VARV_NPC_COUNT 			= 2			-- Sè l­îng qu¸i trong ®ît
+VARV_PLAYER_COUNT		= 3			-- Sè l­îng ng­êi ch¬i
+VARV_STATE 				= 4			-- Tr¹ng th¸i nhiÖm vô: 1 biÓu thŞ b¸o danh, 2 biÓu thŞ V­ît ¶i
+VARV_SIGNUP_WORLD		= 5			-- B¶n ®å b¸o danh
+VARV_SIGNUP_POSX		= 6			-- Täa ®é X cña ®iÓm b¸o danh
+VARV_SIGNUP_POSY		= 7			-- Täa ®é Y cña ®iÓm b¸o danh
+VARV_BOARD_TIMER		= 8			-- Thêi gian tiÕn hµnh V­ît ¶i (phót)
+VARV_PLAYER_TOTAL_COUNT = 9			-- Tæng sè l­îng ng­êi ch¬i (kh«ng qu¶n cã ph¶i ®· tö vong)
+VARV_PLAYER_USE_INDEX	= 10		-- ChØ môc ng­êi ch¬i ®· sö dông
+VARV_NPC_USE_INDEX		= 11		-- ChØ môc NPC ®· sö dông
+VARV_MISSION_RESULT		= 12		-- KÕt qu¶ nhiÖm vô: 1 lµ th¾ng lîi v­ît ¶i, 0 lµ thÊt b¹i
 VARV_PLAYER_SEX			= 13
 -- ÒÔÏÂ±äÁ¿´Ó(VARV_PLAYER_SEX + 1)µ½(VARV_PLAYER_SEX + LIMIT_PLAYER_COUNT)·Ö±ğ±£´æ²»Í¬Íæ¼ÒµÄĞÔ±ğ£¬£°ÎªÄĞĞÔ£¬£±ÎªÅ®ĞÔ£¬£²ÎªÈËÑı
 VARV_PLAYER_SERIES		= VARV_PLAYER_SEX + LIMIT_PLAYER_COUNT + 1		-- 22
 
 
-VARV_XIAONIESHICHEN_BATCH = 31		-- Ğ¡Äôß±³¾³öÏÖµÄ¹Ø
-VARV_BATCH_MODEL		= 32			-- µ±Ç°´³¹ØµÄÄ£Ê½£¬0ÎªÕı³£Ä£Ê½£¬1Îªµ÷ÕûÖ®ºóµÄÄ£Ê½
+VARV_XIAONIESHICHEN_BATCH = 31		-- ¶i Qu¸i ¸c Méng Nhá xuÊt hiÖn
+VARV_BATCH_MODEL		= 32			-- ChÕ ®é cña ¶i hiÖn t¹i: 0 lµ chÕ ®é b×nh th­êng, 1 lµ chÕ ®é ®· ®iÒu chØnh
 
 
--- ÒÔÏÂ±äÁ¿´Ó(VARV_PLAYER_SERIES + 1)µ½(VARV_PLAYER_SERIES + LIMIT_PLAYER_COUNT)·Ö±ğ±£´æ²»Í¬Íæ¼ÒµÄÎåĞĞ
+-- C¸c biÕn tõ (VARV_PLAYER_SERIES + 1) ®Õn (VARV_PLAYER_SERIES + LIMIT_PLAYER_COUNT) lÇn l­ît b¶o qu¶n ngò hµnh cña nh÷ng ng­êi ch¬i kh¸c nhau
 
 SCRIPT_NPC_DEATH 	= "\\script\\missions\\challengeoftime\\npc_death.lua"
 SCRIPT_PLAYER_DEATH = "\\script\\missions\\challengeoftime\\player_death.lua"
 
--- ±ÈÈüµØÍ¼ID
+-- ID b¶n ®å V­ît ¶i
 map_map = {
 	464,
 	465,
@@ -115,7 +116,7 @@ map_map = {
 	495
 };
 
--- ¶ÔÓ¦µØÍ¼ÊÇ·ñ¸ß¼¶±ÈÈü
+-- §èi øng b¶n ®å cã ph¶i V­ît ¶i cao cÊp
 map_isadvanced = {
 	[464] = 0,
 	[465] = 0,
@@ -153,16 +154,16 @@ map_isadvanced = {
 };
 
 
--- ÎåĞĞ
+-- Ngò hµnh
 map_series = {
-	0,	-- ½ğ
-	1,	-- Ä¾
-	2,	-- Ë®
-	3,	-- »ğ
-	4	-- ÍÁ
+	0,	-- Kim
+	1,	-- Méc
+	2,	-- Thñy
+	3,	-- Háa
+	4	-- Thæ
 };
 
--- ºòÑ¡NPCµÄÃû×Ö
+-- Tªn NPC dù bŞ
 map_npcname_candidates = {
 	"HËu  KhÊt KiÕm",
 	"§iªu DŞch §ao",
@@ -173,12 +174,12 @@ map_npcname_candidates = {
 	"H¹ng Phï Nhai"
 };
 
--- ¹ã²¥
+-- Ph¸t sãng
 function broadcast(msg)
 	AddGlobalNews(msg);
 end
 
--- °ÑÍæ¼ÒÌß»Ø±¨Ãûµã
+-- §uæi ng­êi ch¬i vÒ ®iÓm b¸o danh
 function kickout()
 	local index = 0;
 	local player = 0;
@@ -209,46 +210,46 @@ function kickout()
 	PlayerIndex = OldPlayerIndex;
 end
 
--- Æô¶¯Í¨¸æ¶¨Ê±Æ÷
+-- Khëi ®éng bé hÑn giê th«ng c¸o
 function start_board_timer()
 	StartMissionTimer(MISSION_MATCH, TIMER_BOARD, INTERVAL_BOARD * 60 * 18);
 end
 
--- ¹Ø±ÕÍ¨¸æ¶¨Ê±Æ÷
+-- §ãng Bé HÑn Giê Th«ng C¸o
 function close_board_timer()
 	StopMissionTimer(MISSION_MATCH, TIMER_BOARD);
 end
 
--- Æô¶¯±ÈÈü¹Ø±Õ¶¨Ê±Æ÷
+-- Khëi ®éng bé hÑn giê ®ãng V­ît ¶i
 function start_close_timer()
-	-- 10·ÖÖÓºóÆô¶¯±ÈÈüÈÎÎñ
+	-- 10 phót sau khëi ®éng nhiÖm vô V­ît ¶i
 	StartMissionTimer(MISSION_MATCH, TIMER_CLOSE, LIMIT_FINISH * 18);
 end
 
 -- ¹Ø±Õ±ÈÈü¹Ø±Õ¶¨Ê±Æ÷
 function close_close_timer()
-	-- 10·ÖÖÓºóÆô¶¯±ÈÈüÈÎÎñ
+	-- 10 phót sau khëi ®éng nhiÖm vô V­ît ¶i
 	StopMissionTimer(MISSION_MATCH, TIMER_CLOSE);
 end
 
--- ½áÊø±ÈÈü
+-- KÕt thóc V­ît ¶i
 function close_match()
-	-- °ÑÍæ¼ÒÌß³öµØÍ¼
+	-- §uæi ng­êi ch¬i ra khái b¶n ®å
 	kickout();
 	
-	-- ÇåÀíµØÍ¼
+	-- Dän dÑp b¶n ®å
 	world = SubWorldIdx2ID(SubWorld);
-	ClearMapNpc(world, 1);	-- Ò²ÇåÀíÍæ¼Ò
+	ClearMapNpc(world, 1);	-- Còng dän dÑp ng­êi ch¬i
 	ClearMapTrap(world); 
 	ClearMapObj(world);
 end
 
--- »ñÈ¡Íæ¼Ò¼¯ºÏ
+-- LÊy tËp hîp ng­êi ch¬i
 function get_player_map()
-	-- Íæ¼Ò¼¯ºÏ
+	-- TËp hîp ng­êi ch¬i
 	local players = {};
 		
-	-- ±éÀúÃ¿¸ö¶ÓÔ±£¬°ÑÍæ¼ÒĞÅÏ¢´æÈë¼¯ºÏ
+	-- DuyÖt Qua Tõng Thµnh Viªn, L­u Th«ng Tin Ng­êi Ch¬i Vµo TËp Hîp
 	local index = 0;
 	local player = 0;
 	local player_count = 0;
@@ -265,9 +266,9 @@ function get_player_map()
 				--print(format("player[%d]'s index:%d", player_count, player));
 				PlayerIndex = player;
 				players[player_count] = {
-					GetName(),		-- Íæ¼ÒÃû×Ö
-					GetSex(),		-- Íæ¼ÒĞÔ±ğ
-					GetSeries()}; 	-- Íæ¼ÒÎåĞĞ
+					GetName(),		-- Tªn ng­êi ch¬i
+					GetSex(),		-- Giíi tİnh ng­êi ch¬i
+					GetSeries()}; 	-- Ngò hµnh ng­êi ch¬i
 				-- DEBUG
 				--print(format("players[%d], index:%d, name:%s, sex:%d, series:%d",
 				--	player_count,
@@ -289,7 +290,7 @@ function get_player_map()
 	return players;
 end
 
--- ´ÓÒ»¸ö±íÖĞÉ¾³ıÒ»¸öÔªËØ£¬·µ»ØĞÂ±í
+-- Xãa mét phÇn tö khái mét b¶ng, tr¶ vÒ b¶ng míi
 function remove_element(map, index)
 	local result = {};
 	local count = 1;
@@ -302,13 +303,13 @@ function remove_element(map, index)
 	return result;
 end
 
--- °ÑÍæ¼ÒĞÕÃû¡¢ĞÔ±ğ±£´æÔÚmission±äÁ¿ÖĞ
+-- L­u tªn ng­êi ch¬i, giíi tİnh vµo biÕn mission
 function save_player_info()
 	local players = get_player_map();
 	-- DEBUG
 	--print(format("We got %d players", getn(players)));
 	for index = 1,getn(players) do
-		-- Ëæ»úÅÅĞò
+		-- S¾p xÕp ngÉu nhiªn
 		-- players = remove_element(players, random(1, getn(players)));
 		SetMissionS(VARS_PLAYER_NAME + index, players[index][1]);	-- Ãû×Ö
 		SetMissionV(VARV_PLAYER_SEX + index, players[index][2]);	-- ĞÔ±ğ
@@ -334,10 +335,10 @@ hi_range_id = {
 	{1034, 1037}
 };
 
--- ¸ù¾İĞÔ±ğËæ»ú»ñÈ¡NPCµÄID
+-- LÊy ID NPC ngÉu nhiªn dùa trªn giíi tİnh
 function get_random_npc_id(sex)
 	if (sex ~= 0 and sex ~= 1) then
-		-- ÈËÑı¸ÃÔõÃ´´¦Àí£¿
+		-- Nh©n yªu nªn xö lı thÕ nµo?
 		return nil;
 	end
 
@@ -348,7 +349,7 @@ function get_random_npc_id(sex)
 	return random(range_id[sex + 1][1], range_id[sex + 1][2]);
 end
 
--- ´ÓÎÄ¼şÖĞ¶ÁÈ¡NPCÎ»ÖÃ
+-- §äc vŞ trİ NPC tõ file
 function get_file_pos(file, line, column)
 	x = GetTabFileData(file, line, column);
 	y = GetTabFileData(file, line, column + 1);
@@ -356,17 +357,17 @@ function get_file_pos(file, line, column)
 end
 
 function func_npc_getid(item, index)
-	-- »ñÈ¡µ±Ç°Ê¹ÓÃµÄÍæ¼ÒË÷Òı
+	-- LÊy chØ môc ng­êi ch¬i ®ang sö dông
 	local player_use_index = GetMissionV(VARV_PLAYER_USE_INDEX) + 1;
 	local player_all_count = GetMissionV(VARV_PLAYER_TOTAL_COUNT);
 	local player_sex = GetMissionV(VARV_PLAYER_SEX + player_use_index);	
 		
-	-- Èç¹ûÍæ¼ÒÊıÄ¿²»×ã£¬ÔòËæ»ú²úÉúÄĞĞÔNPCµÄID
+	-- NÕu Sè L­îng Ng­êi Ch¬i Kh«ng §ñ, Th× NgÉu Nhiªn T¹o ID NPC Nam
 	local result = 0;
 	if (player_use_index > player_all_count) then
 		result = get_random_npc_id(0);
 	else
-		-- ¸ù¾İÊ¹ÓÃµÄÍæ¼ÒË÷Òı»ñÈ¡µ±Ç°Íæ¼ÒĞÔ±ğ
+		-- LÊy Giíi Tİnh Ng­êi Ch¬i HiÖn T¹i Dùa Trªn ChØ Môc Ng­êi Ch¬i §· Sö Dông
 		result = get_random_npc_id(player_sex);
 	end
 
@@ -377,7 +378,7 @@ function func_npc_getid(item, index)
 end
 
 function func_npc_getname(item, index)
-	-- »ñÈ¡µ±Ç°Ê¹ÓÃµÄÍæ¼ÒË÷Òı
+	-- LÊy chØ môc ng­êi ch¬i ®ang sö dông
 	local player_use_index = GetMissionV(VARV_PLAYER_USE_INDEX) + 1;
 	local player_all_count = GetMissionV(VARV_PLAYER_TOTAL_COUNT);
 	
@@ -385,7 +386,7 @@ function func_npc_getname(item, index)
 	--print(format("func_npc_getname(), player_use_index:%d, player_all_count:%d",
 	--	player_use_index, player_all_count));
 	
-	-- Èç¹ûÍæ¼ÒÊıÄ¿²»×ã£¬ÔòÒÀ´ÎÊ¹ÓÃºòÑ¡NPCÃû×Ö
+	-- NÕu Sè L­îng Ng­êi Ch¬i Kh«ng §ñ, Th× Theo Thø Tù Sö Dông Tªn NPC Dù BŞ
 	local result = "";
 	if (player_use_index > player_all_count) then
 		local npc_use_index = GetMissionV(VARV_NPC_USE_INDEX) + 1;
@@ -397,7 +398,7 @@ function func_npc_getname(item, index)
 		--print(format("func_npc_getname(), npc_use_index:%d", npc_use_index));
 		result = map_npcname_candidates[npc_use_index];
 	else
-		-- ¸ù¾İÊ¹ÓÃµÄÍæ¼ÒË÷Òı»ñÈ¡Ãû×Ö
+		-- LÊy Tªn Dùa Trªn ChØ Môc Ng­êi Ch¬i §· Sö Dông
 		result = GetMissionS(VARS_PLAYER_NAME + player_use_index);
 	end
 	
@@ -414,18 +415,18 @@ function func_ladder_getname(item, index)
 		return nil;
 	end
 	
-	-- Ëæ»ú»ñÈ¡ÅÅĞĞ°ñÍæ¼ÒÃû×Ö
+	-- LÊy NgÉu Nhiªn Tªn Ng­êi Ch¬i XÕp H¹ng
 	local name, data = Ladder_GetLadderInfo(map[2], random(1, 10));
 	if (name ~= nil and name ~= "") then
 		return name;
 	end
 	
-	-- Ëæ»úÊ¹ÓÃºòÑ¡NPCÃû×Ö
+	-- Sö Dông NgÉu Nhiªn Tªn NPC Dù BŞ
 	local pos = random(1, getn(map_npcname_candidates));
 	return map_npcname_candidates[pos];
 end
 
--- NPCÊ¹ÓÃÈ«ÌåÍæ¼ÒµÄÃû×Ö
+-- NPC Sö Dông Tªn Cña TÊt C¶ Ng­êi Ch¬i
 function func_npc_get_eachname(item, index)
 	local player_all_count = GetMissionV(VARV_PLAYER_TOTAL_COUNT);
 	if (index <= player_all_count) then
@@ -441,16 +442,16 @@ function func_npc_get_eachname(item, index)
 end
 
 function func_npc_getseries(item, index)
-	-- »ñÈ¡µ±Ç°Ê¹ÓÃµÄÍæ¼ÒË÷Òı
+	-- LÊy chØ môc ng­êi ch¬i ®ang sö dông
 	local player_use_index = GetMissionV(VARV_PLAYER_USE_INDEX) + 1;
 	local player_all_count = GetMissionV(VARV_PLAYER_TOTAL_COUNT);
 	
-	-- Èç¹ûÍæ¼ÒÊıÄ¿²»×ã£¬ÔòËæ»ú²úÉúÎåĞĞ
+	-- NÕu Sè L­îng Ng­êi Ch¬i Kh«ng §ñ, Th× NgÉu Nhiªn T¹o Ngò Hµnh
 	if (player_use_index > player_all_count) then
 		local index = random(1, getn(map_series));
 		return map_series[index];
 	else
-		-- ¸ù¾İÊ¹ÓÃµÄÍæ¼ÒË÷Òı»ñÈ¡ÎåĞĞ
+		-- LÊy Ngò Hµnh Dùa Trªn ChØ Môc Ng­êi Ch¬i §· Sö Dông
 		return GetMissionV(VARV_PLAYER_SERIES + player_use_index);
 	end
 end
@@ -466,8 +467,8 @@ function func_npc_getpos(item, index)
 	
 	local func = pos;
 	local file = map_posfiles[item[NPC_ATTRIDX_COUNT]];
-	local file_name = file[1];	-- ×ø±êÎÄ¼şÃû
-	local pos_count = file[2];	-- ×ø±êÁĞÊıÁ¿
+	local file_name = file[1];	-- Tªn file täa ®é
+	local pos_count = file[2];	-- Sè l­îng täa ®é
 	
 	local column = 2 * (random(1, pos_count) - 1) + 1;
 	return get_file_pos(file_name, index + 1, column);
@@ -478,7 +479,7 @@ function func_npc_proceed(item)
 	SetMissionV(VARV_PLAYER_USE_INDEX, player_use_index + 1);
 end
 
--- ½±ÀøÎïÆ·
+-- ChiÕn lîi phÈm
 function award_item(item, player_index)
 	local old_index = PlayerIndex;
 	PlayerIndex = player_index;
@@ -496,12 +497,12 @@ function award_item(item, player_index)
 	PlayerIndex = old_index;
 end
 
--- ½±ÀøËæ»úÎïÆ·
+-- PhÇn th­ëng ngÉu nhiªn vËt phÈm
 function award_random_object(objects, player_index)
-	local base = objects[1];		-- Ëæ»ú»ùÊıÔÚµÚÒ»¸öÎ»ÖÃ
+	local base = objects[1];		-- C¬ sè ngÉu nhiªn ë vŞ trİ ®Çu tiªn
 	local sum = 0;
 	local num = random(1, base);
-	for i = 2, getn(objects) do		-- Ëæ»úÎïÆ·´ÓµÚ¶ş¸öÎ»ÖÃ¿ªÊ¼
+	for i = 2, getn(objects) do		-- VËt phÈm ngÉu nhiªn b¾t ®Çu tõ vŞ trİ thø hai
 		local odds = objects[i][1];
 		local item = objects[i][2];
 		sum = sum + odds * base;

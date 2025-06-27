@@ -1,4 +1,4 @@
--- description	: Í¨¸æ¶¨Ê±Æ÷£¬Ã¿·ÖÖÓ´¥·¢Ò»´Î
+-- description	: Bé HÑn Giê Th«ng C¸o, Mçi Phót KÝch Ho¹t Mét LÇn
 -- author		: wangbin
 -- datetime		: 2005-06-07
 
@@ -11,12 +11,12 @@ function OnTimer()
 		local count = GetMissionV(VARV_NPC_COUNT);
 		SetMissionV(VARV_BOARD_TIMER, time);
 		
-		local msg = "<#> NhiÖm vô 'Th¸ch thøc Thêi gian' ®· b¾t ®Çu råi" .. floor(time / 60) 
-			.. "phót, b©y giê lµ "
+		local msg = "<#> NhiÖm vô 'Th¸ch thøc Thêi gian' ®· b¾t ®Çu råi <color=yellow>" .. floor(time / 60) 
+			.. "<color> phót, b©y giê lµ <color=yellow>"
 			.. batch
-			.. "®¸m qu¸i, cßn d­ "
+			.. "<color> ®¸m qu¸i, cßn d­ <color=yellow>"
 			.. count
-			.. "Con qu¸i.";
+			.. "<color> con qu¸i.";
 		Msg2MSAll(MISSION_MATCH, msg);
 	end
 end

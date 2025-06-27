@@ -9,59 +9,59 @@ function cancel_match()
 	-- Msg2SubWorld(date("[%H:%M:%S]") .. "±ÈÈüÈ¡Ïû£¡")
 end
 
--- ¿ªÊ¼±ÈÈü
+-- B¾t ®Çu V­ît ¶i
 function start_match()
-	-- ÉèÖÃÎª±ÈÈü×´Ì¬
+	-- ThiÕt lËp thµnh tr¹ng th¸i V­ît ¶i
 	SetMissionV(VARV_STATE, 2);
 
 	local player_count = GetMSPlayerCount(MISSION_MATCH);
 	if (player_count == 0) then
-		-- È¡Ïû±ÈÈü
+		-- Hñy bá V­ît ¶i
 		cancel_match();
 	else
-		-- Æô¶¯±ÈÈü½áÊø¶¨Ê±Æ÷
+		-- Khëi ®éng bé hÑn giê kÕt thóc V­ît ¶i
 		start_close_timer();
 		
-		-- Í¨¸æ
+		-- Th«ng c¸o
 		broadcast("NhiÖm vô 'Th¸ch thøc Thêi gian' ®· chİnh thøc b¾t ®Çu, anh hïng c¸c n¬i ®ang ra søc tranh tµi");
 
-		-- ³õÊ¼»¯±äÁ¿
-		SetMissionV(VARV_NPC_BATCH, 1);	-- ¹ÖµÄÅú´Î
+		-- Khëi t¹o biÕn
+		SetMissionV(VARV_NPC_BATCH, 1);	-- §ît qu¸i
 		SetMissionV(VARV_MISSION_RESULT, 0);
 		SetMissionV(VARV_PLAYER_USE_INDEX, 0);
 		SetMissionV(VARV_NPC_USE_INDEX, 0);
 		
-		-- Ğ¡Äôß±³¾³öÏÖµÄ¹Ø¿¨
+		-- ¶i Qu¸i ¸c Méng Nhá xuÊt hiÖn (TiÓu NhiÕp Nhİ TrÇn)
 		local nBossBatch = random(5, 15)
-		SetMissionV(VARV_XIAONIESHICHEN_BATCH, nBossBatch)	-- ´Ó5µ½15Ëæ»ú²úÉúÒ»¸ö¹Ø¿¨
+		SetMissionV(VARV_XIAONIESHICHEN_BATCH, nBossBatch)	-- Tõ 5 ®Õn 15 ngÉu nhiªn t¹o ra mét ¶i
 		WriteLog(format("TiÓu NhiÕp Thİ TrÇn xuÊt hiÖn thÎ ¶i lµ %d",nBossBatch))
 		
-		-- ±£´æÍæ¼ÒĞÅÏ¢
+		-- L­u th«ng tin ng­êi ch¬i
 		save_player_info();
     	
-		-- ÇåÀíµØÍ¼
+		-- Dän dÑp b¶n ®å
 		world = SubWorldIdx2ID(SubWorld);
 		ClearMapNpc(world);
 		ClearMapTrap(world); 
 		ClearMapObj(world);
     	
-		-- Éú³ÉµÚ1Åú¹Ö
+		-- Sinh ra ®ît qu¸i thø 1
 		create_batch_npc(1);
 	end
 	
-	-- ÉèÖÃÍæ¼ÒÊıÁ¿
+	-- ThiÕt lËp sè l­îng ng­êi ch¬i
 	SetMissionV(VARV_PLAYER_COUNT, player_count);
 end
 
--- ¹Ø±Õ±ÈÈü¶¨Ê±Æ÷
+-- §ãng bé hÑn giê V­ît ¶i
 function close_match_timer()
 	StopMissionTimer(MISSION_MATCH, TIMER_MATCH);
 end
 
 function OnTimer()
-	-- ±¨Ãû½áÊø
+	-- B¸o danh kÕt thóc
 	close_match_timer();
-	-- ±ÈÈü¿ªÊ¼
+	-- V­ît ¶i b¾t ®Çu
 	start_match();
 	start_board_timer();
 end
